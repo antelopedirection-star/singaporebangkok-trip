@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>南洋漫游记</title>
+<title>十日南洋</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=ZCOOL+KuaiLe&family=Caveat:wght@600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/leaflet.min.css">
@@ -129,6 +129,58 @@ main{padding:2px 16px}
 .svgmap text{font-family:var(--body);font-size:10.5px;fill:var(--ink);paint-order:stroke;stroke:#fbf8ee;stroke-width:3px;stroke-linejoin:round}
 .svgmap .num{font-family:var(--num);font-size:15px;font-weight:700;fill:#fff;stroke:none}
 .mapnote{padding:6px 10px 2px;font-size:11.5px;color:var(--muted);text-align:center}
+.ne{font-size:12px;color:var(--muted);font-style:italic;margin:0 0 2px;line-height:1.35}
+.ne.th{font-style:normal;margin-top:-1px}
+.leg{font-size:11.5px;color:var(--muted);margin:-4px 0 6px 0;padding:2px 8px;background:rgba(160,130,90,.10);border-radius:8px;display:inline-block}
+.leg small{opacity:.7}
+.thx{font-size:13px;line-height:1.5}
+.addr3{margin:6px 0;padding:8px 10px;border:1.5px dashed var(--ink);border-radius:12px;background:var(--card);font-size:12.5px;line-height:1.5}
+.addr3 .ah{font-size:11.5px;color:var(--muted);margin-bottom:2px}
+.addr3 .en{color:var(--muted)}
+.addr3 .thx{font-size:14px;margin-top:2px}
+.bk{margin-top:8px}
+.bkb{font-family:inherit;font-size:13px;padding:4px 14px;border:1.5px solid var(--ink);border-radius:999px;background:#fff;cursor:pointer;color:var(--ink)}
+.bkb.on{background:#ffe9b8;border-color:#c98a00;color:#6a4500;font-weight:700}
+.syncbar{display:flex;flex-wrap:wrap;align-items:center;gap:8px;margin:0 0 10px;padding:6px 10px;border:1.5px dashed var(--ink);border-radius:12px;background:var(--card);font-size:12.5px}
+.syncbar input{width:110px;padding:4px 8px;font:inherit;border:1.5px solid var(--ink);border-radius:8px;background:#fff;color:var(--ink)}
+.sharepanel{margin:0 0 10px;padding:8px 10px;border:1.5px dashed var(--ink);border-radius:12px;background:var(--card)}.sharepanel textarea{width:100%;box-sizing:border-box;font:12px/1.4 monospace;margin:4px 0;border:1.5px solid var(--ink);border-radius:8px;padding:6px;background:#fff;color:var(--ink)}
+.syncst{flex:1;min-width:120px;color:var(--muted)}
+.nlist{margin-top:6px}
+.nrow{padding:6px 8px;margin-bottom:5px;border-radius:10px;background:rgba(160,130,90,.10);font-size:13px;line-height:1.45}
+.nrow.mine{background:rgba(120,170,130,.16)}
+.nrow .nm{display:flex;flex-wrap:wrap;gap:6px;align-items:center;font-size:12px}
+.nrow .nm small{color:var(--muted)}
+.nrow .nm button{font:inherit;font-size:11.5px;border:0;background:none;color:var(--muted);text-decoration:underline;cursor:pointer;padding:0}
+.nrow .nt2{white-space:pre-wrap;word-break:break-word}
+.nbtns{display:flex;gap:8px;margin-top:6px}
+.badge.custom{background:var(--pink-l);color:var(--rose);border:1px solid var(--pink)}
+.lore p.en{margin-top:6px;border-style:dotted;color:#44524a;font-size:12.5px}
+.act{margin-top:8px;display:flex;flex-direction:column;align-items:flex-start;gap:6px}
+.chk{font-family:inherit;font-size:13px;padding:4px 14px;border:1.5px solid var(--ink);border-radius:999px;background:#fff;cursor:pointer;color:var(--ink)}
+.chk.on{background:var(--mint);border-color:var(--jade);color:var(--deep);font-weight:700}
+.tl li.visited .name{color:var(--deep)}
+.tl li.visited .no{background:var(--deep)}
+.nt{width:100%}
+.nt summary{cursor:pointer;font-size:12.5px;color:var(--muted);list-style:none}
+.nt summary::-webkit-details-marker{display:none}
+textarea.pn{width:100%;margin-top:5px;padding:8px 10px;font:inherit;font-size:13px;border:1.5px dashed var(--ink);border-radius:10px;background:var(--card);color:var(--ink);resize:vertical}
+.delx{background:var(--rose-l)}
+.addp{margin-top:6px}
+#addpForm{margin-top:10px;display:flex;flex-direction:column;gap:8px}
+#addpForm input[type=text],#addpForm input:not([type]),#addpForm input[type=time],#addpForm select{font:inherit;font-size:14px;padding:7px 10px;border:1.5px solid var(--ink);border-radius:10px;background:#fff;color:var(--ink);min-width:0}
+#addpForm .row{display:flex;gap:8px;align-items:center;flex-wrap:wrap}
+#addpForm select{flex:1}
+.fd{border-top:1px dashed rgba(44,58,51,.25);padding:6px 0}
+.fd summary{cursor:pointer;font-weight:600;font-size:14px;list-style:none;display:flex;justify-content:space-between;gap:8px}
+.fd summary::-webkit-details-marker{display:none}
+.fd .cnt{font-family:var(--num);font-size:19px;color:var(--turq)}
+.fl{list-style:none;margin:6px 0 2px;padding:0}
+.fl li{display:flex;gap:8px;font-size:13px;padding:3px 0}
+.fl .mk{width:16px;flex:0 0 16px;text-align:center;color:var(--muted)}
+.fl li.ok .mk{color:var(--deep);font-weight:700}
+.fl li.no b{color:var(--muted);font-weight:600}
+.fl small{color:var(--muted)}
+.fl .fn{font-size:12px;color:#7d5d18;margin-top:1px;white-space:pre-wrap}
 .tl .go .ic,.tl .tip .ic{width:16px;height:16px;flex:0 0 auto;margin-top:2px}
 .btns{display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}
 .btn{font-size:12px;text-decoration:none;padding:3px 10px;border:1.5px solid var(--ink);border-radius:14px;background:#fff;white-space:nowrap;cursor:pointer;font-family:inherit;color:var(--ink)}
@@ -254,6 +306,23 @@ main{padding:2px 16px}
 .tb:not(.on)::before,.tb:not(.on)::after{display:none}
 .foot{text-align:center;font-size:11px;color:var(--muted);margin:18px 0 6px}
 </style>
+<script>(function(){var u=["https://cdn.bootcdn.net/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/style.css","https://cdn.staticfile.net/lxgw-wenkai-screen-webfont/1.7.0/style.css","https://cdn.jsdelivr.net/npm/lxgw-wenkai-screen-webfont@1.7.0/style.css","https://cdnjs.cloudflare.com/ajax/libs/lxgw-wenkai-screen-webfont/1.7.0/style.css"],i=0,done=false;
+function nx(){if(done||i>=u.length)return;var l=document.createElement("link");l.rel="stylesheet";l.href=u[i++];var t=setTimeout(nx,3000);l.onload=function(){clearTimeout(t);done=true};l.onerror=function(){clearTimeout(t);nx()};document.head.appendChild(l)}nx()})();</script><style id="skin">
+.pa-top{position:relative;padding:26px 18px 22px;background-image:linear-gradient(rgba(243,239,226,0) 55%,rgba(243,239,226,.9)),url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%22100%22 height=%22100%22 viewBox=%220 0 100 100%22%3E%3Crect width=%22100%22 height=%22100%22 fill=%22%23fbf8ee%22/%3E%3Crect x=%221.5%22 y=%221.5%22 width=%2297%22 height=%2297%22 fill=%22none%22 stroke=%22%2336604f%22 stroke-width=%221.1%22/%3E%3Crect x=%225%22 y=%225%22 width=%2290%22 height=%2290%22 fill=%22none%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22/%3E%3Crect x=%225%22 y=%225%22 width=%2290%22 height=%2290%22 fill=%22%23f3dfd9%22/%3E%3Cpath d=%22M50.0 8L92 50.0L50.0 92L8 50.0Z%22 fill=%22%23dbe8dc%22 stroke=%22%2336604f%22 stroke-width=%22.9%22/%3E%3Cpath d=%22M50.0 14L86 50.0L50.0 86L14 50.0Z%22 fill=%22none%22 stroke=%22%23cfa556%22 stroke-width=%22.6%22 stroke-dasharray=%221.2 1.8%22/%3E%3Cg transform=%22translate(50.0 50.0) scale(.86)%22%3E%3Cg transform=%22rotate(0.0) scale(0.95)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23d99c94%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23fbf8ee%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(45.0) scale(0.95)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23d99c94%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23fbf8ee%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(90.0) scale(0.95)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23d99c94%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23fbf8ee%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(135.0) scale(0.95)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23d99c94%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23fbf8ee%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(180.0) scale(0.95)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23d99c94%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23fbf8ee%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(225.0) scale(0.95)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23d99c94%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23fbf8ee%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(270.0) scale(0.95)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23d99c94%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23fbf8ee%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(315.0) scale(0.95)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23d99c94%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23fbf8ee%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(22.5) scale(0.55)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%234f8571%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(67.5) scale(0.55)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%234f8571%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(112.5) scale(0.55)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%234f8571%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(157.5) scale(0.55)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%234f8571%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(202.5) scale(0.55)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%234f8571%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(247.5) scale(0.55)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%234f8571%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(292.5) scale(0.55)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%234f8571%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(337.5) scale(0.55)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%234f8571%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Ccircle r=%227.5%22 fill=%22%23cfa556%22 stroke=%22%2336604f%22 stroke-width=%22.9%22/%3E%3Ccircle r=%223.4%22 fill=%22%23fbf8ee%22 stroke=%22%2336604f%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%2211.0%22 cy=%220.0%22 r=%221.1%22 fill=%22%2336604f%22/%3E%3Ccircle cx=%227.778174593052023%22 cy=%227.778174593052022%22 r=%221.1%22 fill=%22%2336604f%22/%3E%3Ccircle cx=%226.735557395310443e-16%22 cy=%2211.0%22 r=%221.1%22 fill=%22%2336604f%22/%3E%3Ccircle cx=%22-7.778174593052022%22 cy=%227.778174593052023%22 r=%221.1%22 fill=%22%2336604f%22/%3E%3Ccircle cx=%22-11.0%22 cy=%221.3471114790620886e-15%22 r=%221.1%22 fill=%22%2336604f%22/%3E%3Ccircle cx=%22-7.778174593052024%22 cy=%22-7.778174593052022%22 r=%221.1%22 fill=%22%2336604f%22/%3E%3Ccircle cx=%22-2.0206672185931327e-15%22 cy=%22-11.0%22 r=%221.1%22 fill=%22%2336604f%22/%3E%3Ccircle cx=%227.778174593052021%22 cy=%22-7.778174593052024%22 r=%221.1%22 fill=%22%2336604f%22/%3E%3C/g%3E%3Cg transform=%22translate(0 0)%22%3E%3Cg transform=%22rotate(0.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(45.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(90.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(135.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(180.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(225.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(270.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(315.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Ccircle r=%226%22 fill=%22%23d99c94%22 stroke=%22%2336604f%22 stroke-width=%22.8%22/%3E%3C/g%3E%3Cg transform=%22translate(100 0)%22%3E%3Cg transform=%22rotate(0.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(45.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(90.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(135.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(180.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(225.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(270.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(315.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Ccircle r=%226%22 fill=%22%23d99c94%22 stroke=%22%2336604f%22 stroke-width=%22.8%22/%3E%3C/g%3E%3Cg transform=%22translate(0 100)%22%3E%3Cg transform=%22rotate(0.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(45.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(90.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(135.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(180.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(225.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(270.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(315.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Ccircle r=%226%22 fill=%22%23d99c94%22 stroke=%22%2336604f%22 stroke-width=%22.8%22/%3E%3C/g%3E%3Cg transform=%22translate(100 100)%22%3E%3Cg transform=%22rotate(0.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(45.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(90.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(135.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(180.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(225.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(270.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(315.0) scale(0.62)%22%3E%3Cpath d=%22M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z%22 fill=%22%23f1e5c4%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23cfa556%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Ccircle r=%226%22 fill=%22%23d99c94%22 stroke=%22%2336604f%22 stroke-width=%22.8%22/%3E%3C/g%3E%3Cg transform=%22translate(50.0 0)%22%3E%3Cg transform=%22rotate(0.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(60.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(120.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(180.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(240.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(300.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Ccircle r=%223.2%22 fill=%22%23c07e62%22 stroke=%22%2336604f%22 stroke-width=%22.6%22/%3E%3C/g%3E%3Cg transform=%22translate(50.0 100)%22%3E%3Cg transform=%22rotate(0.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(60.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(120.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(180.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(240.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(300.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Ccircle r=%223.2%22 fill=%22%23c07e62%22 stroke=%22%2336604f%22 stroke-width=%22.6%22/%3E%3C/g%3E%3Cg transform=%22translate(0 50.0)%22%3E%3Cg transform=%22rotate(0.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(60.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(120.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(180.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(240.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(300.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Ccircle r=%223.2%22 fill=%22%23c07e62%22 stroke=%22%2336604f%22 stroke-width=%22.6%22/%3E%3C/g%3E%3Cg transform=%22translate(100 50.0)%22%3E%3Cg transform=%22rotate(0.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(60.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(120.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(180.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(240.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Cg transform=%22rotate(300.0) scale(0.42)%22%3E%3Cpath d=%22M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z%22 fill=%22%239dbba7%22 stroke=%22%2336604f%22 stroke-width=%220.8%22/%3E%3Cpath d=%22M0 -3V-24%22 stroke=%22%23dbe8dc%22 stroke-width=%22.7%22 opacity=%22.7%22/%3E%3C/g%3E%3Ccircle r=%223.2%22 fill=%22%23c07e62%22 stroke=%22%2336604f%22 stroke-width=%22.6%22/%3E%3C/g%3E%3C/svg%3E");background-size:auto,84px 84px;background-position:center top}
+.pa-arch{position:relative;background:var(--card);border-radius:170px 170px 18px 18px/120px 120px 18px 18px;padding:46px 14px 14px;text-align:center;
+ box-shadow:0 0 0 1.5px var(--deep),0 0 0 6px var(--card),0 0 0 7px var(--ochre),0 18px 30px -12px rgba(54,96,79,.45)}
+.pa-ros{position:absolute;left:50%;top:-26px;width:58px;height:58px;transform:translateX(-50%);filter:drop-shadow(0 2px 2px rgba(0,0,0,.15))}
+.pa-eye{font-family:var(--num);font-size:10px;letter-spacing:4px;color:var(--ochre)}
+.pa-top h1{margin:2px 0 0;font-family:var(--hand);font-weight:700;font-size:34px;letter-spacing:4px;color:var(--deep)}
+.pa-top h1 span{color:var(--terra)}
+.pa-top .sub{margin:0 0 12px;font-size:12px}
+.pa-top .clocks{text-align:center}
+.pa-top .clock.local{background:var(--mint);border:1px solid var(--jade)}
+.pa-band{height:12px;background-image:url("data:image/svg+xml,%3Csvg xmlns=%22http://www.w3.org/2000/svg%22 width=%2232%22 height=%2212%22 viewBox=%220 0 32 12%22%3E%3Crect width=%2232%22 height=%2212%22 fill=%22%23dbe8dc%22/%3E%3Cpath d=%22M0 .5H32M0 11.5H32%22 stroke=%22%2336604f%22 stroke-width=%221%22/%3E%3Cpath d=%22M16.0 2L21.0 6.0L16.0 10L11.0 6.0Z%22 fill=%22%23d99c94%22 stroke=%22%2336604f%22 stroke-width=%22.6%22/%3E%3Ccircle cx=%220%22 cy=%226.0%22 r=%222%22 fill=%22%23cfa556%22/%3E%3Ccircle cx=%2232%22 cy=%226.0%22 r=%222%22 fill=%22%23cfa556%22/%3E%3Ccircle cx=%2216.0%22 cy=%226.0%22 r=%221%22 fill=%22%23fbf8ee%22/%3E%3C/svg%3E");background-size:32px 12px}
+
+.pa-top h1{font-family:"LXGW WenKai Screen","LXGW WenKai",var(--hand),serif;font-weight:700}
+.pa-top .clock{border-radius:12px}
+</style>
 </head>
 <body>
 <svg class="svgdefs" aria-hidden="true">
@@ -274,18 +343,7 @@ main{padding:2px 16px}
 </svg>
 
 <div class="wrap">
-  <header class="top">
-    <div class="title-card rough">
-      <svg class="flower f1"><use href="#frangipani"/></svg>
-      <svg class="flower f2"><use href="#frangipani"/></svg>
-      <h1>南洋<span>漫游</span>记</h1>
-      <p class="sub">深圳 → 星洲 → 曼谷 → 深圳 ｜ 2026.11.22 – 12.01</p>
-      <div class="clocks" id="clocks"></div>
-      <div class="countdown" id="countdown"></div>
-    </div>
-    <svg class="shophouses" id="shophouses" viewBox="0 0 440 96" preserveAspectRatio="xMidYMax slice" aria-hidden="true"></svg>
-  </header>
-  <div class="five-foot"></div>
+<header class="pa-top"><div class="pa-arch"><svg class="pa-ros" viewBox="-40 -40 80 80" aria-hidden="true"><g transform="rotate(0.0) scale(1)"><path d="M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z" fill="#d99c94" stroke="#36604f" stroke-width="0.8"/><path d="M0 -3V-24" stroke="#fbf8ee" stroke-width=".7" opacity=".7"/></g><g transform="rotate(45.0) scale(1)"><path d="M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z" fill="#d99c94" stroke="#36604f" stroke-width="0.8"/><path d="M0 -3V-24" stroke="#fbf8ee" stroke-width=".7" opacity=".7"/></g><g transform="rotate(90.0) scale(1)"><path d="M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z" fill="#d99c94" stroke="#36604f" stroke-width="0.8"/><path d="M0 -3V-24" stroke="#fbf8ee" stroke-width=".7" opacity=".7"/></g><g transform="rotate(135.0) scale(1)"><path d="M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z" fill="#d99c94" stroke="#36604f" stroke-width="0.8"/><path d="M0 -3V-24" stroke="#fbf8ee" stroke-width=".7" opacity=".7"/></g><g transform="rotate(180.0) scale(1)"><path d="M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z" fill="#d99c94" stroke="#36604f" stroke-width="0.8"/><path d="M0 -3V-24" stroke="#fbf8ee" stroke-width=".7" opacity=".7"/></g><g transform="rotate(225.0) scale(1)"><path d="M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z" fill="#d99c94" stroke="#36604f" stroke-width="0.8"/><path d="M0 -3V-24" stroke="#fbf8ee" stroke-width=".7" opacity=".7"/></g><g transform="rotate(270.0) scale(1)"><path d="M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z" fill="#d99c94" stroke="#36604f" stroke-width="0.8"/><path d="M0 -3V-24" stroke="#fbf8ee" stroke-width=".7" opacity=".7"/></g><g transform="rotate(315.0) scale(1)"><path d="M0 0C-6.5-7-7.5-21 0-31C7.5-21 6.5-7 0 0Z" fill="#d99c94" stroke="#36604f" stroke-width="0.8"/><path d="M0 -3V-24" stroke="#fbf8ee" stroke-width=".7" opacity=".7"/></g><g transform="rotate(22.5) scale(0.6)"><path d="M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z" fill="#4f8571" stroke="#36604f" stroke-width="0.8"/><path d="M0 -3V-24" stroke="#dbe8dc" stroke-width=".7" opacity=".7"/></g><g transform="rotate(67.5) scale(0.6)"><path d="M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z" fill="#4f8571" stroke="#36604f" stroke-width="0.8"/><path d="M0 -3V-24" stroke="#dbe8dc" stroke-width=".7" opacity=".7"/></g><g transform="rotate(112.5) scale(0.6)"><path d="M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z" fill="#4f8571" stroke="#36604f" stroke-width="0.8"/><path d="M0 -3V-24" stroke="#dbe8dc" stroke-width=".7" opacity=".7"/></g><g transform="rotate(157.5) scale(0.6)"><path d="M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z" fill="#4f8571" stroke="#36604f" stroke-width="0.8"/><path d="M0 -3V-24" stroke="#dbe8dc" stroke-width=".7" opacity=".7"/></g><g transform="rotate(202.5) scale(0.6)"><path d="M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z" fill="#4f8571" stroke="#36604f" stroke-width="0.8"/><path d="M0 -3V-24" stroke="#dbe8dc" stroke-width=".7" opacity=".7"/></g><g transform="rotate(247.5) scale(0.6)"><path d="M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z" fill="#4f8571" stroke="#36604f" stroke-width="0.8"/><path d="M0 -3V-24" stroke="#dbe8dc" stroke-width=".7" opacity=".7"/></g><g transform="rotate(292.5) scale(0.6)"><path d="M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z" fill="#4f8571" stroke="#36604f" stroke-width="0.8"/><path d="M0 -3V-24" stroke="#dbe8dc" stroke-width=".7" opacity=".7"/></g><g transform="rotate(337.5) scale(0.6)"><path d="M0 0C-4-6-4.5-14 0-20C4.5-14 4-6 0 0Z" fill="#4f8571" stroke="#36604f" stroke-width="0.8"/><path d="M0 -3V-24" stroke="#dbe8dc" stroke-width=".7" opacity=".7"/></g><circle r="8" fill="#cfa556" stroke="#36604f" stroke-width=".9"/><circle r="3.5" fill="#fbf8ee"/></svg><div class="pa-eye">PERANAKAN · SIAM</div><h1>十日<span>南洋</span></h1><p class="sub">深圳 · 新加坡 · 曼谷 · 大城 ｜ 2026.11.22 – 12.01</p><div class="clocks" id="clocks"></div><div class="countdown" id="countdown"></div></div><svg id="shophouses" style="display:none" aria-hidden="true"></svg></header><div class="pa-band"></div>
 
   <nav class="days" id="days"></nav>
 
@@ -302,7 +360,7 @@ main{padding:2px 16px}
       <div class="card rough" id="itin"></div>
       <div class="card rough" id="todo"></div>
       <div class="card rough" id="news"></div>
-      <a id="notesBtn" class="notes-btn rough" target="_blank" rel="noopener"></a>
+      <div class="card rough" id="foot"></div>
     </section>
     <section id="tab-food" class="tab"></section>
     <section id="tab-shop" class="tab"></section>
@@ -324,8 +382,6 @@ main{padding:2px 16px}
 
 <script>
 /* ======================== 设置：以后改这里 ======================== */
-// 共享笔记：把腾讯文档链接填在引号里
-const SHARED_NOTES_URL = "";
 
 const CITIES = {
   sz: { name:"深圳", tz:"Asia/Shanghai", lat:22.5431, lon:114.0579 },
@@ -348,7 +404,7 @@ const FLIGHTS = [
   { date:"11/22 周日", no:"ZH229", air:"深圳航空", from:"深圳", fromCode:"SZX", fromT:"宝安 T3", to:"新加坡", toCode:"SIN", toT:"樟宜机场", dep:"13:05", arr:"17:15", dur:"4 小时 10 分",
     note:"建议 10:00 前到宝安机场 T3 值机", go:"10:00" },
   { date:"11/26 周四", no:"TR610", air:"酷航 Scoot", from:"新加坡", fromCode:"SIN", fromT:"樟宜 T1", to:"曼谷", toCode:"BKK", toT:"素万那普", dep:"16:00", arr:"17:35", dur:"2 小时 35 分",
-    note:"廉航：托运行李、餐食要另买；13:00 起可在 Jewel 早到值机", go:"11:30" },
+    note:"廉航：托运行李、餐食要另买；酷航在樟宜 T1 值机（据第三方资料是 5–7 排，以现场屏幕为准）；13:00 起可在 Jewel 一层早到值机", go:"11:30" },
   { date:"12/01 周二", no:"CZ8324", air:"中国南方航空", from:"曼谷", fromCode:"BKK", fromT:"素万那普", to:"深圳", toCode:"SZX", toT:"宝安机场", dep:"19:15", arr:"22:55", dur:"2 小时 40 分",
     note:"有退税的话要更早到，先办退税再值机", go:"16:00" }
 ];
@@ -364,24 +420,27 @@ const HOTELS = [
     name:"曼谷河畔安凡尼酒店", en:"AVANI+ Riverside Bangkok Hotel", room:"阿瓦尼河景房",
     addr:"257 Charoen Nakhon Rd, Khwaeng Samre, Thon Buri, Bangkok 10600",
     local:"โรงแรม อวานี พลัส ริเวอร์ไซด์ กรุงเทพ · 257 ถนนเจริญนคร แขวงสำเหร่ เขตธนบุรี กรุงเทพฯ 10600",
+zh:"吞武里区 Samre 街区 Charoen Nakhon 路 257 号，曼谷 10600",
     lat:13.7195, lon:100.5040,
-    note:"在河对岸（吞武里一侧），离 ICONSIAM 不远，晚上到可以直接河边吃饭" },
+    note:"在河西岸（吞武里一侧）。酒店有免费接驳船到 Saphan Taksin 码头（08:00–23:15，来自酒店官网），可换乘地铁或去对岸的 Asiatique 夜市；ICONSIAM 打车约 7 分钟，不算近" },
   { city:"bkk", place:"安帕瓦 · 水上市场旁", from:"2026-11-27", to:"2026-11-28", dates:"11/27 – 11/28（1 晚）",
     name:"班印轩家庭旅馆", en:"Baan Ing Suan, Amphawa", room:"大床房（带阳台）",
     addr:"28 Klong Bang Chak, Amphawa, Samut Songkhram",
     local:"บ้านอิงสวน · 28 คลองบางจาก อัมพวา สมุทรสงคราม",
+zh:"夜功府（Samut Songkhram）安帕瓦县 Khlong Bang Chak 运河边 28 号",
     lat:13.4256, lon:99.9553,
     note:"家庭旅馆，晚上要看萤火虫、逛夜市，建议提前和房东确认到达时间" },
   { city:"bkk", place:"大城府 · 古城", from:"2026-11-28", to:"2026-11-29", dates:"11/28 – 11/29（1 晚）",
     name:"夏玛雷斯登斯", en:"Syama Residence and Café", room:"特大床房 · 禁烟",
     addr:"5 U Thong Rd, Tambon Pratuchai, Phra Nakhon Si Ayutthaya 13000",
-    local:"",
-    lat:14.3517, lon:100.5600,
+    local:"ศยามา เรสซิเดนซ์ แอนด์ คาเฟ่ · 5 ถนนอู่ทอง ตำบลประตูชัย อำเภอพระนครศรีอยุธยา จังหวัดพระนครศรีอยุธยา 13000",
+    zh:"大城府 Phra Nakhon Si Ayutthaya 县 Pratuchai 乡 U Thong 路 5 号 13000", lat:14.3517, lon:100.5600,
     note:"在古城区，离大城历史公园和河边都很近；入住 14:00–19:00，前台 9:00–18:00，晚于 18:00 到要提前联系酒店" },
   { city:"bkk", place:"曼谷 · 暹罗广场", from:"2026-11-29", to:"2026-12-01", dates:"11/29 – 12/01（2 晚）",
     name:"诺富特暹罗广场酒店", en:"Novotel Bangkok Siam Square", room:"高级大床房",
     addr:"392/44 Siam Square Soi 6, Rama 1 Rd, Pathum Wan, Bangkok 10330",
     local:"โรงแรมโนโวเทล กรุงเทพ สยามสแควร์ · 392/44 ซอยสยามสแควร์ 6 ถนนพระราม 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพฯ 10330",
+zh:"曼谷 Pathum Wan 区 Rama 1 路 Siam Square 6 巷 392/44 号 10330",
     lat:13.7457, lon:100.5331,
     note:"BTS Siam / National Stadium 站步行可达，逛街、去机场都方便" }
 ];
@@ -391,116 +450,162 @@ const DAYS = [
   { date:"2026-11-21", city:"sz", type:"prep", title:"出发前一天 · 整装待发", items:[] },
 
   { date:"2026-11-22", city:"sg", title:"深圳起飞 · 落地狮城", items:[
-    {t:"10:00", n:"到达深圳宝安机场 T3", en:"Shenzhen Bao'an International Airport", lat:22.6393, lon:113.8107, s:"fixed", d:"国际航班值机、托运、出境", tip:"充电宝随身带，不能托运；出境前把 SG Arrival Card 再确认一遍"},
-    {t:"13:05", n:"ZH229 飞往新加坡", s:"fixed", fl:0},
-    {t:"17:15", n:"抵达新加坡樟宜机场", en:"Changi Airport", lat:1.3644, lon:103.9915, s:"fixed", d:"不在机场逗留，入境、取行李后直接去酒店（约 45–60 分钟）；中国护照可走自动通道", go:"到达厅买电话卡 / 开 eSIM，然后打 Grab 去酒店", tip:"星耀樟宜留到 11/26 再逛"},
-    {t:"19:00", n:"入住琵拉帝诗酒店", en:"Paradox Singapore Merchant Court", lat:1.2887, lon:103.8466, s:"fixed", d:"尊贵特大床房，连住 4 晚；放行李、洗把脸，休息 20 分钟", go:"机场打 Grab 到 Merchant Road，约 25–30 分钟", tip:"入住时酒店一般要刷信用卡做押金，带上带国际币种的信用卡；要安静就说想要高楼层、背对河边的房间"},
-    {t:"20:00", n:"新加坡河游船 Bumboat", en:"Singapore River Cruise Clarke Quay Jetty 3 River Valley Rd", lat:1.2897, lon:103.8465, s:"fixed", d:"传统平底小船，全程约 40 分钟，夜里两岸亮灯，从 Clarke Quay Jetty 上船并回到同一码头", go:"从酒店步行 5 分钟左右到 Clarke Quay Jetty（3 River Valley Rd）", tip:"周日首班 10:00、末班 21:00 开，你们 20:00 上船没问题；网上买的票要在这个码头兑换；常见路线会经过船码头、鱼尾狮、金沙一带，以船上广播为准；晚上河边风大，带件薄外套"},
-    {t:"21:00", n:"晚饭：珍宝海鲜 Jumbo Seafood", en:"JUMBO Seafood Riverside Point 30 Merchant Rd #01-01/02", lat:1.2891, lon:103.8453, s:"fixed", d:"辣椒螃蟹、黑胡椒螃蟹、麦片虾、炸馒头，在酒店隔壁（河滨坊 Riverside Point），游船上完岸边走几步", go:"从码头步行约 5 分钟，酒店就在旁边，吃完直接回房", tip:"每天营业 11:30–23:00；周日晚上人多，建议提前通过 Jumbo 官网或电话订位。螃蟹按重量计价，点之前问清每公斤价格，两个人一只中等大小的螃蟹配一两个小菜就够"}
-  ], todos:["确认 SG Arrival Card 已提交","机场买电话卡或开 eSIM","手机装好 Grab","提前买好 Bumboat 船票（20:00 场）","订 Jumbo 21:00 的位子"]},
+    {id:"d1122-1", t:"10:00", n:"到达深圳宝安机场 T3", ne:"Arrive · Shenzhen Bao'an Airport T3", en:"Shenzhen Bao'an International Airport", lat:22.6393, lon:113.8107, s:"fixed", d:"国际航班值机、托运、出境", tip:"充电宝随身带，不能托运；出境前把 SG Arrival Card 再确认一遍"},
+    {id:"d1122-2", t:"13:05", n:"ZH229 飞往新加坡", ne:"Flight ZH229 to Singapore", s:"fixed", fl:0},
+    {id:"d1122-3", t:"17:15", n:"抵达新加坡樟宜机场", ne:"Arrive · Singapore Changi Airport", en:"Changi Airport", lat:1.3644, lon:103.9915, s:"fixed", d:"不在机场逗留，入境、取行李后直接去酒店（约 45–60 分钟）；中国护照可走自动通道", go:"到达厅买电话卡 / 开 eSIM，然后打 Grab 去酒店", tip:"星耀樟宜留到 11/26 再逛"},
+    {id:"d1122-4", t:"19:00", n:"入住琵拉帝诗酒店", ne:"Check-in · Paradox Singapore Merchant Court", en:"Paradox Singapore Merchant Court", lat:1.2887, lon:103.8466, s:"fixed", d:"尊贵特大床房，连住 4 晚；放行李、洗把脸，休息 20 分钟", go:"机场打 Grab 到 Merchant Road，约 25–30 分钟", tip:"入住时酒店一般要刷信用卡做押金，带上带国际币种的信用卡；要安静就说想要高楼层、背对河边的房间"},
+    {id:"d1122-5", t:"20:00", n:"新加坡河游船 Bumboat", ne:"Singapore River Bumboat Cruise", en:"Singapore River Cruise Clarke Quay Jetty 3 River Valley Rd", lat:1.2897, lon:103.8465, s:"fixed", d:"传统平底小船，全程约 40 分钟，夜里两岸亮灯，从 Clarke Quay Jetty 上船并回到同一码头", go:"从酒店步行 5 分钟左右到 Clarke Quay Jetty（3 River Valley Rd）", tip:"周日首班 10:00、末班 21:00 开，你们 20:00 上船没问题；网上买的票要在这个码头兑换；常见路线会经过船码头、鱼尾狮、金沙一带，以船上广播为准；晚上河边风大，带件薄外套"},
+    {id:"d1122-6", t:"21:00", n:"晚饭：珍宝海鲜 Jumbo Seafood", ne:"Dinner · JUMBO Seafood (Riverside Point)", en:"JUMBO Seafood Riverside Point 30 Merchant Rd #01-01/02", lat:1.2891, lon:103.8453, s:"fixed", d:"辣椒螃蟹、黑胡椒螃蟹、麦片虾、炸馒头，在酒店隔壁（河滨坊 Riverside Point），游船上完岸边走几步", go:"从码头步行约 5 分钟，酒店就在旁边，吃完直接回房", tip:"每天营业 11:30–23:00；周日晚上人多，建议提前通过 Jumbo 官网或电话订位。螃蟹按重量计价，点之前问清每公斤价格，两个人一只中等大小的螃蟹配一两个小菜就够"}
+  ], todos:["预约 Peranakan Mansion 11:00 导览（电话 +65 9789 7628）", "订 National Kitchen by Violet Oon 19:45 的位子（violetoon.com 或 +65 9834 9935）", "带无味湿巾、薄荷糖（不是口香糖，新加坡禁）、防晒、薄外套", "穿舒服的鞋，充电宝带好"]},
 
   { date:"2026-11-23", city:"sg", title:"如切 · 老机场路 · 榴莲街 · 哈芝巷 · 翡翠山", items:[
-    {t:"09:15", n:"出发去如切", en:"Chin Mee Chin Confectionery 204 East Coast Rd", lat:1.3051, lon:103.9092, s:"idea", d:"从酒店打 Grab 约 20 分钟；今天路线：如切 → 老机场路食阁 → 榴莲街 → 哈芝巷 → Selegie → 翡翠山，晚上约 21:00 回到酒店", go:"直接到 Chin Mee Chin（204 East Coast Rd）下车", tip:"Geylang 在老机场路和甘榜格南之间，顺路；Selegie 放在哈芝巷和翡翠山之间，11/24 就不用赶了"},
-    {t:"09:40", n:"早餐：Chin Mee Chin 老饼店", en:"Chin Mee Chin Confectionery 204 East Coast Rd", lat:1.3051, lon:103.9092, s:"fixed", d:"1925 年开的老式咖啡饼店，炭烤咖椰吐司（约 S$2.8）配半熟蛋、奶油角（cream horn）、各口味包和蛋糕；店内有老式大理石桌和花砖地板", go:"每天 8:00–16:00 营业，最后点单 15:45；离 Marine Parade 地铁站步行约 10 分钟", tip:"2018 年关过，现在由原家族重开；吐司蘸半熟蛋和酱油，是正宗吃法；回如切路上可以在 Kim Choo Kueh Chang（60 Joo Chiat Place，每天 9:00–21:00）买几块娘惹糕点带着吃"},
-    {t:"10:20", n:"Koon Seng Road 彩色排屋", en:"Koon Seng Road Singapore", lat:1.3127, lon:103.9006, s:"fixed", d:"新加坡最出名的娘惹彩色排屋，早上人少、光线柔；再看后巷的彩色门、附近的壁画", go:"从 Chin Mee Chin 打车约 5 分钟；住宅区，拍照轻声、别挡路", tip:"拍完 10:55 走去隔壁的 Peranakan Mansion"},
-    {t:"11:00", n:"Singapore Peranakan Mansion 娘惹博物馆", en:"Singapore Peranakan Mansion 283A Joo Chiat Rd", lat:1.3125, lon:103.9012, s:"fixed", d:"如切路上的娘惹私人博物馆：娘惹古董家具、青花瓷、150 年的婚床、串珠鞋、kebaya 和首饰；导览约 1–2 小时，娘惹体验和服装拍摄在这里做", go:"在 283A Joo Chiat Rd，离 Koon Seng Road 步行几分钟", tip:"只接受预约（电话 +65 9789 7628 或 Facebook）；文化导览约 S$38 每人；手机自拍版的娘惹服拍照约 S$50 每人起，专业摄影棚版 S$980 起；每天 11:00 开门（周三 9:00 起）。预约时问清当天时间、能不能试衣、拍照价格，如果要拍照就留 2.5 小时"},
-    {t:"13:30", n:"午饭：老机场路食阁", en:"Old Airport Road Food Centre 51 Old Airport Rd", lat:1.3085, lon:103.8878, s:"fixed", d:"新加坡最有名的食阁之一，1973 年开，约 170 个摊位；推荐摊位：新美香正宗卤面（#01-116，每天 7:00–16:00，卤面 S$6/8）、祥记卤面（#01-81，周三到周一 7:00–15:00，S$4/5）、东记炒粿条（#01-138，周一到周六 11:00–20:00，S$4–6）、老夫子炒粿条（#01-12，必比登推介；米其林指南页面写周一 11:45–22:00 营业、周三和周六休息，另有网站写每天营业，以 Google 地图当天显示为准）、Hua Ji 鱼头米粉（#01-118，周五到周三 12:30–21:00，鱼汤 S$7）、Toa Payoh 罗杂（#01-108，周一到周六，S$3 起）；甜品：Whampoa 豆花（#01-68，每天 8:00–20:00）", go:"从如切打 Grab 约 10 分钟；每份 S$4–8，两个人点 3–4 样分着吃", tip:"摊位时间来自网上资料，可能有变，去之前在 Google 地图看一下；14:30 前吃完"},
-    {t:"14:45", n:"榴莲街 · Geylang 榴莲摊", en:"Durian 36 608 Geylang Rd", lat:1.3172, lon:103.8888, s:"fixed", d:"Geylang Road 靠 Lorong 36 路口一带，沿着骑楼摆桌椅；Durian 36（608 Geylang Rd）标注 24 小时营业，主打猫山王", go:"从老机场路食阁打 Grab 约 6–8 分钟；吃完直接打车去哈芝巷，别坐地铁", tip:"另一些摊位傍晚才开，下午去先确认 Durian 36 开着（电话 9889 4906）；11–12 月是榴莲小季，点之前问清按个还是按公斤，让老板帮你开、先试再买；榴莲不能带进酒店和地铁，就在摊边吃；Geylang 有些街区夜里复杂，白天只在大路沿线的摊位；吃完洗手漱口，包里放无味湿巾和口香糖"},
-    {t:"15:45", n:"去甘榜格南", en:"Haji Lane Singapore", lat:1.3009, lon:103.8590, s:"idea", d:"从 Geylang 打 Grab 约 15–20 分钟；路上开窗透气", go:"在 Haji Lane 路口下车"},
-    {t:"16:05", n:"哈芝巷 Haji Lane", en:"Haji Lane Singapore", lat:1.3009, lon:103.8590, s:"fixed", d:"新加坡最窄的潮流小巷，两边是彩色壁画和小店：Coffee Donkee（51 号，秋千和草坪，10:30–18:30）、Vintagewknd 古着（41 号，12:00–21:00）、Musicology Records 黑胶（66 号，12:30–20:30）、Gelato Garden（65 号，11:00–22:00）、Solace Airlines 韩式写真馆（73 号，11:00–22:00，可以拍一组）、Crafune 手作皮具工作坊（#02-01 38 号，11:00–18:00，做钱包）、Hands on Film 胶片相机（Bali Lane 21 号，11:00–19:00）", go:"在哈芝巷和旁边的 Bali Lane 慢慢逛，约 1.5 小时", tip:"天黑后霓虹壁画更好看；商店营业时间来自网上资料，可能有出入"},
-    {t:"17:15", n:"Bussorah Street · 苏丹回教堂", en:"Masjid Sultan Singapore Bussorah Street", lat:1.3023, lon:103.8583, s:"idea", d:"从哈芝巷走到 Arab Street 和 Bussorah Street：棕榈树大道尽头就是金顶的苏丹回教堂，Arab Street 一带有土耳其地毯、布料、香料小店", go:"从哈芝巷步行约 5 分钟", tip:"进回教堂要遮肩膝、非穆斯林有固定参观时间，赶不上就在外面拍"},
-    {t:"17:45", n:"Selegie Arts Centre 打卡", en:"Selegie Arts Centre 30 Selegie Rd", lat:1.3002, lon:103.8508, s:"fixed", d:"Selegie Road 和 Prinsep Street 路口的楔形老楼，窗框涂满鲜艳的颜色，在外面拍照 15–20 分钟；傍晚的光让颜色更饱和", go:"从苏丹回教堂打 Grab 约 8–10 分钟，往乌节路方向顺路", tip:"大楼里有咖啡店、画材店和画廊，开放时间我没查到，外面拍就够"},
-    {t:"18:10", n:"出发去翡翠山", en:"Peranakan Place 180 Orchard Rd", lat:1.3010, lon:103.8387, s:"idea", d:"从 Selegie 打 Grab 约 12 分钟，日落约 18:45，到的时候是黄昏", go:"在 Peranakan Place（180 Orchard Rd）下车，就是翡翠山路口"},
-    {t:"18:25", n:"翡翠山历史保护区 Emerald Hill", en:"Emerald Hill Road Singapore", lat:1.3005, lon:103.8385, s:"fixed", d:"1901–1925 年建的联排洋楼，多是娘惹家族住宅，1989 年划为保护区；看点：路口 Peranakan Place 1902 年的六间两层店屋、中式巴洛克花板、彩色花砖、「平多帕加」旋转木门、五脚基走廊；黄昏到天黑灯光下很有气氛", go:"从 Peranakan Place 走上 Emerald Hill Road，沿路慢慢走一圈，约 1 小时", tip:"大多是私人住宅，只在路上拍照，别进院子、别大声说话；天黑后光线弱，手机开夜景模式；我没核对具体门牌，沿着最花的几栋拍就可以"},
-    {t:"19:45", n:"晚饭：National Kitchen by Violet Oon（国家美术馆）", en:"National Kitchen by Violet Oon National Gallery Singapore 1 St Andrew's Rd #02-01", lat:1.2903, lon:103.8517, s:"fixed", d:"在 1920 年代的老市政厅大楼二楼（国家美术馆 City Hall 侧翼），Violet Oon 的娘惹菜，有大厅和露台座位，比商场里那家更有历史感；官网上能确认的招牌是 Kunyit Lemak 椰浆姜黄杏鲍菇；其他菜（黑果炖鸡 Ayam Buah Keluak、叻沙、辣椒椰浆虾、海南猪排等）是同一位主厨的招牌，美术馆店的菜单相近，具体以当天为准；晚餐 18:00–22:30，最后点单 21:30", go:"从翡翠山 Grab 约 15–20 分钟（晚上车多可能到 25 分钟）；从 Coleman Street 入口进美术馆，上二楼 #02-01", tip:"提前订位：violetoon.com、电话 +65 9834 9935、或 eat@violetoon.com，订 19:45；价格我没有从官网核到，先别记数字；备选：ION Orchard 的 Violet Oon（#04-12，离翡翠山更近）、Bonding Kitchen（Orchard Gateway #02-18）；吃完从美术馆回 Clarke Quay 只要 7–10 分钟"},
-    {t:"21:30", n:"打车回酒店", en:"Paradox Singapore Merchant Court", lat:1.2887, lon:103.8466, s:"idea", d:"美术馆 → Clarke Quay 约 7–10 分钟，大约 21:40 到酒店；也可以沿河慢慢走回去，约 20 分钟；衣服有榴莲味，回房先洗澡", tip:"榴莲味重，穿的衣服先装塑料袋；鱼尾狮不在回酒店的路上，11/25 下午 16:00 去"}
-  ], todos:["预约 Peranakan Mansion 11:00 导览（电话 +65 9789 7628）","订 National Kitchen by Violet Oon 19:45 的位子（violetoon.com 或 +65 9834 9935）","带无味湿巾、口香糖、防晒、薄外套","穿舒服的鞋，充电宝带好"]},
+    {id:"d1123-1", t:"09:15", n:"出发去如切", ne:"Depart for Joo Chiat", en:"Chin Mee Chin Confectionery 204 East Coast Rd", lat:1.3051, lon:103.9092, s:"idea", d:"从酒店打 Grab 约 20 分钟；今天路线：如切 → 老机场路食阁 → 榴莲街 → 哈芝巷 → Selegie → 翡翠山 → 国家美术馆晚餐，约 21:40 回到酒店", go:"直接到 Chin Mee Chin（204 East Coast Rd）下车", nov:true},
+    {id:"d1123-2", t:"09:40", n:"早餐：Chin Mee Chin 老饼店", ne:"Breakfast · Chin Mee Chin Confectionery", en:"Chin Mee Chin Confectionery 204 East Coast Rd", lat:1.3051, lon:103.9092, s:"fixed", d:"1925 年开的老式咖啡饼店，炭烤咖椰吐司（约 S$2.8）配半熟蛋、奶油角（cream horn）、各口味包和蛋糕；店内有老式大理石桌和花砖地板", go:"每天 8:00–16:00 营业，最后点单 15:45；离 Marine Parade 地铁站步行约 10 分钟", tip:"2018 年关过，现在由原家族重开；吐司蘸半熟蛋和酱油，是正宗吃法；回如切路上可以在 Kim Choo Kueh Chang（60 Joo Chiat Place，每天 9:00–21:00）买几块娘惹糕点带着吃"},
+    {id:"d1123-3", t:"10:20", n:"Koon Seng Road 彩色排屋", ne:"Koon Seng Road Peranakan Houses", en:"Koon Seng Road Singapore", lat:1.3127, lon:103.9006, s:"fixed", d:"新加坡最出名的娘惹彩色排屋，早上人少、光线柔；再看后巷的彩色门、附近的壁画", go:"从 Chin Mee Chin 打车约 5 分钟；住宅区，拍照轻声、别挡路", tip:"拍完 10:55 走去隔壁的 Peranakan Mansion"},
+    {id:"d1123-4", t:"11:00", n:"Singapore Peranakan Mansion 娘惹博物馆", ne:"Singapore Peranakan Mansion Museum", en:"Singapore Peranakan Mansion 283A Joo Chiat Rd", lat:1.3125, lon:103.9012, s:"fixed", d:"如切路上的娘惹私人博物馆：娘惹古董家具、青花瓷、150 年的婚床、串珠鞋、kebaya 和首饰；导览约 1–2 小时，娘惹体验和服装拍摄在这里做", go:"在 283A Joo Chiat Rd，离 Koon Seng Road 步行几分钟", tip:"只接受预约（电话 +65 9789 7628 或 Facebook）；文化导览约 S$38 每人；手机自拍版的娘惹服拍照约 S$50 每人起，专业摄影棚版 S$980 起；每天 11:00 开门（周三 9:00 起）。预约时问清当天时间、能不能试衣、拍照价格，如果要拍照就留 2.5 小时"},
+    {id:"d1123-5", t:"13:30", n:"午饭：老机场路食阁 · 老夫子炒粿条", ne:"Lunch · Old Airport Road Food Centre (Lao Fu Zi Fried Kway Teow)", en:"Lao Fu Zi Fried Kway Teow Old Airport Road Food Centre #01-12 51 Old Airport Rd", lat:1.3085, lon:103.8878, s:"fixed", d:"今天午饭的重点：老夫子炒粿条（Lao Fu Zi Fried Kway Teow，摊位 #01-12），必比登推介。米其林指南页面写周一 11:45–22:00 营业（周三、周六休息），另有网站写每天营业，去之前在 Google 地图确认当天状态。食阁 1973 年开，约 170 个摊位。吃完粿条还有胃口的话，再点一样分着吃：Hua Ji 鱼头米粉（#01-118，周五到周三 12:30–21:00）、Toa Payoh 罗杂（#01-108，周一到周六）；甜品：Whampoa 豆花（#01-68，每天 8:00–20:00）", go:"从如切打 Grab 约 10 分钟；进食阁后找 #01-12，每份 S$4–8，两个人点 3–4 样分着吃", tip:"11:45 才开始营业，13:30 到可能要排队，先占座再去点；摊位时间来自网上资料，可能有变；14:30 前吃完去榴莲街"},
+    {id:"d1123-6", t:"14:45", n:"榴莲街 · Geylang 榴莲摊", ne:"Durian Street · Geylang", en:"Durian 36 608 Geylang Rd", lat:1.3172, lon:103.8888, s:"fixed", d:"Geylang Road 靠 Lorong 36 路口一带，沿着骑楼摆桌椅；Durian 36（608 Geylang Rd）标注 24 小时营业，主打猫山王", go:"从老机场路食阁打 Grab 约 6–8 分钟；吃完直接打车去哈芝巷，别坐地铁", tip:"另一些摊位傍晚才开，下午去先确认 Durian 36 开着（电话 9889 4906）；11–12 月是榴莲小季，点之前问清按个还是按公斤，让老板帮你开、先试再买；榴莲不能带进酒店和地铁，就在摊边吃；Geylang 有些街区夜里复杂，白天只在大路沿线的摊位；吃完洗手漱口，包里放无味湿巾和薄荷糖（口香糖在新加坡是违禁品，别带）"},
+    {id:"d1123-7", t:"16:05", n:"哈芝巷 Haji Lane", ne:"Haji Lane · Kampong Glam", en:"Haji Lane Singapore", lat:1.3009, lon:103.8590, s:"fixed", d:"新加坡最窄的潮流小巷，两边是彩色壁画和小店：Coffee Donkee（51 号，秋千和草坪，10:30–18:30）、Vintagewknd 古着（41 号，12:00–21:00）、Musicology Records 黑胶（66 号，12:30–20:30）、Gelato Garden（65 号，11:00–22:00）、Solace Airlines 韩式写真馆（73 号，11:00–22:00，可以拍一组）、Crafune 手作皮具工作坊（#02-01 38 号，11:00–18:00，做钱包）、Hands on Film 胶片相机（Bali Lane 21 号，11:00–19:00）", go:"从 Geylang 打 Grab 约 15–20 分钟，在 Haji Lane 路口下车（哈芝巷就在甘榜格南区里）；在哈芝巷和旁边的 Bali Lane 慢慢逛，约 1.5 小时", tip:"天黑后霓虹壁画更好看；商店营业时间来自网上资料，可能有出入"},
+    {id:"d1123-8", t:"17:15", n:"Bussorah Street · 苏丹回教堂", ne:"Bussorah Street · Sultan Mosque", en:"Masjid Sultan Singapore Bussorah Street", lat:1.3023, lon:103.8583, s:"idea", d:"从哈芝巷走到 Arab Street 和 Bussorah Street：棕榈树大道尽头就是金顶的苏丹回教堂，Arab Street 一带有土耳其地毯、布料、香料小店", go:"从哈芝巷步行约 5 分钟", tip:"进回教堂要遮肩膝、非穆斯林有固定参观时间，赶不上就在外面拍"},
+    {id:"d1123-9", t:"17:45", n:"Selegie Arts Centre 打卡", ne:"Selegie Arts Centre", en:"Selegie Arts Centre 30 Selegie Rd", lat:1.3002, lon:103.8508, s:"fixed", d:"Selegie Road 和 Prinsep Street 路口的楔形老楼，窗框涂满鲜艳的颜色，在外面拍照 15–20 分钟；傍晚的光让颜色更饱和", go:"从苏丹回教堂打 Grab 约 8–10 分钟，往乌节路方向顺路", tip:"大楼里有咖啡店、画材店和画廊，开放时间我没查到，外面拍就够"},
+    {id:"d1123-10", t:"18:25", n:"翡翠山历史保护区 Emerald Hill", ne:"Emerald Hill Conservation Area", en:"Peranakan Place 180 Orchard Rd", lat:1.3005, lon:103.8385, s:"fixed", d:"1901–1925 年建的联排洋楼，多是娘惹家族住宅，1989 年划为保护区。拍照路线从路口往山上走：① 路口 Peranakan Place 的彩色店屋；② 2–9 号一带是酒吧（2 号 Alley Bar、5 号 No. 5 Emerald Hill、7 号 Que Pasa、9 号 Ice-Cold Beer），天黑后亮灯最热闹；③ 39、43 号（1905 年建，白墙配潮州式门楼）、41 号的古董木门 pintu pagar、45 号门面最宽、屋脊带燕尾；④ 53–85 号是 1920 年代中期成排的联排屋，彩色花砖和木窗花最整齐；⑤ 64–74 号是 1916 年建的一排。门牌来自旅游指南，以现场为准", go:"18:10 从 Selegie 出发：Grab 目的地写「Peranakan Place, 180 Orchard Road」，约 12 分钟，在翡翠山路口下车；日落约 18:45，先慢慢走上山，天黑后回头拍酒吧街的灯", tip:"大多是私人住宅，只在路上拍照，别进院子、别大声说话；Emerald Hill 本身几乎没有零售小店，想逛店可以去 Orchard Gateway（斜对面）或 313@Somerset（步行几分钟）；路上的酒吧天黑后才热闹；手机开夜景模式"},
+    {id:"d1123-11", t:"19:45", n:"晚饭：National Kitchen by Violet Oon（国家美术馆）", ne:"Dinner · National Kitchen by Violet Oon", en:"National Kitchen by Violet Oon National Gallery Singapore 1 St Andrew's Rd #02-01", lat:1.2903, lon:103.8517, s:"fixed", d:"在 1920 年代的老市政厅大楼二楼（国家美术馆 City Hall 侧翼），Violet Oon 的娘惹菜，有大厅和露台座位，比商场里那家更有历史感；官网上能确认的招牌是 Kunyit Lemak 椰浆姜黄杏鲍菇；其他菜（黑果炖鸡 Ayam Buah Keluak、叻沙、辣椒椰浆虾、海南猪排等）是同一位主厨的招牌，美术馆店的菜单相近，具体以当天为准；晚餐 18:00–22:30，最后点单 21:30", go:"从翡翠山 Grab 约 15–20 分钟（晚上车多可能到 25 分钟）；从 Coleman Street 入口进美术馆，上二楼 #02-01", tip:"提前订位：violetoon.com、电话 +65 9834 9935、或 eat@violetoon.com，订 19:45；价格我没有从官网核到，先别记数字；备选：ION Orchard 的 Violet Oon（#04-12，离翡翠山更近）、Bonding Kitchen（Orchard Gateway #02-18）；吃完从美术馆回 Clarke Quay 只要 7–10 分钟"},
+    {id:"d1123-12", t:"21:30", n:"打车回酒店", ne:"Back to the hotel", en:"Paradox Singapore Merchant Court", lat:1.2887, lon:103.8466, s:"idea", d:"美术馆 → Clarke Quay 约 7–10 分钟，大约 21:40 到酒店；也可以沿河慢慢走回去，约 20 分钟；衣服有榴莲味，回房先洗澡", tip:"榴莲味重，穿的衣服先装塑料袋；鱼尾狮不在回酒店的路上，11/25 下午 16:00 去", nov:true}
+  ], todos:["订夜间动物园门票（选 20:15 场次；晚到 15 分钟能不能进，先在官网确认；或买 21:15 场次）", "出发去动物园前在 Google 地图确认 Geylang Lor 9 当晚营业", "预订 HolyCrab 12:30 位子（Chope 或电话）", "提前查国家博物馆目前开放的展厅", "带薄外套、驱蚊液、充电宝（一整天不回酒店）"]},
 
-  { date:"2026-11-24", city:"sg", title:"警察局 · 福康宁 · 两座博物馆 · 夜间动物园", items:[
-    {t:"08:30", n:"Old Hill Street Police Station（彩虹窗大楼）", en:"Old Hill Street Police Station 140 Hill St", lat:1.2900, lon:103.8472, s:"fixed", d:"927 扇彩色窗户的 1934 年老警察局，新加坡最好认的彩色建筑，1998 年成为国家古迹；对面马路退后一点可以拍到全景", go:"从酒店步行约 8–10 分钟，或 Clarke Quay 站走 3 分钟", tip:"一楼有画廊和 Atrium @ MCI，开放时间我没查到，外面拍就够；早上光线柔、人少"},
-    {t:"09:00", n:"福康宁公园 Fort Canning Park", en:"Fort Canning Park Singapore", lat:1.2950, lon:103.8458, s:"fixed", d:"24 小时开放，免费；看点：Fort Gate、Spice Garden（180 多种香料植物）、东盟雕塑园、历史花园；约 45 分钟，边逛边往土生博物馆那一侧走", go:"从 Old Hill Street Police Station 往山上走，步行约 5–10 分钟", tip:"早上凉快；山上蚊子多，带驱蚊液；9:50 前要走到 Armenian Street"},
-    {t:"10:00", n:"土生华人博物馆", en:"Peranakan Museum 39 Armenian St", lat:1.2942, lon:103.8487, s:"fixed", d:"新加坡最全的土生华人（娘惹 / 峇峇）文化博物馆：嫁妆、珠绣、金饰、婚礼文化，约 1.5–2 小时", go:"从福康宁公园步行约 10 分钟", tip:"每天 10:00–19:00，最晚入场约 18:30；外国游客门票约 S$16（需以官网为准）；11:45 看完后可以去隔壁 Armenian Street 逛逛再走去吃饭"},
-    {t:"12:30", n:"午饭：HolyCrab（Capitol）", en:"HolyCrab 13 Stamford Rd #01-85 Capitol Singapore", lat:1.2937, lon:103.8512, s:"fixed", d:"斯里兰卡式螃蟹：绿辣椒蟹、胡椒蟹、配炸馒头；在 Capitol Kempinski 的 13 Stamford Rd #01-85，离土生博物馆步行约 10 分钟，吃完去国家博物馆也顺路", go:"电话 +65 8444 2722，或在 Chope 上订位", tip:"店很小，有评论说常常客满，建议先订 12:30 的位子；人均约 S$40，螃蟹按重量计价，点前问清价格；11/22 在 Jumbo 吃过一次螃蟹，这顿可以点小份；14:00 前要吃完走"},
-    {t:"13:45", n:"新加坡国家博物馆", en:"National Museum of Singapore 93 Stamford Rd", lat:1.2966, lon:103.8485, s:"fixed", d:"新加坡最古老的博物馆，约 4 小时，看到 18:00 左右（博物馆 19:00 关门）", go:"从 Capitol 步行约 10–12 分钟", tip:"每天 10:00–19:00，外国游客约 S$15；新加坡历史馆之前有一段时间在整修，目前开放哪些展厅我没查到，去之前看官网（nationalmuseum.nhb.gov.sg）；4 小时较长，可中途去里面的咖啡馆休息"},
-    {t:"18:15", n:"去 Sixth Avenue", s:"idea", d:"离开博物馆后打 Grab 约 20–25 分钟（晚高峰可能到 30 分钟），到 18:45 左右"},
-    {t:"18:45", n:"晚饭：Kopi House 1990 @ Sixth Ave", en:"Kopi House 1990 24 Sixth Ave Singapore 276481", lat:1.3317, lon:103.7966, s:"fixed", d:"武吉知马的老式咖啡店，主打 CTE 套餐（咖啡、吐司、蛋）、蛋挞、咖喱角", go:"地铁 Downtown 线 Sixth Avenue 站", tip:"每天 5:00–23:00 营业，主要是咖啡店轻食，不算正餐；要赶 20:15 的场次，19:35 出发就来得及，可以吃 45 分钟；园里 18:30 起也有餐厅，可以再补一顿"},
-    {t:"19:35", n:"出发去夜间动物园", s:"idea", d:"从 Sixth Avenue 打车约 25–30 分钟（17 点后车费加 S$5 附加费）", tip:"Selegie 挪走后时间松了一些；想更从容也可以买 21:15 场次"},
-    {t:"20:15", n:"夜间动物园 Night Safari", en:"Night Safari Singapore 80 Mandai Lake Rd", lat:1.4022, lon:103.7897, s:"fixed", d:"世界首个夜间动物园，场次入场时间 19:15 / 20:15 / 21:15 / 22:15，最晚 23:15，约 3 小时；乘园内小火车约 30 分钟，Creatures of the Night 表演每晚 19:30、20:30、21:30", go:"回程打车约 25–30 分钟，先在 Grab 上叫好；你们约 23:30 离开，00:15 左右到酒店", tip:"门票约 S$58 起，含小火车约 S$64，提前 2–5 天买；动物区禁止闪光灯；今天从早上 8:30 一直在外面，注意体力，晚上冷可以带件外套"}
-  ], todos:["订夜间动物园门票（选 20:15 或 21:15 场次）","预订 HolyCrab 12:30 位子（Chope 或电话）","提前查国家博物馆目前开放的展厅","带薄外套、驱蚊液、充电宝（一整天不回酒店）"]},
+  { date:"2026-11-24", city:"sg", title:"警察局 · 福康宁 · 两座博物馆 · 夜间动物园 · 田鸡粥宵夜", items:[
+    {id:"d1124-1", t:"08:30", n:"Old Hill Street Police Station（彩虹窗大楼）", ne:"Old Hill Street Police Station (Rainbow Windows)", en:"Old Hill Street Police Station 140 Hill St", lat:1.2900, lon:103.8472, s:"fixed", d:"927 扇彩色窗户的 1934 年老警察局，新加坡最好认的彩色建筑，1998 年成为国家古迹；对面马路退后一点可以拍到全景", go:"从酒店步行约 8–10 分钟，或 Clarke Quay 站走 3 分钟", tip:"一楼有画廊和 Atrium @ MCI，开放时间我没查到，外面拍就够；早上光线柔、人少"},
+    {id:"d1124-2", t:"09:00", n:"福康宁公园 Fort Canning Park", ne:"Fort Canning Park", en:"Fort Canning Park Singapore", lat:1.2950, lon:103.8458, s:"fixed", d:"24 小时开放，免费；看点：Fort Gate、Spice Garden（180 多种香料植物）、东盟雕塑园、历史花园；约 45 分钟，边逛边往土生博物馆那一侧走", go:"从 Old Hill Street Police Station 往山上走，步行约 5–10 分钟", tip:"早上凉快；山上蚊子多，带驱蚊液；9:50 前要走到 Armenian Street"},
+    {id:"d1124-3", t:"10:00", n:"土生华人博物馆", ne:"Peranakan Museum", en:"Peranakan Museum 39 Armenian St", lat:1.2942, lon:103.8487, s:"fixed", d:"新加坡最全的土生华人（娘惹 / 峇峇）文化博物馆：嫁妆、珠绣、金饰、婚礼文化，约 1.5–2 小时", go:"从福康宁公园步行约 10 分钟", tip:"每天 10:00–19:00，最晚入场约 18:30；外国游客门票约 S$16（需以官网为准）；11:45 看完后可以去隔壁 Armenian Street 逛逛再走去吃饭"},
+    {id:"d1124-4", t:"12:30", n:"午饭：HolyCrab（Capitol）", ne:"Lunch · HolyCrab (Capitol)", en:"HolyCrab 13 Stamford Rd #01-85 Capitol Singapore", lat:1.2937, lon:103.8512, s:"fixed", d:"斯里兰卡式螃蟹：绿辣椒蟹、胡椒蟹、配炸馒头；在 Capitol Kempinski 的 13 Stamford Rd #01-85，离土生博物馆步行约 10 分钟，吃完去国家博物馆也顺路", go:"电话 +65 8444 2722，或在 Chope 上订位", tip:"店很小，有评论说常常客满，建议先订 12:30 的位子；人均约 S$40，螃蟹按重量计价，点前问清价格；11/22 在 Jumbo 吃过一次螃蟹，这顿可以点小份；14:00 前要吃完走"},
+    {id:"d1124-5", t:"13:45", n:"新加坡国家博物馆", ne:"National Museum of Singapore", en:"National Museum of Singapore 93 Stamford Rd", lat:1.2966, lon:103.8485, s:"fixed", d:"新加坡最古老的博物馆，约 5 小时，计划 18:30–19:00 之间离开（博物馆 19:00 关门）", go:"从 Capitol 步行约 10–12 分钟", tip:"每天 10:00–19:00，外国游客约 S$15；新加坡历史馆之前有一段时间在整修，目前开放哪些展厅我没查到，去之前看官网（nationalmuseum.nhb.gov.sg）；5 小时较长，可中途去里面的咖啡馆休息"},
+    {id:"d1124-6", t:"18:45", n:"离开国家博物馆，去 Sixth Avenue", ne:"Leave the Museum for Sixth Avenue", s:"idea", d:"18:30–19:00 之间出发都行；Grab 约 20–25 分钟（晚高峰可能到 30 分钟），19:10 左右到", nov:true},
+    {id:"d1124-7", t:"19:10", n:"晚饭：Kopi House 1990 @ Sixth Ave", ne:"Dinner · Kopi House 1990 @ Sixth Ave", en:"Kopi House 1990 24 Sixth Ave Singapore 276481", lat:1.3317, lon:103.7966, s:"fixed", d:"武吉知马的老式咖啡店，主打 CTE 套餐（咖啡、吐司、蛋）、蛋挞、咖喱角", go:"地铁 Downtown 线 Sixth Avenue 站", tip:"每天 5:00–23:00 营业，主要是咖啡店轻食，不算正餐；吃到 20:00 就要出发，约 45–50 分钟，点 CTE 套餐、蛋挞这类上得快的；想吃饱，夜间动物园里 18:30 起也有餐厅，可以再补一顿"},
+    {id:"d1124-8", t:"20:00", n:"出发去夜间动物园", ne:"To Night Safari", s:"idea", d:"从 Sixth Avenue 打车约 25–30 分钟（17 点后车费加 S$5 附加费），20:30 左右到", tip:"Grab 在 19:55 前叫好；赶不上就买 21:15 场次", nov:true},
+    {id:"d1124-9", t:"20:30", n:"夜间动物园 Night Safari", ne:"Night Safari", en:"Night Safari Singapore 80 Mandai Lake Rd", lat:1.4022, lon:103.7897, s:"fixed", d:"世界首个夜间动物园。约 19:15 开门（也有网站写 18:30），24:00 关门，最晚 23:15 入场，一般要玩 3 小时。4 条步行道：Fishing Cat、Leopard、East Lodge、Wallaby；园内小火车约 30–40 分钟。表演场次：Creatures of the Night（动物表演，圆形剧场，约 20 分钟）每晚 19:30、20:30、21:30；Twilight 火舞表演（入口广场，免订位）周日到周四 20:00、21:00，周五、周六 20:00、21:00、22:00", go:"回程打车约 25–30 分钟，先在 Grab 上叫好；你们计划 23:30 左右离开", tip:"建议这样排：20:30 进园 → 21:00 在入口广场看火舞 → 21:15 去圆形剧场占位 → 21:30 看 Creatures of the Night → 22:00 坐小火车 → 22:40 走两条步道 → 23:20 出园；圆形剧场座位先到先得；表演时间来自第三方网站，以官网和现场告示为准；门票约 S$58 起，含小火车约 S$64，提前 2–5 天买；动物区禁止闪光灯；晚上冷可以带件外套"},
+    {id:"d1124-10", t:"23:30", n:"离开夜间动物园，去芽笼宵夜", ne:"Leave Night Safari for Geylang", s:"idea", d:"在出口叫 Grab（先在 App 里选好目的地），到芽笼约 35–45 分钟（估计），00:10 前后到", nov:true},
+    {id:"d1124-11", t:"00:15", n:"宵夜：Geylang Lor 9 田鸡粥", ne:"Supper · Geylang Lor 9 Fresh Frog Porridge", en:"Geylang Lor 9 Fresh Frog Porridge 235 Geylang Rd", lat:1.3135, lon:103.8750, s:"fixed", d:"芽笼最出名的田鸡粥老店，地址 235 Geylang Road（Lorong 9），周二营业：周一到周四 16:00–04:00，周五到周日 12:00–04:00；一份砂锅田鸡粥约 S$8.50 起，常点干辣椒田鸡（Dried Chilli）和姜葱田鸡（Ginger Spring Onion），粥另点", go:"从夜间动物园打车约 35–45 分钟（估计），00:10 前后到；备选：明辉田鸡粥（323 Geylang Road，米其林页面写周二休息，去前先看 Google 地图）、G7（161–163 Geylang Road）", tip:"夜宵时段人多，可能要等位；吃完大约 01:00；Geylang 夜里有些街区复杂，吃完直接叫车，别在小巷里逛；地图点位是估的，导航以店名和地址为准"},
+    {id:"d1124-12", t:"01:15", n:"打车回酒店", ne:"Back to the hotel", en:"Paradox Singapore Merchant Court", lat:1.2887, lon:103.8466, s:"idea", d:"芽笼 → Clarke Quay 约 15–20 分钟，大约 01:30 到酒店", tip:"明早 11/25 的东亚早餐如果起不来，可以推到 10:00，周三东亚开到 14:00", nov:true}
+  ], todos:["提前订 Bafu 20:30 的位置", "买好伴手礼放行李箱，确认行李重量", "出发前 3 天内提交泰国 TDAC", "今天路线长，穿舒服的鞋；带小电扇或水"]},
 
   { date:"2026-11-25", city:"sg", title:"牛车水 · 鱼尾狮 · 滨海湾花园 · 榴莲鸡火锅", items:[
-    {t:"09:00", n:"东亚 Tong Ah Eating House（早餐）", en:"Tong Ah Eating House 35 Keong Saik Rd", lat:1.2802, lon:103.8419, s:"fixed", d:"1939 年的老店，炭烤脆吐司配咖椰和半熟蛋；一份套餐 S$5–7 左右", go:"从酒店 Grab 约 10 分钟，或 Clarke Quay → Outram Park 站再步行", tip:"周三只开到 14:00（其他日子 7:00–22:00），要早点去；我是按「东亚」猜的 Tong Ah，如果不是请告诉我"},
-    {t:"10:00", n:"Tong Mern Sern Antiques Arts & Crafts", en:"Tong Mern Sern 51 Craig Rd", lat:1.2787, lon:103.8428, s:"fixed", d:"三层老排屋，塞满老物件：翡翠白菜、墙上的瓷盘、楼梯上的老打字机、老式梳妆台、能放音乐的古董钟", go:"从东亚步行约 5 分钟；每天 9:00–18:00 营业", tip:"不一定每件都卖，想买先问；拍照前先问店主"},
-    {t:"11:30", n:"BabyFang（Tras Link）午饭", en:"Baby Fang 1 Tras Link #01-07", lat:1.2758, lon:103.8457, s:"fixed", d:"印尼 / 南洋风咖啡简餐店，招牌有 Indomie 和鸡饭；在 Tanjong Pagar 的 1 Tras Link #01-07", go:"从 Craig Rd 步行约 10–12 分钟；周二到周五 11:30–15:30、17:30–22:45", tip:"我按这一家排的，如果你说的 BabyFang 是别家（比如别的分店），把地址发我；营业时间来自外卖平台，可能有出入"},
-    {t:"12:45", n:"佛牙寺（牛车水的庙）", en:"Buddha Tooth Relic Temple 288 South Bridge Rd", lat:1.2814, lon:103.8441, s:"fixed", d:"牛车水最有名的庙，免费参观，四层殿堂和佛牙舍利", go:"从 Tras Link Grab 约 5 分钟，或步行 15 分钟", tip:"进寺要遮肩、过膝；你说的「牛车水的庙」没写名字，我先排佛牙寺。如果你想去的是 Sri Mariamman（印度庙）或天福宫，告诉我我换掉，它们都在附近"},
-    {t:"13:45", n:"大中国 Tai Chong Kok（Sago Street）", en:"Tai Chong Kok 38 Sago St", lat:1.2828, lon:103.8446, s:"fixed", d:"老牌广式饼家，招牌是小猪酥（约 S$2 两个）、坚果月饼；每天 9:30–20:00 营业", go:"从佛牙寺步行约 5 分钟", tip:"买一两样现吃，别买多，今天还要走很多路"},
-    {t:"14:15", n:"Chinatown Market Wall · 叶耀聪牛车水壁画", en:"Chinatown wet market mural 30 Temple St", lat:1.2827, lon:103.8440, s:"fixed", d:"Yip Yew Chong（叶耀聪）画的牛车水壁画：Pagoda St 和 Temple St 之间小巷尽头的「湿巴刹」壁画是逛菜市场的场景，可以摆姿势拍照；附近还有「理发」「木屐匠」等壁画", go:"从 Tai Chong Kok 步行约 5 分钟", tip:"壁画在小巷里，拍照时留意来往的人；附近 Smith Street 的 Chinatown Complex 地面层柱子上也有李小龙和招财猫的壁画"},
-    {t:"15:00", n:"回酒店休息", en:"Paradox Singapore Merchant Court", lat:1.2887, lon:103.8466, s:"idea", d:"从牛车水回 Clarke Quay 地铁 1 站；洗澡、换衣服、充电，休息 45 分钟", go:"Chinatown 站 → 东北线（紫）Clarke Quay 站，1 站"},
-    {t:"16:00", n:"鱼尾狮公园 Merlion Park", en:"Merlion Park One Fullerton 1 Fullerton Rd", lat:1.2868, lon:103.8545, s:"fixed", d:"新加坡的象征，背后是金沙酒店；24 小时开放；11:00–15:00 光线最硬、人最多，16:00 以后好很多，下午到傍晚金沙正面受光，拍照最好", go:"从酒店 Grab 约 10 分钟，或沿河步行约 15–25 分钟", tip:"11/22 的 Bumboat 路线会经过这里，从水上看一遍；今天是在岸上拍近景。最好的位置在雕像正前方，人多时等一两分钟就能等到空档。拍完 16:45 出发去滨海湾花园"},
-    {t:"17:15", n:"滨海湾花园 · Golden Garden · 空中走廊", en:"Gardens by the Bay Supertree Grove", lat:1.2816, lon:103.8636, s:"fixed", d:"户外花园免费；天快黑时上 OCBC Skyway（空中走廊）看日落，晚 21:00 关闭，最晚入场 20:30；冷凝馆 Cloud Forest 和花穹 Flower Dome 要买票，最晚入场 20:00 / 20:30", go:"从鱼尾狮公园打 Grab 约 10–15 分钟", tip:"日落约 18:45，先拍照再看灯光秀；Garden Rhapsody 当晚有 19:45 和 20:45 两场，你们看 19:45 的，之后有时间吃火锅"},
-    {t:"19:45", n:"Garden Rhapsody 灯光秀", en:"Supertree Grove Gardens by the Bay", lat:1.2816, lon:103.8636, s:"fixed", d:"Supertree 随音乐变灯光，约 15 分钟，免费；躺在地上看最舒服", tip:"圣诞特别版 11/27 才开始，赶不上"},
-    {t:"20:30", n:"榴莲鸡火锅：Bafu Durian Chicken", en:"Bafu Durian Chicken 18 Smith Street", lat:1.2831, lon:103.8443, s:"idea", d:"牛车水 Smith Street 18 号，每天 11:00–22:00 营业；招牌用猫山王榴莲、走地鸡、泰国椰青，汤底有榴莲椰青和酸汤两种", go:"灯光秀结束后 Grab 约 20 分钟，也可地铁 Bayfront → Chinatown", tip:"我没查到它的最后点单时间，先电话确认能不能 20:30 到；价格偏贵（$$$$），猫山王点之前问清价格；订不到位备选：回酒店旁 Jumbo 再吃一次，或 Smith Street 上其他小吃"}
-  ], todos:["提前订 Bafu 20:30 的位置","买好伴手礼放行李箱，确认行李重量","出发前 3 天内提交泰国 TDAC","今天路线长，穿舒服的鞋；带小电扇或水"]},
+    {id:"d1125-1", t:"09:00", n:"东亚 Tong Ah Eating House（早餐）", ne:"Breakfast · Tong Ah Eating House", en:"Tong Ah Eating House 35 Keong Saik Rd", lat:1.2802, lon:103.8419, s:"fixed", d:"1939 年的老店，炭烤脆吐司配咖椰和半熟蛋；一份套餐 S$5–7 左右", go:"从酒店 Grab 约 10 分钟，或 Clarke Quay → Outram Park 站再步行", tip:"周三只开到 14:00（其他日子 7:00–22:00），要早点去；我是按「东亚」猜的 Tong Ah，如果不是请告诉我"},
+    {id:"d1125-2", t:"10:00", n:"Tong Mern Sern Antiques Arts & Crafts", ne:"Tong Mern Sern Antiques Arts & Crafts", en:"Tong Mern Sern 51 Craig Rd", lat:1.2787, lon:103.8428, s:"fixed", d:"三层老排屋，塞满老物件：翡翠白菜、墙上的瓷盘、楼梯上的老打字机、老式梳妆台、能放音乐的古董钟", go:"从东亚步行约 5 分钟；每天 9:00–18:00 营业", tip:"不一定每件都卖，想买先问；拍照前先问店主"},
+    {id:"d1125-3", t:"11:30", n:"BabyFang（Tras Link）路过打卡", ne:"BabyFang (photo stop only)", en:"Baby Fang 1 Tras Link #01-07", lat:1.2758, lon:103.8457, s:"idea", d:"只在门口拍一张店名打卡，不进去吃；在 Tanjong Pagar 的 1 Tras Link #01-07", go:"从 Craig Rd 步行约 10–12 分钟，拍完走去 Maxwell 吃午饭约 8–10 分钟", tip:"我按这个地址排的，如果你说的 BabyFang 是别家，把地址发我"},
+    {id:"d1125-4", t:"12:00", n:"午饭：Maxwell 熟食中心 · 天天海南鸡饭", ne:"Lunch · Maxwell Food Centre (Tian Tian Chicken Rice)", en:"Tian Tian Hainanese Chicken Rice Maxwell Food Centre #01-10/11 1 Kadayanallur St", lat:1.2803, lon:103.8448, s:"idea", d:"麦士威熟食中心里的天天海南鸡饭（Tian Tian，#01-10/11，必比登推介；米其林指南写周二到周日 8:30–20:00，周一休息，周三照常营业）。想吃点心，Xing Xing 木薯糕和椰丝糯米球（周一到周六 7:00–13:00，每个约 S$0.7）颜色最好看，中午前后可能卖完", go:"从 BabyFang 步行约 8–10 分钟；吃完走到佛牙寺约 5 分钟", tip:"中午常要排队，可以先占座；这一站只是顺路建议，不想排队就换隔壁摊位"},
+    {id:"d1125-5", t:"12:45", n:"佛牙寺（牛车水的庙）", ne:"Buddha Tooth Relic Temple", en:"Buddha Tooth Relic Temple 288 South Bridge Rd", lat:1.2814, lon:103.8441, s:"fixed", d:"牛车水最有名的庙，免费参观，四层殿堂和佛牙舍利", go:"从 Maxwell 步行约 5 分钟", tip:"进寺要遮肩、过膝"},
+    {id:"d1125-6", t:"13:45", n:"大中国 Tai Chong Kok（Sago Street）", ne:"Tai Chong Kok Pastries (Sago Street)", en:"Tai Chong Kok 38 Sago St", lat:1.2828, lon:103.8446, s:"fixed", d:"老牌广式饼家，招牌是小猪酥（约 S$2 两个）、坚果月饼；每天 9:30–20:00 营业", go:"从佛牙寺步行约 5 分钟", tip:"买一两样现吃，别买多，今天还要走很多路"},
+    {id:"d1125-7", t:"14:15", n:"Chinatown Market Wall · 叶耀聪牛车水壁画", ne:"Chinatown Market Wall Mural by Yip Yew Chong", en:"Chinatown wet market mural 30 Temple St", lat:1.2827, lon:103.8440, s:"fixed", d:"Yip Yew Chong（叶耀聪）画的牛车水壁画：Pagoda St 和 Temple St 之间小巷尽头的「湿巴刹」壁画是逛菜市场的场景，可以摆姿势拍照；附近还有「理发」「木屐匠」等壁画", go:"从 Tai Chong Kok 步行约 5 分钟", tip:"壁画在小巷里，拍照时留意来往的人；附近 Smith Street 的 Chinatown Complex 地面层柱子上也有李小龙和招财猫的壁画"},
+    {id:"d1125-8", t:"15:00", n:"天福宫 Thian Hock Keng 与 Telok Ayer 街", ne:"Thian Hock Keng Temple & Telok Ayer Street", en:"Thian Hock Keng Temple 158 Telok Ayer St", lat:1.2811, lon:103.8478, s:"idea", d:"新加坡最老的福建庙之一，供奉妈祖，1839–1842 年由陈笃生（Tan Tock Seng）出资重建，1973 年列为国家古迹；每天 7:30–17:30，免费", go:"从牛车水壁画步行约 10–12 分钟；出来后 Grab 去鱼尾狮约 8 分钟", tip:"进殿要遮肩，里面是烧香的信众，拍照别对着人；Telok Ayer Street 上还有 Al-Abrar 清真寺等老建筑"},
+    {id:"d1125-9", t:"16:00", n:"鱼尾狮公园 Merlion Park", ne:"Merlion Park", en:"Merlion Park One Fullerton 1 Fullerton Rd", lat:1.2868, lon:103.8545, s:"fixed", d:"新加坡的象征，背后是金沙酒店；24 小时开放；11:00–15:00 光线最硬、人最多，16:00 以后好很多，下午到傍晚金沙正面受光，拍照最好", go:"从天福宫 Grab 约 8 分钟，或步行约 20 分钟", tip:"11/22 的 Bumboat 路线会经过这里，从水上看一遍；今天是在岸上拍近景。最好的位置在雕像正前方，人多时等一两分钟就能等到空档。拍完 16:45 出发去滨海湾花园"},
+    {id:"d1125-10", t:"17:15", n:"滨海湾花园 · Golden Garden · 空中走廊", ne:"Gardens by the Bay · Supertree Grove & OCBC Skyway", en:"Gardens by the Bay Supertree Grove", lat:1.2816, lon:103.8636, s:"fixed", d:"户外花园免费；天快黑时上 OCBC Skyway（空中走廊）看日落，晚 21:00 关闭，最晚入场 20:30；冷凝馆 Cloud Forest 和花穹 Flower Dome 要买票，最晚入场 20:00 / 20:30", go:"从鱼尾狮公园打 Grab 约 10–15 分钟", tip:"日落约 18:45，先拍照再看灯光秀；Garden Rhapsody 当晚有 19:45 和 20:45 两场，你们看 19:45 的，之后有时间吃火锅"},
+    {id:"d1125-11", t:"19:45", n:"Garden Rhapsody 灯光秀", ne:"Garden Rhapsody Light Show", en:"Supertree Grove Gardens by the Bay", lat:1.2816, lon:103.8636, s:"fixed", d:"Supertree 随音乐变灯光，约 15 分钟，免费；躺在地上看最舒服", tip:"圣诞特别版 11/27 才开始，赶不上"},
+    {id:"d1125-12", t:"20:30", n:"榴莲鸡火锅：Bafu Durian Chicken", ne:"Durian Chicken Hotpot · Bafu", en:"Bafu Durian Chicken 18 Smith Street", lat:1.2831, lon:103.8443, s:"idea", d:"牛车水 Smith Street 18 号，每天 11:00–22:00 营业；招牌用猫山王榴莲、走地鸡、泰国椰青，汤底有榴莲椰青和酸汤两种", go:"灯光秀结束后 Grab 约 20 分钟，也可地铁 Bayfront → Chinatown", tip:"我没查到它的最后点单时间，先电话确认能不能 20:30 到；价格偏贵（$$$$），猫山王点之前问清价格；订不到位备选：回酒店旁 Jumbo 再吃一次，或 Smith Street 上其他小吃"}
+  ], todos:["确认酷航托运行李额度（Jewel 早到值机柜台 13:00 起办）", "Canopy Park 想玩的话提前在 Jewel 官网买票", "确认 TDAC 已提交", "买泰国电话卡或开 eSIM", "换一些泰铢现金（后面两天去的安帕瓦、大城多数只收现金）", "和包车师傅确认明早出发时间和 3 天路线"]},
 
   { date:"2026-11-26", city:"bkk", title:"告别狮城 · 樟宜机场 · 飞往曼谷", items:[
-    {t:"09:30", n:"酒店早餐 · 慢慢收拾", s:"idea", d:"不赶时间，把行李整理好，检查护照、充电宝放随身包"},
-    {t:"11:00", n:"退房（琵拉帝诗）", en:"Paradox Singapore Merchant Court", lat:1.2887, lon:103.8466, s:"fixed", d:"退房后带着行李直接去樟宜机场，不用回酒店", tip:"押金退还情况退房时确认；酒店一般中午前退房"},
-    {t:"11:30", n:"去樟宜机场 · 星耀樟宜", en:"Jewel Changi Airport", lat:1.3602, lon:103.9898, s:"fixed", d:"从酒店 Grab 约 25–30 分钟到 Jewel，星耀樟宜和 T1 有天桥相连", go:"在 Jewel 下车，不要直接去 T1 出发层，行李先带着逛", tip:"11:30 到的话离 13:00 还有一阵，可以先吃午饭"},
-    {t:"12:15", n:"星耀樟宜 · 雨漩涡 · 森林谷", en:"Jewel Changi Airport Rain Vortex", lat:1.3602, lon:103.9898, s:"idea", d:"40 米高的室内瀑布（每天 10:00–22:00），森林谷步道、商场、各种吃的", tip:"瀑布晚上才有灯光秀（20:00 起），白天你们只能看到瀑布本身；Canopy Park 里的付费项目要提前看官网"},
-    {t:"13:00", n:"Jewel 早到值机 · 寄行李", en:"Jewel Changi Airport Early Check-in Lounge", lat:1.3602, lon:103.9898, s:"fixed", d:"酷航可以在 Jewel 一层的早到值机柜台办，起飞前 3 小时开始、最早可提前 18 小时，办完行李就不用拖着逛了", tip:"柜台在 Jewel 1 楼；先看订单里的托运额度，不含的话现场加购比较贵"},
-    {t:"14:30", n:"去 T1 出境", en:"Changi Airport Terminal 1", lat:1.3618, lon:103.9893, s:"fixed", d:"从 Jewel 走天桥到 T1，过海关、免税店逛逛", tip:"买满一定金额的商品，记得在机场办消费税退税；登机口提前查，T1 很大"},
-    {t:"16:00", n:"TR610 飞往曼谷", s:"fixed", fl:1},
-    {t:"17:35", n:"抵达曼谷素万那普机场", en:"Suvarnabhumi Airport", lat:13.6900, lon:100.7501, s:"fixed", d:"曼谷比新加坡慢 1 小时，手机时间会自动调整", go:"带着行李建议直接打 Grab / 机场出租车，约 1 小时（晚高峰可能更久）", tip:"出口有电话卡柜台；提前填好 TDAC；出租车坚持打表，说 meter please"},
-    {t:"20:30", n:"入住曼谷河畔安凡尼酒店", en:"AVANI+ Riverside Bangkok Hotel", lat:13.7195, lon:100.5040, s:"fixed", d:"阿瓦尼河景房，只住 1 晚", tip:"明早 7:30 左右要退房出发去安帕瓦，今晚就把行李分好：一个小包装 11/27–11/28 两晚用的东西，大箱子放包车"},
-    {t:"21:30", n:"ICONSIAM 暹罗天地（夜宵）", en:"ICONSIAM", lat:13.7267, lon:100.5106, s:"idea", d:"一楼 SookSiam 室内水上市场，吃点小吃当夜宵", go:"酒店打车几分钟，太累就在酒店河景餐厅吃", tip:"商场一般 22:00 前后关门，晚了就直接回酒店"}
-  ], todos:["确认 TDAC 已提交","买泰国电话卡或开 eSIM","换一些泰铢现金（后面两天去的安帕瓦、大城多数只收现金）","和包车师傅确认明早出发时间和 3 天路线"]},
+    {id:"d1126-1", t:"08:30", n:"早餐 · 快一点", ne:"Quick hotel breakfast", s:"idea", d:"酒店早餐 30–40 分钟解决，9:15 前回房收拾；护照、充电宝、液体放随身包", tip:"早餐含不含以订单为准；不含的话 Clarke Quay 一带找家咖啡店吃咖椰吐司套餐，也很快", nov:true},
+    {id:"d1126-2", t:"10:30", n:"退房（琵拉帝诗）", ne:"Check-out · Paradox Singapore Merchant Court", en:"Paradox Singapore Merchant Court", lat:1.2887, lon:103.8466, s:"fixed", d:"退房后直接出发去樟宜，行李带着", tip:"押金退还情况退房时确认", nov:true},
+    {id:"d1126-3", t:"10:35", n:"去樟宜机场（Grab 或地铁）", ne:"To Changi Airport (Jewel)", s:"idea", d:"Grab 约 25–30 分钟，费用大约 S$25–35（估计，以 App 为准），11:00 前后到。司机目的地写「Jewel Changi Airport, 78 Airport Boulevard」", go:"想省钱可以坐地铁：Clarke Quay → Outram Park 换东西线 → Tanah Merah 换 Changi Airport 支线 → Changi Airport 站，约 50 分钟，下车后沿连廊走到 Jewel 约 5–10 分钟；拖着行李建议 Grab", tip:"在 Jewel 下车，不要直接去 T1 出发层，因为早到值机柜台在 Jewel 一层", nov:true},
+    {id:"d1126-4", t:"11:00", n:"Jewel 到达 · 寄存行李", ne:"Jewel · Baggage Storage", en:"Jewel Changi Airport 78 Airport Blvd", lat:1.3602, lon:103.9898, s:"fixed", d:"星耀樟宜（Jewel）直接连着 T1 到达大厅。行李先寄在一层的行李寄存处（收费，24 小时），空手逛；早到值机柜台 13:00 才开始办（TR610 起飞前 3 小时）", go:"寄存处和早到值机柜台都在 Jewel 一层；Canopy Park 里也有小件储物柜", tip:"寄存费用以现场为准"},
+    {id:"d1126-5", t:"11:20", n:"Shiseido 森林谷 · 雨漩涡", ne:"Shiseido Forest Valley & Rain Vortex", en:"Jewel Changi Airport Rain Vortex", lat:1.3602, lon:103.9898, s:"idea", d:"Shiseido Forest Valley 是四层楼的室内森林，两条步道从一层爬到顶层，全天开放；40 米高的 HSBC 雨漩涡（Rain Vortex）白天运行，晚上才有灯光秀（周一到周四 20:00、21:00），你们是白天，只能看到瀑布本身", go:"从一层沿步道往上走到五层的 Canopy Park，约 20–30 分钟，边走边拍", tip:"雨漩涡的运行时间有网站写 10:00 起、有网站写 11:00 起，11:20 去不会错"},
+    {id:"d1126-6", t:"12:10", n:"Canopy Park（Jewel 五层）", ne:"Canopy Park (Jewel Level 5)", en:"Canopy Park Jewel Changi Airport Level 5", lat:1.3602, lon:103.9898, s:"idea", d:"五层空中花园，周一到周四 10:00–22:00。付费项目：Canopy Bridge（50 米长、离地 23 米，有一段玻璃地板）、Manulife Sky Nets（行走网 / 弹跳网）、树篱迷宫和镜子迷宫、Discovery 滑梯、雾碗 Foggy Bowls；免费的有 Topiary Walk 和 Petal Garden", go:"约 60 分钟，13:10 前要回一层", tip:"门票价格我没核实到，官网有联票，想玩提前在 Jewel 官网买；穿平底鞋；时间紧就只逛免费区"},
+    {id:"d1126-7", t:"13:10", n:"早到值机 · 寄行李", ne:"Early Check-in Lounge (Jewel Level 1)", en:"Jewel Changi Airport Early Check-in Lounge Level 1", lat:1.3602, lon:103.9898, s:"fixed", d:"酷航（Scoot）可在 Jewel 一层的早到值机柜台办理，TR610 起飞前 3 小时开始，也就是 13:00 起。办完行李就不用再拿，空手吃饭、过关", go:"先去一层行李寄存处取行李，再去早到值机柜台；不托运的话，也可以直接去 T1 值机排（酷航在 T1，据第三方资料是 5–7 排，以现场屏幕为准）", tip:"酷航廉价票的托运行李要提前加购，现场加购更贵；早到值机的开放时间各来源写的不一样，以酷航和 Jewel 官网为准"},
+    {id:"d1126-8", t:"13:40", n:"午饭 · 伴手礼（Jewel）", ne:"Lunch & Gifts at Jewel", en:"Jewel Changi Airport Level 5 Garden Dining", lat:1.3602, lon:103.9898, s:"idea", d:"午饭三选一：① 五层花园餐饮区，对着雨漩涡吃：Arteastiq、Jack's Place、KANTIN；② 二层 Shake Shack（美式汉堡）；③ 一层本地品牌区的 Ya Kun 亚坤，咖椰吐司配半熟蛋收尾。饭后在一层本地品牌区买伴手礼：Rich & Good Cake Shop（娘惹糕 kueh）、Bengawan Solo（娘惹糕、凤梨挞）", go:"一层本地品牌区在早到值机柜台所在的同一层", tip:"娘惹糕当天吃完，要带上飞机就挑凤梨挞、蛋卷；咖椰酱是半液体，过关前买的只能托运，过海关后的店里买可以随身带；以上店家我没逐家核对当天营业时间"},
+    {id:"d1126-9", t:"14:40", n:"去 T1 出境", ne:"To Terminal 1 Immigration", en:"Changi Airport Terminal 1", lat:1.3618, lon:103.9893, s:"idea", d:"从 Jewel 一层走连廊进 T1 到达大厅，再上二层出发层过边检（出示登机牌）；TR610 在 T1 起飞", tip:"据第三方资料，T1 没有集中安检，行李安检在登机口做，以现场告示为准；15:15 前到登机口，T1 很大，先看屏幕上的登机口", nov:true},
+    {id:"d1126-10", t:"16:00", n:"TR610 飞往曼谷", ne:"Flight TR610 to Bangkok", s:"fixed", fl:1},
+    {id:"d1126-11", t:"17:35", n:"抵达曼谷素万那普机场", ne:"Arrive · Suvarnabhumi Airport", en:"Suvarnabhumi Airport", lat:13.6900, lon:100.7501, s:"fixed", d:"曼谷比新加坡慢 1 小时，手机时间会自动调整", go:"带着行李建议直接打 Grab / 机场出租车，约 1 小时（晚高峰可能更久）", tip:"出口有电话卡柜台；提前填好 TDAC；出租车坚持打表，说 meter please"},
+    {id:"d1126-12", t:"20:30", n:"入住曼谷河畔安凡尼酒店", ne:"Check-in · AVANI+ Riverside Bangkok", en:"AVANI+ Riverside Bangkok Hotel", lat:13.7195, lon:100.5040, s:"fixed", d:"阿瓦尼河景房，只住 1 晚", tip:"明早 7:30 左右要退房出发去安帕瓦，今晚就把行李分好：一个小包装 11/27–11/28 两晚用的东西，大箱子放包车"},
+    {id:"d1126-13", t:"21:30", n:"Asiatique 河滨夜市（夜宵）", ne:"Asiatique The Riverfront (supper)", en:"Asiatique The Riverfront 2194 Charoen Krung Rd", lat:13.7045, lon:100.5035, s:"idea", d:"曼谷河边的大型夜市和购物区，每天 16:00–24:00，在河对岸；有 60 米高的摩天轮（一圈约 20 分钟）、小吃摊和餐厅，可以当夜宵", go:"酒店有免费接驳船到 Saphan Taksin 码头（08:00–23:15，来自酒店官网），再换乘 Asiatique 的免费船（约 10–15 分钟）；回程船的末班时间到了 Asiatique 码头问清", tip:"你们 20:30 入住，21:15 前出门比较从容；累了就在酒店河景餐厅吃，或打车去 Charoen Nakhon Road 上的 Heng Hoi Tod Chaw Lae（1301 Charoen Nakhon Rd，每天 9:30–22:00，海蛎煎和炒面，离酒店多远我没核实）；ICONSIAM 打车约 7 分钟（酒店官网），商场一般 22:00 前后关门"}
+  ], todos:["给班印轩老板发消息 / 打电话：订明早的布施（斋饭）和早餐，问清楚几点、多少钱", "向司机或美功当地人确认当天火车时刻（我查到的是 2022 年的旧表）", "带够现金：小摊、船、庙都收现金", "驱蚊液、防晒、拖鞋装进随身小包", "确认安帕瓦水上市场周五的开市时间"]},
 
-  { date:"2026-11-27", city:"bkk", wx:{name:"安帕瓦 / 美功", lat:13.4260, lon:99.9570}, title:"水上市场 · 铁道市场 · 安帕瓦", items:[
-    {t:"07:30", n:"退房，包车出发", en:"AVANI+ Riverside Bangkok Hotel", lat:13.7195, lon:100.5040, s:"idea", d:"今天起 3 天（到 11/29 回曼谷市区）建议包一辆带司机的车，大行李放车上", tip:"在携程 / Klook 订，或让酒店前台帮忙叫车；说清楚：丹嫩沙多 → 美功 → 安帕瓦住一晚 → 次日去大城 → 回暹罗广场"},
-    {t:"09:15", n:"丹嫩沙多水上市场", en:"Damnoen Saduak Floating Market", lat:13.5196, lon:99.9590, s:"idea", d:"坐小船逛水上摊贩，越早人越少", go:"从曼谷过来约 1.5–2 小时", tip:"船上买东西记得砍价；游客船费看清楚再上"},
-    {t:"11:45", n:"美功铁道市场", en:"Maeklong Railway Market", lat:13.4074, lon:99.9997, s:"idea", d:"火车从菜市场中间穿过，摊贩瞬间收篷", tip:"火车每天只经过几趟，提前查当天时刻表再决定到的时间"},
-    {t:"14:00", n:"入住班印轩家庭旅馆", en:"Baan Ing Suan Amphawa", lat:13.4256, lon:99.9553, s:"fixed", d:"大床房（带阳台），只住 1 晚", tip:"小旅馆楼梯窄，只带随身小包进去；晚上河边有蚊子，带驱蚊液"},
-    {t:"16:00", n:"安帕瓦水上市场", en:"Amphawa Floating Market", lat:13.4261, lon:99.9564, s:"idea", d:"傍晚到夜里最热闹，河边小吃、烤海鲜、椰子糖", go:"从民宿步行即到", tip:"市场多在周五到周日下午至晚上营业，你们周五周六刚好；现金备好"},
-    {t:"19:30", n:"夜游萤火虫", s:"idea", d:"天黑后坐小船看河边树上的萤火虫", tip:"让民宿帮忙订船或在码头现场议价，晚上防蚊、别开闪光灯"}
-  ], todos:["驱蚊液、防晒、拖鞋装进随身小包","大行李留在包车上，贵重物品随身带","现场用现金，备足小面额泰铢"]},
+  { date:"2026-11-27", city:"bkk", wx:{"name": "安帕瓦 / 美功", "lat": 13.426, "lon": 99.957}, title:"美功铁道市场 · 树抱佛庙 · 安帕瓦水上市场 · 萤火虫", items:[
+    {"id": "d1127-1", "t": "09:00", "n": "退房，包车出发", "ne": "Check-out · Charter car departs", "en": "AVANI+ Riverside Bangkok Hotel", "lat": 13.7195, "lon": 100.504, "s": "idea", "d": "酒店含双早，吃完早餐 9:00 退房，车 9:00 来接；大行李留在车上，今晚和明晚只带一个小包", "tip": "9:00 出发已经错开最早的高峰，往西南出城方向通常比进城好走，但仍给自己留机动时间。跟司机说清路线：美功 → 树抱佛庙 → 安帕瓦班印轩；明天 安帕瓦 → 柴瓦塔那兰寺 → 大城酒店", "nov": true},
+    {"id": "d1127-3", "t": "11:00", "n": "美功铁道市场 · 看火车进站", "ne": "Maeklong Railway Market · Train Arrival", "en": "Maeklong Railway Market", "lat": 13.4074, "lon": 99.9997, "s": "idea", "d": "约 11:00 到（9:00 出发，路上约 2 小时，是我的估算），先逛菜市场；11:10 左右火车进站，11:30 左右又从站里开出，可以一次看两趟（下一趟进站要等到 14:30，太久，不建议为它留下）。如果路上堵得晚到，11:30 的开出也值得看", "go": "从曼谷包车约 2 小时（我的估算）", "tip": "时刻表我只查到一份（thaitrainguide，2022 年更新）：到站 8:30 / 11:10 / 14:30 / 17:40，开出 6:20 / 9:00 / 11:30 / 15:30；另一来源和它对不上。请让司机或当地摊贩当天确认。听到广播铃就站到铁轨边安全位置，摊贩会收篷，火车贴着摊位慢慢开过，拍视频站稳、别踩轨道"},
+    {"id": "d1127-7", "t": "12:00", "n": "午饭（美功小镇）", "ne": "Lunch in Maeklong", "s": "idea", "d": "一篇旧游记提到三家：Nam Prik Puthon（市场外大路边的小摊，十几种辣椒酱配蔬菜和蛋饼）；泰国酒店（Rong Raem Thai Sawadee）的老式海南鸡饭；Rong Krua 餐厅（美功本地菜、美功式冬阴功）。想吃海鲜：Don Hoi Lot 河口一带有海鲜餐厅和海鲜市场，离车站几公里", "tip": "以上来自游记，不是实时信息，我没核实现在是否营业，到了在地图上搜一下名字再决定；吃完就走，不必再等下一趟火车"},
+    {"id": "d1127-8", "t": "13:15", "n": "树抱佛庙（Wat Bang Kung）", "ne": "Wat Bang Kung (Banyan-Embraced Temple)", "en": "Wat Bang Kung Samut Songkhram", "s": "idea", "d": "大殿被大榕树的根整个包住，是安帕瓦一带最出名的小景点，免费参观，约 8:00 到 17:00（也有来源写到 18:00）", "go": "从美功开车约 20–30 分钟（估）；离安帕瓦水上市场约 6 公里 / 10 分钟", "tip": "遮肩过膝、脱鞋；别爬树根、别踩佛像；逛 30–45 分钟就够", "tt": "约 20–30 分钟 · 包车（估）"},
+    {"id": "d1127-4", "t": "14:30", "n": "入住班印轩家庭旅馆", "ne": "Check-in · Baan Ing Suan, Amphawa", "en": "Baan Ing Suan Amphawa", "lat": 13.4256, "lon": 99.9553, "s": "fixed", "d": "大床房（带阳台），只住 1 晚", "tip": "先放好行李，当面和老板约好：①明早 5 点左右划船给僧侣的布施（斋饭包含什么、几点出发、多少钱）②老板娘做的早餐几点吃；小旅馆楼梯窄，晚上河边蚊子多", "tt": "约 10 分钟 · 包车（约 6 km，估）"},
+    {"id": "d1127-5", "t": "15:00", "n": "安帕瓦水上市场", "ne": "Amphawa Floating Market", "en": "Amphawa Floating Market", "lat": 13.4261, "lon": 99.9564, "s": "idea", "d": "周五下午开市，傍晚到夜里最热闹：船上现烤河虾、烤海鲜、粿条、泰式糕点、椰子糖", "go": "从民宿步行即到", "tip": "我查到的开市时间大约 14:00–20:00，各来源略有出入；现金备小面额。这里不是丹嫩沙多那种清晨水上市场，傍晚才对"},
+    {"id": "d1127-9", "t": "16:30", "n": "安帕瓦周边小逛（选一项）", "ne": "Around Amphawa (optional)", "s": "idea", "d": "河边的安帕瓦寺（Wat Amphawan Chetiyaram，拉玛二世诞生地一带，有纪念性建筑）、拉玛二世纪念公园、运河边的老木屋街；或者坐长尾船看河边生活", "tip": "这几处我没查到可靠的开放时间，到现场看；不想走就留在民宿阳台歇一会儿，晚上还有萤火虫", "tt": "约 5–10 分钟 · 步行（估）"},
+    {"id": "d1127-10", "t": "18:00", "n": "晚饭（安帕瓦）", "ne": "Dinner in Amphawa", "s": "idea", "d": "最省事：在水上市场里吃（现烤河虾、粿条、咖喱、鲭鱼 Pla Tu 是美功府特产，糕点和小吃一般 20–70 泰铢）。想坐下慢慢吃：Chao Le Restaurant（50/6 Moo 6，靠近萤火虫村，一篇博客提到，电话 034-752-681）或 Moo Dang Restaurant（Bang Chang，烤红叉烧饭和面，据说每天营业）", "tip": "两家餐厅我都没核实营业时间，先打电话或问老板；晚上 19:30 要出船，18:00–19:00 吃完比较从容", "tt": "约 5–10 分钟 · 步行（估）"},
+    {"id": "d1127-6", "t": "19:30", "n": "夜游萤火虫", "ne": "Firefly Boat Tour", "s": "idea", "d": "天黑后坐小船看河边树上的萤火虫", "tip": "让老板帮忙订船最省心；晚上防蚊，别开闪光灯、别用手电照树；上船穿救生衣", "tt": "约 10 分钟 · 步行到码头（估）"}
+  ], todos:["寺庙着装：遮肩，长裤或过膝裙", "带够现金：联票 300、嘟嘟车、泰服、晚饭（Baan Ta Koh Rai 只收现金）", "跟司机确认明天路线：安帕瓦 → 柴瓦塔那兰寺（停约 1.5 小时）→ 夏玛雷斯登斯酒店（U Thong 路 5 号）", "给大城酒店发消息：问能不能提前入住 / 寄存行李，附近哪家租泰服，请前台帮忙订 Baan Ta Koh Rai 18:30（+66 89 764 5119）", "防蚊、防晒、带水", "夜里把换洗衣物整理好，明早退房"]},
 
-  { date:"2026-11-28", city:"bkk", wx:{name:"大城", lat:14.3532, lon:100.5600}, title:"安帕瓦清晨 · 大城古城", items:[
-    {t:"07:30", n:"河边散步 · 早餐", s:"idea", d:"早上的河边安静凉快，吃一碗船面或泰式早餐"},
-    {t:"09:30", n:"包车去大城", s:"idea", d:"安帕瓦 → 大城约 2.5–3 小时", tip:"路上可以让司机停一个休息站，买点水和零食"},
-    {t:"12:30", n:"大城午饭", s:"idea", d:"大城出名的是河边船面和 roti sai mai（拉丝糖饼）", tip:"天热中午先吃饭休息，下午再看古迹"},
-    {t:"14:00", n:"入住夏玛雷斯登斯（大城）", en:"Syama Residence and Café Ayutthaya", lat:14.3517, lon:100.5600, s:"fixed", d:"特大床房，只住 1 晚；入住 14:00–19:00", tip:"前台 9:00–18:00，晚于 18:00 到要提前联系酒店；这家酒店不提供机场接送"},
-    {t:"15:30", n:"玛哈泰寺 · 树中佛头", en:"Wat Mahathat Ayutthaya", lat:14.3577, lon:100.5679, s:"idea", d:"佛头被榕树根包住，大城最出名的画面", tip:"古迹大多要买门票，现金；不要爬上遗迹，拍照时人的头不要高过佛头"},
-    {t:"17:15", n:"柴瓦塔那兰寺（看日落）", en:"Wat Chaiwatthanaram", lat:14.3441, lon:100.5435, s:"idea", d:"高棉风格的大佛塔，日落时最美", go:"从玛哈泰寺打车或坐嘟嘟车约 15 分钟", tip:"多数古迹 18:00 前后关门，有的会开灯到晚上"},
-    {t:"19:30", n:"大城夜市晚饭", s:"idea", d:"酒店附近找夜市，吃烤河虾、泰式小吃", tip:"今晚早点休息，明早古迹人少、也凉快"}
-  ], todos:["寺庙着装：遮肩，长裤或过膝裙","防蚊、防晒、带水"]},
+  { date:"2026-11-28", city:"bkk", wx:{"name": "大城", "lat": 14.3532, "lon": 100.56}, title:"清晨布施 · 柴瓦塔那兰寺 · 入住大城 · 步行逛古迹", items:[
+    {"id": "d1128-1", "t": "05:30", "n": "给僧侣布施（划船托钵）", "ne": "Alms-Giving to Monks by Boat", "en": "Baan Ing Suan Amphawa", "lat": 13.4256, "lon": 99.9553, "s": "idea", "d": "5:00 起床，在民宿河边等僧侣的小船经过，把前一晚订好的斋饭放进钵里", "tip": "经过的时间每个民宿不一样，问老板；遮肩过膝、保持安静；女生不要直接触碰僧人，食物放进钵里；拍照先问可不可以，不开闪光灯"},
+    {"id": "d1128-8", "t": "06:30", "n": "民宿早餐（老板娘做）", "ne": "Breakfast at the guesthouse", "s": "idea", "d": "提前向老板订好；吃完收拾行李，7:45 前退房", "tip": "大行李在车上，随身小包别落下"},
+    {"id": "d1128-2", "t": "08:00", "n": "包车去大城（途中停柴瓦塔那兰寺）", "ne": "Drive to Ayutthaya (stop at Wat Chaiwatthanaram)", "s": "idea", "d": "安帕瓦 → 柴瓦塔那兰寺约 2.5–3 小时（我的估算，没有可靠来源），预计 10:45 前后到；从南边进大城，这座寺在城岛西侧河对岸，正好顺路", "tip": "周六上午环城路可能堵，路上让司机停一次休息站；跟司机说好：在柴瓦塔那兰寺门口等约 1.5 小时，然后直接送去酒店", "nov": true},
+    {"id": "d1128-6", "t": "10:45", "n": "柴瓦塔那兰寺（路上顺路停）", "ne": "Wat Chaiwatthanaram (stop on the way)", "en": "Wat Chaiwatthanaram", "lat": 14.3441, "lon": 100.5435, "s": "idea", "d": "高棉风格的大佛塔，中央主塔约 35 米，四周四座小塔，是大城最上镜的古迹之一；上午光线偏硬、很热，约逛 1–1.5 小时。寺门口有好几家泰服出租店（泰文网帖），想在这里穿泰服拍，见「租泰服」那一条", "go": "从安帕瓦包车约 2.5–3 小时（估）；车停寺门口，司机等你们", "tip": "先买联票 300 泰铢（见「大城古迹」那一条）；联票隔天是否还能用我没核实，买的时候问清。离今晚的酒店：直线约 2 km（我用坐标估的），但寺在河对岸、要绕桥，有来源写它离大城市区约 6–7 km，所以不能走路，开车约 10–15 分钟（估）。寺的开放时间我没查到准确的，现场确认；不要爬上遗迹，不要碰佛像"},
+    {"id": "d1128-4", "t": "12:15", "n": "入住夏玛雷斯登斯（大城）", "ne": "Check-in · Syama Residence & Café", "en": "Syama Residence and Café Ayutthaya", "lat": 14.3517, "lon": 100.56, "s": "fixed", "d": "特大床房，只住 1 晚；入住 14:00 起。地址：U Thong 路 5 号，走 1 分钟就到历史公园。中午 12 点多到，大概率还进不了房", "tip": "先问能不能提前入住；不行就寄存行李，顺便问前台两件事：① 附近哪家租泰服（走路能到的）；② 能不能帮忙打电话订今晚的 Baan Ta Koh Rai（只说泰语，+66 89 764 5119）。前台 9:00–18:00，晚于 18:00 到要提前联系酒店；这家酒店不提供机场接送", "tt": "约 10–15 分钟 · 包车（估）"},
+    {"id": "d1128-3", "t": "12:45", "n": "午饭（酒店附近）", "ne": "Lunch near the hotel", "s": "idea", "d": "米其林指南列的大城必比登里有 Pranom 鸡丝面（Pranom Shredded Chicken Noodles）和 Pa Lek 船面（Pa Lek Boat Noodles，明天中午吃）；今天先吃鸡丝面，或者问前台酒店附近哪家好", "tip": "这两家的地址和今天是否营业我没核实，出发前在地图搜名字，选离酒店近的；别吃太饱，下午要走路", "tt": "约 5 分钟 · 步行 / 打车（估）"},
+    {"id": "d1128-9", "t": "14:00", "n": "租泰服（酒店附近）", "ne": "Rent a Thai Costume Near the Hotel", "s": "idea", "d": "酒店走 1 分钟到历史公园，但我没查到玛哈泰寺附近有名有姓的租衣店。查到有名字有价格的店都集中在柴瓦塔那兰寺门口（泰文网帖，价格是网友 2023–2024 年写的，仅供参考）：ร้านไอยรา（Aiyara）约 300 泰铢起；มณฑิตาชุดไทย、ภูษา ผ้าไทย、อโยธยา 约 200 起；化妆、做头发各约 50，带头饰整套约 500。\n办法 A（推荐）：问酒店前台，走路能到的最近一家，现场挑。\n办法 B（保底）：上午在柴瓦塔那兰寺停车时就租好，穿着拍寺、坐车去酒店，下午继续逛，再打车回去还（要问清几点前还、押金、能不能存包）。", "tip": "租之前问清：租几小时、含不含头饰首饰 / 妆发 / 摄影师、几点前要还（今天日落约 17:40，想拍湖边日落就要租到 18:00）、押金、能不能存包；鞋子选好走的"},
+    {"id": "d1128-5", "t": "14:30", "n": "玛哈泰寺 · 树中佛头", "ne": "Wat Mahathat (Buddha Head in Tree Roots)", "en": "Wat Mahathat Ayutthaya", "lat": 14.3577, "lon": 100.5679, "s": "idea", "d": "大城最出名的画面：佛头被榕树根包住；寺的主塔和一圈佛塔是大城早期的王家寺院，用联票", "tip": "不要爬上遗迹；拍佛头时蹲下或坐下，人的头不要高过佛头（当地规矩）；这里人多，穿泰服拍照要避开游客，可以早点来或绕到周边的断壁处", "go": "从酒店出发：Expedia 写酒店走 1 分钟到历史公园入口，到玛哈泰寺本身多远我没核实，出门前在地图上量一下（走路不超过 20 分钟就别叫车）"},
+    {"id": "d1128-10", "t": "15:30", "n": "拉嘉布拉那寺", "ne": "Wat Ratchaburana", "en": "Wat Ratchaburana Ayutthaya", "s": "idea", "d": "和玛哈泰寺只隔一条马路，高大的佛塔和红砖回廊，拍泰服照也很出片；有台阶通往地宫（crypt），里面有 15 世纪壁画，是否开放以现场为准；用联票", "go": "从玛哈泰寺步行约 5 分钟（约 0.3 km，估）"},
+    {"id": "d1128-12", "t": "16:30", "n": "河边散步看日落（酒店附近）", "ne": "Riverside Stroll & Sunset near the Hotel", "s": "idea", "d": "拉嘉布拉那寺逛完，慢慢走回酒店一带：Expedia 说酒店步行就能到昭披耶河边，日落约 17:40（估）。不用再赶下一个古迹，泰服也该在 17:45 前还掉", "tip": "还泰服前别忘了拍最后几张；想坐下喝东西，酒店有 Café（Syama Residence & Café）；叫好车再去晚饭，天黑后路上的嘟嘟车少，可以让前台约"},
+    {"id": "d1128-7", "t": "18:30", "n": "晚饭：Baan Ta Koh Rai（必比登，河鱼）", "ne": "Dinner · Baan Ta Koh Rai (Michelin Bib Gourmand)", "s": "idea", "d": "米其林必比登，本地人爱去的蓝屋顶餐馆，用社区里种的菜；米其林点出的招牌：香草鱼饼、炒芥蓝配炸咸鱼，再点当天的河鱼；分量大，先问份量；每天 9:00–20:00，只收现金，要订位请直接打电话（+66 89 764 5119，泰语）", "tip": "地址：112/941 Moo 3, Khlong Suanplu；离酒店有一段车程（距离我没核实），18:30 前到、别拖到 19:30 以后；点烤河虾要先问价（按重量算）；饭后的 Roti Sai Mai 拉丝糖饼留到明天", "tt": "约 10–15 分钟 · Grab / 嘟嘟车（估）", "en": "Baan Ta Koh Rai Ayutthaya"}
+  ], todos:["确认明早包车 8:15 出发，路线：Wat Yai Chai Mongkhon（西游记取景地）→ 洛卡亚苏塔寺 → 帕西桑佩寺 → 帕兰寺 → 午饭 → 13:00 回曼谷", "泰服今晚前还掉，别带去明天", "联系 Molly House：确认 11/30 早上 9:00 的妆发、能租到几点、含什么、价格、要不要押金", "在 Grab 里看 Here Hai 能不能送到诺富特酒店（17:30 前下单）；手机号和支付方式先绑好", "设好明早闹钟", "换洗衣服和脏衣服分袋", "现金：Here Hai 只收现金；郑王庙 200、卧佛寺 300、渡轮零钱"]},
 
-  { date:"2026-11-29", city:"bkk", title:"大城清晨 · 回曼谷 · 周日市集", items:[
-    {t:"07:30", n:"大城古迹清晨游", en:"Wat Phra Si Sanphet", lat:14.3563, lon:100.5558, s:"idea", d:"三座白色佛塔，早上光线好、人少", go:"从酒店打车 / 嘟嘟车几分钟", tip:"早上 9 点以后越来越热，尽量早去"},
-    {t:"10:30", n:"退房，包车回曼谷", s:"idea", d:"大城 → 曼谷市区约 1.5–2 小时"},
-    {t:"12:30", n:"入住诺富特暹罗广场酒店", en:"Novotel Bangkok Siam Square", lat:13.7457, lon:100.5331, s:"fixed", d:"高级大床房，连住 2 晚", tip:"通常下午才能入住，到得早就先寄存行李、把行李箱放前台"},
-    {t:"13:30", n:"午饭", s:"idea", d:"暹罗广场一带小吃、商场美食广场都方便"},
-    {t:"15:00", n:"恰图恰周末市场", en:"Chatuchak Weekend Market", lat:13.7999, lon:100.5500, s:"idea", d:"上万个摊位，周日是最后一天，天黑前逛一圈买点东西", go:"BTS Siam → Mo Chit 站，约 20 分钟", tip:"周日一般到 18:00 前后收摊；带现金和零钱"},
-    {t:"19:00", n:"暹罗商圈晚饭 · 逛街", en:"Siam Paragon", lat:13.7462, lon:100.5347, s:"idea", d:"Siam Paragon 美食广场 + 周边商场", go:"BTS Siam 站直通，酒店走路可达"}
-  ], todos:["大城带回的脏衣服集中放一个袋子","打包前清点：前面几天买的伴手礼"]},
+  { date:"2026-11-29", city:"bkk", title:"包车游大城古迹 · 回曼谷 · 金·汤普森 · Here Hai 外卖", items:[
+    {"id": "d1129-7", "t": "07:30", "n": "酒店早餐 · 退房", "ne": "Breakfast & Check-out", "s": "idea", "d": "吃完早餐退房，行李放车上，8:15 包车出发", "nov": true, "tip": "今天只看没去过的古迹，不租泰服；带水、帽子"},
+    {"id": "d1129-9", "t": "08:15", "n": "Wat Yai Chai Mongkhon 大佛塔（西游记取景地）", "ne": "Wat Yai Chai Mongkhon", "en": "Wat Yai Chai Mongkhon Ayutthaya", "s": "idea", "d": "🎬 86 版《西游记》第 24 集「天竺收玉兔」的取景地（剧中的布金寺：公主被玉兔精换走后在寺里安身，唐僧在一排佛像旁给三个徒弟讲须达多布金买祇园的故事）。高大的白色佛塔，周围一圈坐佛，旁边还有卧佛，早上人少；外国人收费，金额以现场为准", "go": "从酒店包车约 10–15 分钟（估）", "tip": "这是城外东南的一座；旧资料写约 8:00 开门。网上多篇文章说《泰囧》也在这里拍过。时间多的话顺路看旁边的 Wat Phanan Choeng（三宝公庙，一尊大坐佛，建于 1324 年，比大城建城还早），约 20–30 分钟，距离我没核实"},
+    {"id": "d1129-8", "t": "09:20", "n": "洛卡亚苏塔寺 · 露天大卧佛", "ne": "Wat Lokayasutharam (Open-Air Reclining Buddha)", "en": "Wat Lokayasutharam Ayutthaya", "s": "idea", "d": "没有屋顶的露天大卧佛，约 40 多米长，大城另一个经典画面", "tip": "开放时间我只查到一份旧资料：8:30–17:00，现场确认；是否收费也没核实；拍照别站得比佛像高", "go": "从 Wat Yai Chai Mongkhon 包车约 15–20 分钟（约 5 km，估）；离帕西桑佩寺只有 0.5 km"},
+    {"id": "d1129-11", "t": "10:00", "n": "帕西桑佩寺 · 蒙科空博碧寺", "ne": "Wat Phra Si Sanphet & Wihan Phra Mongkhon Bophit", "en": "Wat Phra Si Sanphet", "s": "idea", "d": "三座并排的白色佛塔是大城最经典的画面，原来是王宫里的御用寺；旁边的蒙科空博碧寺（大佛殿）有一尊大铜佛，免费进入。用联票", "go": "从洛卡亚苏塔寺步行约 5–10 分钟（约 0.5 km，估）", "tip": "联票如果昨天只能当天用，这里单独买 80 泰铢；进大佛殿要脱鞋、遮肩膝；约 1 小时，11:00 去帕兰寺"},
+    {"id": "d1129-12", "t": "11:00", "n": "帕兰寺", "ne": "Wat Phra Ram", "en": "Wat Phra Ram Ayutthaya", "s": "idea", "d": "建在湖边的高棉式佛塔，四周一排排小佛塔，倒影好看，人比玛哈泰少；约 40 分钟。用联票", "tip": "我没查到准确的开放时间；酒店在帕兰寺附近（Expedia：开车 3 分钟），所以放在最后顺路；11:45 前上车去吃午饭，13:00 出发回曼谷"},
+    {"id": "d1129-10", "t": "11:50", "n": "大城午饭 · 船面 + 拉丝糖饼", "ne": "Lunch in Ayutthaya · Boat Noodles", "s": "idea", "d": "Pa Lek Boat Noodles（船面，必比登）或 Pranom Shredded Chicken Noodles（鸡丝面，必比登）；饭后 Roti Sai Mai Abeedeen–Pranom Sangaroon 买拉丝糖饼（大城特产，必比登）", "tip": "地址和营业时间没核实；船面碗很小，可以点两三碗", "tt": "约 10–15 分钟 · 嘟嘟车（估）"},
+    {"id": "d1129-2", "t": "13:00", "n": "包车回曼谷", "ne": "Car back to Bangkok", "s": "idea", "d": "大城 → 曼谷市区约 1.5–2 小时（估），13:00 出发，15:00 前后到，避开下午 4 点以后的高峰", "tip": "周日下午回城方向有可能略堵，让司机走高速", "nov": true},
+    {"id": "d1129-3", "t": "15:00", "n": "入住诺富特暹罗广场酒店", "ne": "Check-in · Novotel Bangkok Siam Square", "en": "Novotel Bangkok Siam Square", "lat": 13.7457, "lon": 100.5331, "s": "fixed", "d": "高级大床房，连住 2 晚；入住 15:00 起。从大城出发约 13:00，预计 15:00 前后到（估，周日回城车多）", "tip": "放下行李、洗把脸就出门，别耽误 Here Hai 16:00 开门；金·汤普森故居今天去不了（17:00 就关门），改到 12/1 早上"},
+    {"id": "d1129-13", "t": "15:30", "n": "金·汤普森故居博物馆", "ne": "Jim Thompson House Museum", "en": "Jim Thompson House Bangkok", "lat": 13.7492, "lon": 100.5284, "s": "idea", "d": "每天 10:00–17:00，最后一场导览 17:00 开始；成人 250 泰铢（官网）；主屋必须跟导览，有中文（官网只写 Chinese，没说是否普通话）。地址：6 Soi Kasemsan 2, Rama 1 Rd", "go": "从酒店走过去约 12 分钟（估，约 0.9 km）；或 BTS 坐一站到 National Stadium 再走 5 分钟", "tip": "15:30 到，导览约 30–40 分钟（估）；17:00 前开始的最后一场也来得及，但要给 Here Hai 外卖留时间，建议最晚 16:15 离开；故居里的泰丝店适合买丝巾、小钱包"},
+    {"id": "d1129-4", "t": "16:20", "n": "Here Hai 外卖送到酒店（Grab）", "ne": "Here Hai Delivery to the Hotel (Grab)", "s": "idea", "d": "Here Hai 原店在 Ekkamai 路，营业 10:00–15:00、16:00–17:30（周一休息，11/29 是周日），所以外卖必须在 17:30 前下单、出餐。从故居出来（约 16:15）在 Grab 点单，让他们送到酒店前台，预计 17:00 前后到；回酒店后在前台取餐。蟹肉炒饭 340 泰铢、蟹肉蛋卷等（2019 年价，肯定涨过）", "tip": "我没核实现在能不能送、几点截单、有没有送到你们酒店的服务：有一条旧点评的标题写「提前在 Grab 点了外卖」，说明 Grab 上有这家；下单前先看 App 里是否显示营业。Grab 要有可用的手机号和支付方式（国外手机号 / 境外信用卡）。炒饭放久了会闷，尽量快吃，不要放到晚上。备选：Siam Paragon 美食广场有分店（4 道菜，营业到商场关门，可刷卡），不是原店"},
+    {"id": "d1129-6", "t": "18:30", "n": "酒店楼下逛 mall（Siam Paragon / Siam Center）", "ne": "Mall Time Right Below the Hotel", "en": "Siam Paragon", "lat": 13.7462, "lon": 100.5347, "s": "idea", "d": "Siam Paragon 地下 Gourmet Market 买泰国零食和泰茶；Siam Center 看泰国设计师品牌；Siam Discovery 看家居和设计小店；逛 1.5 小时就回去", "go": "酒店所在的暹罗广场，几个 mall 之间天桥相连，走路 5–10 分钟（估）", "tip": "mall 一般约 10:00–22:00（我没核实）；明早 7:10 要出门去郑王庙化妆，21:00 前回酒店睡"}
+  ], todos:["确认 11/30 早上 Molly House 9:00 的预约，问清租衣归还时间（建议 15:00 回来还）", "叫车前先存好泰文地址：Molly House、水门寺、Hidden Bangkok Bistro（点地址按钮）", "带遮肩过膝的衣服：还泰服后去水门寺要穿", "现金：郑王庙 200、卧佛寺 300、渡轮零钱、夜市小摊", "BTS 二维码 / Rabbit 卡备好（水门寺回夜市要坐）", "设闹钟 6:30"]},
 
-  { date:"2026-11-30", city:"bkk", title:"大皇宫 · 湄南河 · 唐人街", items:[
-    {t:"08:30", n:"大皇宫 & 玉佛寺", en:"Grand Palace Bangkok", lat:13.7500, lon:100.4913, s:"idea", d:"曼谷必去，金碧辉煌", go:"从酒店 BTS 到 Saphan Taksin 站 → 昭披耶河快船到 Tha Chang 码头", tip:"着装严格：遮肩、长裤或过膝裙；门口常有人说「今天关门」，不要理会"},
-    {t:"11:30", n:"卧佛寺", en:"Wat Pho", lat:13.7465, lon:100.4930, s:"idea", d:"46 米长的金色卧佛", go:"从大皇宫步行约 10 分钟", tip:"寺里有泰式按摩学校，可以按一按"},
-    {t:"13:00", n:"午饭 + 休息", s:"idea", d:"附近吃个泰式炒河粉，避开最热的时候"},
-    {t:"16:30", n:"郑王庙（看日落）", en:"Wat Arun", lat:13.7437, lon:100.4889, s:"idea", d:"黎明寺，傍晚从对岸看最美", go:"Tha Tien 码头坐渡轮过河，几分钟就到"},
-    {t:"19:00", n:"唐人街 · 耀华力路", en:"Yaowarat Road", lat:13.7406, lon:100.5100, s:"idea", d:"霓虹招牌、街边海鲜、燕窝甜品", go:"MRT 到 Wat Mangkon 站"}
-  ], todos:["大皇宫着装：遮肩，长裤或过膝长裙","收拾行李，泰国伴手礼装箱","确认明天航班时间和去机场方式"]},
+  { date:"2026-11-30", city:"bkk", title:"Molly House 妆发 · 郑王庙 · 卧佛寺 · 水门寺 · 朱拉夜市", items:[
+    {"id": "d1130-6", "t": "07:00", "n": "早餐", "ne": "Early Breakfast", "s": "idea", "d": "酒店吃早餐，带一瓶水，现金备好（郑王庙 200、卧佛寺 300、渡轮要零钱）", "nov": true},
+    {"id": "d1130-7", "t": "07:50", "n": "去 Molly House（Arun Amarin 路）", "ne": "To Molly House (Arun Amarin Rd)", "s": "idea", "d": "打车约 30–45 分钟（早高峰，我的估算），8:30–8:40 到，留出 20 分钟缓冲", "tip": "给司机看泰文地址（见地址按钮）；Grab 先在 App 里输入 Molly House Makeup Studio", "nov": true},
+    {"id": "d1130-12", "t": "09:00", "n": "Molly House 化妆 + 穿泰服", "ne": "Molly House Makeup Studio · Makeup & Thai Costume", "en": "Molly House Makeup Studio Bangkok", "s": "fixed", "d": "地址：345/3 Arun Amarin Rd，Wat Arun 一带（Bangkok Yai 区，10600）；一个来源写每天 8:00–18:00。约 9:00 开始妆发，约 1–1.5 小时（我的估算）", "tip": "我没查到这家店的电话和价格，请你向店家确认：① 租到几点、能不能 15:00 前后回来还衣服（今天要去卧佛寺 + 水门寺，建议穿到下午）② 含不含头饰首饰 / 妆发 / 摄影师 / 修图几张 ③ 要不要押金 ④ 能不能存包。早点拍：郑王庙 10:00 起旅游大巴多"},
+    {"id": "d1130-4", "t": "10:30", "n": "泰服拍照 · 郑王庙", "ne": "Thai Costume Photoshoot · Wat Arun", "en": "Wat Arun", "lat": 13.7437, "lon": 100.4889, "s": "idea", "d": "从 Molly House 走到郑王庙（同在 Wat Arun 一带，几分钟，估）。门票 200 泰铢（外国人，现金，穿泰服不免票）；每天 8:00–18:00，最晚入场约 17:30。10:00 后旅游团多，拍之前先找人少的角度；如果觉得人太多，傍晚 16:00–17:30 是第二个好光线时段", "tip": "遮肩遮膝的泰服符合寺里的着装规定；塔的台阶很陡，穿长裙小心；拍完到 Tha Tien 渡口坐船过河（不到 3 分钟，每 5–10 分钟一班，现金零钱），费用 2026 年 4 月涨过价，带零钱", "go": null},
+    {"id": "d1130-13", "t": "11:45", "n": "过河到 Tha Tien，午饭", "ne": "Ferry to Tha Tien & Lunch", "s": "idea", "d": "郑王庙渡口坐船到 Tha Tien 渡口（N8），上岸走到卧佛寺约 5 分钟；午饭在 Tha Tien 一带随便找：河边小店、卧佛寺外的小吃，我没核实具体店，选人多的", "tip": "别吃太油，下午还要换地方；穿着泰服吃饭注意酱汁", "nov": true},
+    {"id": "d1130-14", "t": "12:30", "n": "卧佛寺（Wat Pho）", "ne": "Wat Pho (Reclining Buddha)", "en": "Wat Pho Bangkok", "lat": 13.7465, "lon": 100.4927, "s": "idea", "d": "曼谷最古老的大寺之一，46 米长的卧佛；外国人 300 泰铢（2026 年，现金）；院子 8:00–19:30，但佛殿等内部区域关得早，实际最晚 17:30 前到。至少留 1.5 小时；10:00–14:00 最挤，所以中午这趟人多、热", "go": "从 Tha Tien 渡口走约 5 分钟（估）", "tip": "进殿脱鞋、遮肩遮膝；穿泰服正好；想避人，14:00 之后人会少一些；拍完 14:30 过河回 Molly House"},
+    {"id": "d1130-15", "t": "14:30", "n": "过河回 Molly House 还泰服", "ne": "Back to Molly House · Return Costume", "s": "idea", "d": "Tha Tien 渡口坐船回郑王庙一侧（<3 分钟），走回 Molly House 卸妆换衣服，约 40 分钟；换回自己的衣服（遮肩过膝，水门寺要用）", "tip": "还衣服前确认没落东西；店 18:00 前要还", "nov": true},
+    {"id": "d1130-2", "t": "16:00", "n": "水门寺（Wat Paknam Phasi Charoen）· 玻璃佛塔与大佛", "ne": "Wat Paknam Phasi Charoen · Glass Pagoda & Giant Buddha", "en": "Wat Paknam Bhasicharoen Bangkok", "lat": 13.7217, "lon": 100.4703, "s": "idea", "d": "吞武里的大寺，免费，约 8:00–18:00。80 米的白色大塔有电梯，顶层是 8 米高的绿色玻璃佛塔；院里有 69 米高的青铜坐佛", "go": "从 Molly House 打车约 20–30 分钟（估，下午不堵的话）", "tip": "塔顶楼层要在 17:00 前上，所以 16:00 到最合适；遮肩过膝，不要摸佛像；先给司机看泰文 วัดปากน้ำภาษีเจริญ"},
+    {"id": "d1130-16", "t": "17:15", "n": "Hidden Bangkok Bistro · 大金佛景观咖啡馆", "ne": "Hidden Bangkok Bistro (Giant Buddha View Café)", "en": "Hidden Bangkok Bistro Talat Phlu", "s": "idea", "d": "运河边的咖啡馆，露台正对水门寺的大金佛。地址：872, 8 Soi Thoet Thai 26, Talat Phlu, Thon Buri, Bangkok 10600；一个来源写每天 9:00–22:00（别的页面没写，请在地图上再看）。饮品约 100–200 泰铢，餐点约 150–400 泰铢；楼上有酒吧菜单", "go": "从水门寺打车约 10 分钟（估）；在小巷里，导航容易走错，可以让 Grab 司机看泰文地址", "tip": "日落约 17:40（估），坐下来正好看大佛和晚霞；坐 1 小时左右，18:30 前离开。离 BTS Talat Phlu 站不远，后面坐 BTS 去夜市（站到小巷的具体距离我没核实）", "tt": "约 10 分钟 · 打车（估）"},
+    {"id": "d1130-17", "t": "18:45", "n": "BTS 去国家体育场站", "ne": "BTS to National Stadium", "s": "idea", "d": "Talat Phlu → National Stadium 站（BTS 绿线 Silom 线），约 25–30 分钟（估）；下班高峰会挤", "tip": "提前在手机里备好 BTS 二维码 / 零钱（Rabbit 卡）", "nov": true},
+    {"id": "d1130-5", "t": "19:30", "n": "朱拉隆功夜市（Bhantat Thong）", "ne": "Chula Night Market (Bhantat Thong)", "en": "Bhantat Thong Road Pathum Wan", "lat": 13.7368, "lon": 100.5304, "s": "idea", "d": "多数摊位约 16:00 到午夜；18:00–21:00 最挤。可以吃：烤猪肉串 moo ping、粥 jok、青木瓜沙拉摊、Elvis Suki 火锅、Jeh O Chula（中泰菜）、蛋挞、竹筒糯米饭、椰子冰淇淋；单样 40–150 泰铢，摊位 50 多个", "go": "BTS National Stadium 站走路 5–7 分钟；MRT Sam Yan 站走路约 10 分钟", "tip": "排队的当地人多的摊通常不会错；这里的位置我只能确定在朱拉隆功大学附近，坐标是大致位置，请用 Bhantat Thong Road 在地图搜"},
+    {"id": "d1130-11", "t": "21:00", "n": "回酒店休息", "ne": "Back to the hotel", "s": "idea", "d": "BTS 回暹罗站（一站），收拾买的东西；12/1 早上退房、寄存行李", "nov": true}
+  ], todos:["晚上整理已买的东西，明早退房前装箱", "液体、膏状的东西（药膏、酱）放托运行李", "检查护照、手机、充电器", "Siam Paragon 约 10:00 开门，明早退房后直接去", "确认 12/1 去机场的方式（打车 15:30 出发）", "剩下的泰铢在机场花掉"]},
 
-  { date:"2026-12-01", city:"bkk", title:"满载而归 · 飞回深圳", items:[
-    {t:"09:00", n:"最后的泰国早餐", s:"idea", d:"酒店附近吃一碗粿条，或 7-Eleven 买最后一波零食"},
-    {t:"10:30", n:"Big C 超市（Ratchadamri）", en:"Big C Ratchadamri", lat:13.7470, lon:100.5398, s:"idea", d:"零食、手标泰茶、芒果干一次买齐", go:"从酒店沿天桥步行约 10 分钟"},
-    {t:"12:00", n:"退房（诺富特），寄存行李", en:"Novotel Bangkok Siam Square", lat:13.7457, lon:100.5331, s:"idea", d:"大多数酒店退房后可以免费寄存行李，让前台挂个牌"},
-    {t:"13:00", n:"泰式按摩 / 最后逛逛", s:"idea", d:"轻松一点，不要排太满"},
-    {t:"16:00", n:"出发去素万那普机场", en:"Suvarnabhumi Airport", lat:13.6900, lon:100.7501, s:"fixed", d:"傍晚曼谷很堵，打车预留至少 1 小时，或 BTS Siam → Phaya Thai 换机场快线", tip:"有退税单的要先去海关盖章、办退税，再值机"},
-    {t:"19:15", n:"CZ8324 飞回深圳", s:"fixed", fl:2},
-    {t:"22:55", n:"抵达深圳宝安机场", en:"Shenzhen Bao'an International Airport", lat:22.6393, lon:113.8107, s:"fixed", d:"欢迎回家", tip:"落地已近 23:00，地铁可能已收班，提前约好接机或网约车"}
-  ], todos:["检查护照、手机、充电器","退税单据放在随身包","剩下的泰铢在机场花掉"]}
+  { date:"2026-12-01", city:"bkk", title:"泰国香氛 · MBK · 莲花超市 · 买买买 · 飞回深圳", items:[
+    {"id": "d1201-1", "t": "08:30", "n": "最后的泰国早餐", "ne": "Last Thai Breakfast", "s": "idea", "d": "酒店早餐，或 7-Eleven 买最后一波零食"},
+    {"id": "d1201-3", "t": "09:30", "n": "退房（诺富特），寄存行李", "ne": "Check-out · Novotel (Bag Storage)", "en": "Novotel Bangkok Siam Square", "lat": 13.7457, "lon": 100.5331, "s": "idea", "d": "退房后让前台寄存行李，下午 15:15 回来取（10:00 去 Siam Paragon）", "nov": true},
+    {"id": "d1201-13", "t": "10:00", "n": "Siam Paragon · 泰国香氛 + 泰国零食", "ne": "Siam Paragon · Thai Fragrance & Snacks", "s": "idea", "d": "泰国香氛：Siam Paragon 一层（GF）有 Reunrom、PAÑPURI（GF 和 1F）、HARNN、PAWIS（扩香、香薰蜡烛、香薰精油），2F 有 OUD ERA（来源：OneSiam 官方旅游页）。地下 Gourmet Market 买泰国零食、泰茶", "go": "从酒店走天桥 5–10 分钟（估）", "tip": "买香水（不是家居香氛）：Panpuri 的 Andaman Sails 香精 50ml 约 3,950 泰铢（2025 年媒体价）；Butterfly Thai Perfume、Mith 在别处，见 MBK 那条。商场约 10:00 开门，我没核实；液体放托运行李，随身带不过安检", "en": "Siam Paragon", "lat": 13.7458, "lon": 100.5326},
+    {"id": "d1201-12", "t": "11:45", "n": "MBK 中心 · Thai Perfume Runway + 平价纪念品", "ne": "MBK Center · Thai Perfume Runway & Souvenirs", "s": "idea", "d": "MBK 一层（G 层）有 Thai Perfume Runway，卖多个泰国小众香水品牌（来源：Daily Vanity，包括 Voyager by Siam 1928 等；我没核实具体品牌和价格）。5–6 层小摊：T 恤、象裤、小象摆件、钥匙扣、冰箱贴；美食广场午饭", "tip": "小摊要砍价，多数收现金；香水品牌可以现场闻香再买；假的名牌和仿冒品别买；MBK 营业时间我没核实", "en": "MBK Center Bangkok", "lat": 13.7447, "lon": 100.53, "go": "从 Siam Paragon 走天桥 + 步行约 10 分钟（估），或 BTS 一站到 National Stadium"},
+    {"id": "d1201-2", "t": "13:45", "n": "莲花超市（Lotus's Rama I）", "ne": "Lotus's Rama I Supermarket", "en": "Lotus's Rama 1 Bangkok", "s": "idea", "d": "Lotus's（前身 Tesco Lotus）是泰国连锁大超市，Rama I 店在 Pathum Wan 区（有来源写它 8:00 开门）；买芒果干、手标泰茶、泰国零食、Mistine / Srichand 彩妆、泰国香料酱，价格比商场超市低", "go": "准确位置、离酒店多远我没核实，请在地图上搜 Lotus's Rama 1 / โลตัส พระราม 1，打车应该不远；先量好时间再去", "tip": "液体、膏状的东西放托运行李；买了退税单的话，我没核实超市能不能退税，问收银台", "tt": "约 10–15 分钟 · 打车（估，位置没核实）"},
+    {"id": "d1201-10", "t": "15:15", "n": "回诺富特取行李", "ne": "Back for luggage", "s": "idea", "d": "从暹罗逛完回酒店取行李，BTS 一站就到", "nov": true},
+    {"id": "d1201-5", "t": "15:30", "n": "出发去素万那普机场", "ne": "To Suvarnabhumi Airport", "en": "Suvarnabhumi Airport", "lat": 13.69, "lon": 100.7501, "s": "fixed", "d": "傍晚曼谷很堵，打车预留 1–1.5 小时，争取 17:00 前到机场（离起飞 2 小时 15 分钟）", "tip": "有退税单的要先去海关盖章、办退税，再值机；国际航班一般提前 2–3 小时到", "nov": true},
+    {"id": "d1201-6", "t": "19:15", "n": "CZ8324 飞回深圳", "ne": "Flight CZ8324 to Shenzhen", "s": "fixed", "fl": 2},
+    {"id": "d1201-7", "t": "22:55", "n": "抵达深圳宝安机场", "ne": "Arrive · Shenzhen Bao'an Airport", "en": "Shenzhen Bao'an International Airport", "lat": 22.6393, "lon": 113.8107, "s": "fixed", "d": "欢迎回家", "tip": "落地已近 23:00，地铁可能已收班，提前约好接机或网约车"}
+  ], todos:[]}
 ];
+
+/* ---------- 泰文名 / 补充坐标 ---------- */
+const TH = {"d1126-11": "ท่าอากาศยานสุวรรณภูมิ", "d1126-12": "อวานี พลัส ริเวอร์ไซด์ กรุงเทพ", "d1126-13": "เอเชียทีค เดอะ ริเวอร์ฟร้อนท์", "d1127-1": "อวานี พลัส ริเวอร์ไซด์ กรุงเทพ", "d1127-3": "ตลาดร่มหุบ แม่กลอง", "d1127-7": "อาหารกลางวัน แม่กลอง", "d1127-8": "วัดบางกุ้ง", "d1127-4": "บ้านอิงสวน อัมพวา", "d1127-5": "ตลาดน้ำอัมพวา", "d1127-9": "เที่ยวรอบอัมพวา", "d1127-10": "อาหารเย็น อัมพวา", "d1127-6": "ล่องเรือชมหิ่งห้อย", "d1128-1": "ตักบาตรพระทางเรือ", "d1128-8": "อาหารเช้าที่พัก", "d1128-2": "เดินทางไปอยุธยา (แวะวัดไชยวัฒนาราม)", "d1128-3": "อาหารกลางวัน ใกล้โรงแรม", "d1128-4": "ศยามา เรสซิเดนซ์ แอนด์ คาเฟ่ อยุธยา", "d1128-9": "เช่าชุดไทย ใกล้โรงแรม", "d1128-5": "วัดมหาธาตุ", "d1128-10": "วัดราชบูรณะ", "d1128-6": "วัดไชยวัฒนาราม", "d1128-7": "บ้านตะโกราย", "d1129-7": "อาหารเช้า · เช็คเอาท์", "d1129-9": "วัดใหญ่ชัยมงคล", "d1129-8": "วัดโลกยสุธาราม", "d1129-10": "อาหารกลางวัน อยุธยา · เรือเมล์ก๋วยเตี๋ยว", "d1129-2": "เดินทางกลับกรุงเทพ", "d1129-3": "โนโวเทล กรุงเทพ สยามสแควร์", "d1129-4": "เฮียไห้ ส่งอาหารถึงโรงแรม (Grab)", "d1129-6": "สยามพารากอน · สยามเซ็นเตอร์", "d1130-6": "อาหารเช้า", "d1130-7": "เดินทางไปร้านมอลลี่เฮาส์ ถนนอรุณอมรินทร์", "d1130-4": "ถ่ายภาพชุดไทย วัดอรุณราชวราราม", "d1130-2": "วัดปากน้ำภาษีเจริญ", "d1130-5": "ถนนบรรทัดทอง (ตลาดโต้รุ่งจุฬา)", "d1130-11": "กลับโรงแรม", "d1201-1": "อาหารเช้า", "d1201-3": "เช็คเอาท์ โนโวเทล กรุงเทพ สยามสแควร์", "d1201-2": "โลตัส พระราม 1", "d1201-10": "กลับโรงแรมรับกระเป๋า", "d1201-5": "ท่าอากาศยานสุวรรณภูมิ", "d1201-6": "เที่ยวบิน CZ8324 ไปเซินเจิ้น", "d1201-7": "ท่าอากาศยานนานาชาติเซินเจิ้นเป่าอัน", "d1129-11": "วัดพระศรีสรรเพชญ์ · วิหารพระมงคลบพิตร", "d1129-12": "วัดพระราม", "d1128-12": "เดินเล่นริมแม่น้ำ ใกล้โรงแรม", "d1201-12": "เอ็มบีเค เซ็นเตอร์ · Thai Perfume Runway", "d1201-13": "สยามพารากอน · น้ำหอมและขนมไทย", "d1130-12": "มอลลี่เฮาส์ เมคอัพ สตูดิโอ", "d1130-13": "ข้ามฟากท่าเตียน · อาหารกลางวัน", "d1130-14": "วัดโพธิ์ (วัดพระเชตุพนวิมลมังคลาราม)", "d1130-15": "กลับร้าน Molly House คืนชุดไทย", "d1130-16": "ฮิดเดน แบงคอก บิสโทร", "d1130-17": "นั่ง BTS ไปสนามกีฬาแห่งชาติ", "d1129-13": "บ้านจิมทอมป์สัน"};
+const COORD = {"d1128-9": [14.3573, 100.5672], "d1128-10": [14.3588, 100.5693], "d1129-9": [14.3438, 100.5875], "d1129-8": [14.3604, 100.5552], "d1129-11": [14.3563, 100.5558], "d1129-12": [14.3504, 100.5707]};
+DAYS.forEach(d => (d.items || []).forEach(p => { if (TH[p.id]) p.th = TH[p.id]; const c = COORD[p.id]; if (c) { p.lat = c[0]; p.lon = c[1]; } }));
+/* 两点间交通时间估算：直线距离 × 1.3，≤1.2 km 当步行，否则按打车 / 嘟嘟车 */
+function legText(a, b){
+  if (!a || !b || a.lat == null || b.lat == null || a.nov || b.nov || a.fl != null || b.fl != null) return "";
+  const R = 6371, rad = x => x * Math.PI / 180;
+  const dLa = rad(b.lat - a.lat), dLo = rad(b.lon - a.lon);
+  const h = Math.sin(dLa/2)**2 + Math.cos(rad(a.lat)) * Math.cos(rad(b.lat)) * Math.sin(dLo/2)**2;
+  const km = 2 * R * Math.asin(Math.sqrt(h)) * 1.3;
+  if (km < 0.15) return "";
+  const kmS = km < 10 ? km.toFixed(1) : Math.round(km);
+  if (km <= 1.2) return `约 ${Math.max(2, Math.round(km / 4.5 * 60))} 分钟 · 步行（约 ${kmS} km）`;
+  const sp = km > 25 ? 50 : 25;
+  return `约 ${Math.round(km / sp * 60 + 5)} 分钟 · 打车 / 嘟嘟车（约 ${kmS} km）`;
+}
+
+const ADDR = {"d1126-11": ["素万那普机场，北榄府 Bang Phli 县 Nong Prue 乡 999 号 1 村 10540", "Suvarnabhumi Airport, 999 Moo 1, Nong Prue, Bang Phli, Samut Prakan 10540", "ท่าอากาศยานสุวรรณภูมิ 999 หมู่ 1 ตำบลหนองปรือ อำเภอบางพลี จังหวัดสมุทรปราการ 10540"], "d1126-12": ["河畔安凡尼酒店，吞武里区 Samre 街区 Charoen Nakhon 路 257 号 10600", "AVANI+ Riverside Bangkok Hotel, 257 Charoen Nakhon Rd, Samre, Thon Buri, Bangkok 10600", "โรงแรม อวานี พลัส ริเวอร์ไซด์ กรุงเทพ 257 ถนนเจริญนคร แขวงสำเหร่ เขตธนบุรี กรุงเทพฯ 10600"], "d1126-13": ["Asiatique 河滨夜市，Bang Kho Laem 区 Charoen Krung 路 2194 号 10120", "Asiatique The Riverfront, 2194 Charoen Krung Rd, Wat Phraya Krai, Bang Kho Laem, Bangkok 10120", "เอเชียทีค เดอะ ริเวอร์ฟร้อนท์ 2194 ถนนเจริญกรุง แขวงวัดพระยาไกร เขตบางคอแหลม กรุงเทพฯ 10120"], "d1127-1": ["河畔安凡尼酒店，吞武里区 Samre 街区 Charoen Nakhon 路 257 号 10600", "AVANI+ Riverside Bangkok Hotel, 257 Charoen Nakhon Rd, Samre, Thon Buri, Bangkok 10600", "โรงแรม อวานี พลัส ริเวอร์ไซด์ กรุงเทพ 257 ถนนเจริญนคร แขวงสำเหร่ เขตธนบุรี กรุงเทพฯ 10600"], "d1127-3": ["美功铁道市场（美功火车站旁），夜功府 Mueang 县 Mae Klong 乡 75000", "Maeklong Railway Market (Mae Klong Station), Mae Klong, Mueang Samut Songkhram, Samut Songkhram 75000", "ตลาดร่มหุบ แม่กลอง (สถานีรถไฟแม่กลอง) ตำบลแม่กลอง อำเภอเมืองสมุทรสงคราม จังหวัดสมุทรสงคราม 75000"], "d1127-8": ["树抱佛庙，夜功府 Bang Khon Thi 县 Bang Kung 乡（到乡级，请用地图定位）", "Wat Bang Kung, Bang Kung, Bang Khon Thi, Samut Songkhram (subdistrict level, confirm on the map)", "วัดบางกุ้ง ตำบลบางกุ้ง อำเภอบางคนที จังหวัดสมุทรสงคราม"], "d1127-4": ["班印轩家庭旅馆，夜功府安帕瓦县 Khlong Bang Chak 28 号", "Baan Ing Suan, 28 Khlong Bang Chak, Amphawa, Samut Songkhram", "บ้านอิงสวน 28 คลองบางจาก อำเภออัมพวา จังหวัดสมุทรสงคราม"], "d1127-5": ["安帕瓦水上市场，夜功府安帕瓦县 Amphawa 乡 75110", "Amphawa Floating Market, Amphawa, Amphawa, Samut Songkhram 75110", "ตลาดน้ำอัมพวา ตำบลอัมพวา อำเภออัมพวา จังหวัดสมุทรสงคราม 75110"], "d1128-4": ["夏玛雷斯登斯，大城府 Pratuchai 乡 U Thong 路 5 号 13000", "Syama Residence and Café, 5 U Thong Rd, Pratuchai, Phra Nakhon Si Ayutthaya 13000", "ศยามา เรสซิเดนซ์ แอนด์ คาเฟ่ 5 ถนนอู่ทอง ตำบลประตูชัย อำเภอพระนครศรีอยุธยา จังหวัดพระนครศรีอยุธยา 13000"], "d1128-5": ["玛哈泰寺，大城历史公园内，大城府 13000（到县级，请用地图定位）", "Wat Mahathat, Ayutthaya Historical Park, Phra Nakhon Si Ayutthaya 13000 (district level)", "วัดมหาธาตุ อุทยานประวัติศาสตร์พระนครศรีอยุธยา อำเภอพระนครศรีอยุธยา จังหวัดพระนครศรีอยุธยา 13000"], "d1128-10": ["拉嘉布拉那寺，大城历史公园内，大城府 13000（到县级）", "Wat Ratchaburana, Ayutthaya Historical Park, Phra Nakhon Si Ayutthaya 13000 (district level)", "วัดราชบูรณะ อุทยานประวัติศาสตร์พระนครศรีอยุธยา อำเภอพระนครศรีอยุธยา จังหวัดพระนครศรีอยุธยา 13000"], "d1128-6": ["柴瓦塔那兰寺，大城府 13000（到县级）", "Wat Chaiwatthanaram, Phra Nakhon Si Ayutthaya 13000 (district level)", "วัดไชยวัฒนาราม อำเภอพระนครศรีอยุธยา จังหวัดพระนครศรีอยุธยา 13000"], "d1129-9": ["大佛塔寺，大城府 13000（到县级）", "Wat Yai Chai Mongkhon, Phra Nakhon Si Ayutthaya 13000 (district level)", "วัดใหญ่ชัยมงคล อำเภอพระนครศรีอยุธยา จังหวัดพระนครศรีอยุธยา 13000"], "d1129-8": ["洛卡亚苏塔寺（露天卧佛），大城府 13000（到县级）", "Wat Lokayasutharam, Phra Nakhon Si Ayutthaya 13000 (district level)", "วัดโลกยสุธาราม อำเภอพระนครศรีอยุธยา จังหวัดพระนครศรีอยุธยา 13000"], "d1129-3": ["诺富特暹罗广场酒店，Pathum Wan 区 Rama 1 路 Siam Square 6 巷 392/44 号 10330", "Novotel Bangkok Siam Square, 392/44 Siam Square Soi 6, Rama 1 Rd, Pathum Wan, Bangkok 10330", "โรงแรมโนโวเทล กรุงเทพ สยามสแควร์ 392/44 ซอยสยามสแควร์ 6 ถนนพระราม 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพฯ 10330"], "d1129-4": ["Here Hai 原店，Vadhana 区 Ekkamai 路 112/3 号（Ekkamai 12 巷附近，Donki Mall Thonglor 对面，二楼）10110（门牌各来源有出入，请以地图为准）", "Here Hai (Original shop), 112/3 Ekkamai Rd (near Ekkamai Soi 12, opposite Donki Mall Thonglor, 2nd floor), Khlong Tan Nuea, Vadhana, Bangkok 10110 (house number differs between sources)", "เฮียไห้ (ร้านต้นตำรับ) 112/3 ถนนเอกมัย แขวงคลองตันเหนือ เขตวัฒนา กรุงเทพฯ 10110"], "d1129-6": ["Siam Paragon，Pathum Wan 区 Rama 1 路 991 号 10330", "Siam Paragon, 991 Rama 1 Rd, Pathum Wan, Bangkok 10330", "สยามพารากอน 991 ถนนพระราม 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพฯ 10330"], "d1130-4": ["郑王庙，Bangkok Yai 区 Wang Doem 路 158 号 10600", "Wat Arun Ratchawararam, 158 Wang Doem Rd, Wat Arun, Bangkok Yai, Bangkok 10600", "วัดอรุณราชวราราม 158 ถนนวังเดิม แขวงวัดอรุณ เขตบางกอกใหญ่ กรุงเทพฯ 10600"], "d1130-2": ["水门寺，Phasi Charoen 区 Phetkasem 路 8 巷 300 号 10160（门牌我凭记忆，请用地图核对）", "Wat Paknam Bhasicharoen, 300 Soi Phetkasem 8, Pak Khlong Phasi Charoen, Phasi Charoen, Bangkok 10160 (house number from memory)", "วัดปากน้ำภาษีเจริญ 300 ซอยเพชรเกษม 8 ถนนเพชรเกษม แขวงปากคลองภาษีเจริญ เขตภาษีเจริญ กรุงเทพฯ 10160"], "d1130-5": ["朱拉隆功夜市，Bhantat Thong 路（朱拉隆功大学旁），Pathum Wan 区 10330（到路级）", "Chula Night Market, Bhantat Thong Rd, Wang Mai, Pathum Wan, Bangkok 10330 (road level)", "ถนนบรรทัดทอง (ตลาดโต้รุ่งจุฬา) แขวงวังใหม่ เขตปทุมวัน กรุงเทพฯ 10330"], "d1201-3": ["诺富特暹罗广场酒店，Pathum Wan 区 Rama 1 路 Siam Square 6 巷 392/44 号 10330", "Novotel Bangkok Siam Square, 392/44 Siam Square Soi 6, Rama 1 Rd, Pathum Wan, Bangkok 10330", "โรงแรมโนโวเทล กรุงเทพ สยามสแควร์ 392/44 ซอยสยามสแควร์ 6 ถนนพระราม 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพฯ 10330"], "d1201-2": ["Lotus's Rama I（莲花超市），Pathum Wan 区 Rama 1 路（位置没核实，到路级）", "Lotus's Rama I, Rama I Rd, Pathum Wan, Bangkok (road level, location not verified)", "โลตัส พระราม 1 ถนนพระรามที่ 1 เขตปทุมวัน กรุงเทพฯ"], "d1201-5": ["素万那普机场（出发层），北榄府 Bang Phli 县 999 号 10540", "Suvarnabhumi Airport (Departures), 999 Moo 1, Nong Prue, Bang Phli, Samut Prakan 10540", "ท่าอากาศยานสุวรรณภูมิ (ผู้โดยสารขาออก) 999 หมู่ 1 ตำบลหนองปรือ อำเภอบางพลี จังหวัดสมุทรปราการ 10540"], "d1129-11": ["帕西桑佩寺，大城历史公园内，大城府 13000（到县级）", "Wat Phra Si Sanphet, Ayutthaya Historical Park, Phra Nakhon Si Ayutthaya 13000 (district level)", "วัดพระศรีสรรเพชญ์ อุทยานประวัติศาสตร์พระนครศรีอยุธยา อำเภอพระนครศรีอยุธยา จังหวัดพระนครศรีอยุธยา 13000"], "d1128-7": ["Baan Ta Koh Rai（必比登），大城府 Khlong Suanplu 乡 3 村 112/941 号 13000", "Baan Ta Koh Rai, 112/941 Moo 3, Khlong Suanplu, Phra Nakhon Si Ayutthaya 13000", "บ้านตะโกราย 112/941 หมู่ 3 ตำบลคลองสวนพลู อำเภอพระนครศรีอยุธยา จังหวัดพระนครศรีอยุธยา 13000"], "d1129-12": ["帕兰寺，大城历史公园内，大城府 13000（到县级）", "Wat Phra Ram, Ayutthaya Historical Park, Phra Nakhon Si Ayutthaya 13000 (district level)", "วัดพระราม อุทยานประวัติศาสตร์พระนครศรีอยุธยา อำเภอพระนครศรีอยุธยา จังหวัดพระนครศรีอยุธยา 13000"], "d1201-12": ["MBK 中心，Pathum Wan 区 Phaya Thai 路 444 号 10330", "MBK Center, 444 Phaya Thai Rd, Wang Mai, Pathum Wan, Bangkok 10330", "เอ็มบีเค เซ็นเตอร์ 444 ถนนพญาไท แขวงวังใหม่ เขตปทุมวัน กรุงเทพฯ 10330"], "d1201-13": ["Siam Paragon，Pathum Wan 区 Rama 1 路 991 号 10330（门牌凭记忆）", "Siam Paragon, 991 Rama 1 Rd, Pathum Wan, Bangkok 10330 (house number from memory)", "สยามพารากอน 991 ถนนพระราม 1 แขวงปทุมวัน เขตปทุมวัน กรุงเทพฯ 10330"], "d1130-12": ["Molly House Makeup Studio，Bangkok Yai 区 Arun Amarin 路 345/3 号（Wat Arun 一带）10600", "Molly House Makeup Studio, 345/3 Arun Amarin Rd, Wat Arun, Bangkok Yai, Bangkok 10600", "มอลลี่เฮาส์ เมคอัพ สตูดิโอ 345/3 ถนนอรุณอมรินทร์ แขวงวัดอรุณ เขตบางกอกใหญ่ กรุงเทพฯ 10600 (ชื่อภาษาไทยเป็นการทับศัพท์ ไม่ได้ตรวจสอบ)"], "d1130-14": ["卧佛寺，Phra Nakhon 区 Sanamchai 路 2 号 10200（门牌凭记忆，请用地图核对）", "Wat Pho, 2 Sanamchai Rd, Grand Palace Subdistrict, Phra Nakhon, Bangkok 10200 (house number from memory)", "วัดโพธิ์ (วัดพระเชตุพนวิมลมังคลาราม) 2 ถนนสนามไชย แขวงพระบรมมหาราชวัง เขตพระนคร กรุงเทพฯ 10200"], "d1130-16": ["Hidden Bangkok Bistro，Thon Buri 区 Talat Phlu，Soi Thoet Thai 26 巷 8 号 872 号 10600", "Hidden Bangkok Bistro, 872, 8 Soi Thoet Thai 26, Talat Phlu, Thon Buri, Bangkok 10600", "ฮิดเดน แบงคอก บิสโทร 872 ซอยเทอดไท 26 แยก 8 แขวงตลาดพลู เขตธนบุรี กรุงเทพฯ 10600 (ชื่อภาษาไทยทับศัพท์ ไม่ได้ตรวจสอบ)"], "d1129-13": ["金·汤普森故居，Pathum Wan 区 Rama 1 路 Kasemsan 2 巷 6 号 10330", "Jim Thompson House, 6 Soi Kasemsan 2, Rama 1 Rd, Wang Mai, Pathum Wan, Bangkok 10330", "บ้านจิมทอมป์สัน 6 ซอยเกษมสันต์ 2 ถนนพระราม 1 แขวงวังใหม่ เขตปทุมวัน กรุงเทพฯ 10330"]};
 
 // 出发前清单（11/21 显示）
 const PREP = [
@@ -548,6 +653,7 @@ const PREP = [
     ["防晒霜、墨镜、帽子", ""],
     ["个人洗护小样", "液体单瓶不超过 100ml 才能随身"]
   ]],
+  ["11/22 出发当天要办好的事", [["确认 SG Arrival Card 已提交", ""], ["机场买电话卡或开 eSIM", ""], ["手机装好 Grab", ""], ["提前买好 Bumboat 船票（20:00 场）", ""], ["订 Jumbo 21:00 的位子", ""]]],
   ["不要带", [
     ["电子烟", "新加坡、泰国都违法，会被重罚"],
     ["口香糖", "不能带入新加坡售卖，带了也别在当地乱吐"]
@@ -557,226 +663,361 @@ const PREP = [
 const LORE = [
  [
   "深圳宝安机场",
-  "深圳宝安机场 T3 航站楼 2013 年启用，由意大利建筑师 Fuksas 设计，白色蜂窝状的外壳像一只展开的蝠鲼（魔鬼鱼）。深圳在 1980 年设为经济特区之前，只是宝安县的一个边境小镇，四十多年里长成了超大城市。"
+  "深圳宝安机场 T3 航站楼 2013 年启用，由意大利建筑师 Fuksas 设计，白色蜂窝状的外壳像一只展开的蝠鲼（魔鬼鱼）。深圳在 1980 年设为经济特区之前，只是宝安县的一个边境小镇，四十多年里长成了超大城市。",
+  "Shenzhen Bao'an Airport's Terminal 3 opened in 2013, designed by Italian architect Fuksas. Its white honeycomb shell looks like an outstretched manta ray. Before it became a Special Economic Zone in 1980, Shenzhen was a border town in Bao'an County; in four decades it grew into a megacity."
  ],
  [
   "抵达新加坡樟宜机场",
-  "樟宜机场 1981 年启用，取代了之前的巴耶利巴机场，后来多次被评为世界最佳机场之一。樟宜这一带二战时也是日军关押战俘和平民的地方。"
+  "樟宜机场 1981 年启用，取代了之前的巴耶利巴机场，后来多次被评为世界最佳机场之一。樟宜这一带二战时也是日军关押战俘和平民的地方。",
+  "Changi Airport opened in 1981, replacing Paya Lebar Airport, and has repeatedly been voted one of the world's best airports. During World War II the Changi area was also where the Japanese held prisoners of war and civilians."
  ],
  [
   "入住琵拉帝诗",
-  "酒店附近的克拉码头（Clarke Quay）以海峡殖民地第二任总督安德鲁·克拉克爵士（1873–75 年在任）命名。19 世纪这里是新加坡河边的货运码头，岸边是一排排仓库（godown）；今天的彩色店屋就是这些老仓库和店屋翻新而成。"
+  "酒店附近的克拉码头（Clarke Quay）以海峡殖民地第二任总督安德鲁·克拉克爵士（1873–75 年在任）命名。19 世纪这里是新加坡河边的货运码头，岸边是一排排仓库（godown）；今天的彩色店屋就是这些老仓库和店屋翻新而成。",
+  "Clarke Quay is named after Sir Andrew Clarke, the second Governor of the Straits Settlements (1873–75). In the 19th century this was a cargo wharf on the Singapore River, lined with warehouses (godowns). Today's colourful buildings are those old warehouses and shophouses, restored."
  ],
  [
   "Bumboat",
-  "bumboat 原本是新加坡河上运货的平底小驳船：大船停在外海，货物由驳船运进河边仓库，两岸因此成了贸易中心。1977 年起政府花十年清理河道，驳船和小贩迁走；现在游览用的 bumboat 是模仿当年驳船的样子做的。"
+  "bumboat 原本是新加坡河上运货的平底小驳船：大船停在外海，货物由驳船运进河边仓库，两岸因此成了贸易中心。1977 年起政府花十年清理河道，驳船和小贩迁走；现在游览用的 bumboat 是模仿当年驳船的样子做的。",
+  "A bumboat was a flat-bottomed lighter that carried cargo on the Singapore River: ships anchored offshore and bumboats ferried goods to riverside warehouses, which made the banks a trading hub. From 1977 the government spent ten years cleaning up the river and relocating boatmen and hawkers. Today's tour boats imitate the old bumboats."
  ],
  [
   "Jumbo",
-  "辣椒蟹是新加坡最有代表性的菜之一，相传 1950 年代由 Cher Yam Tian 女士在路边摊发明，最早只是蟹加番茄酱炒，后来才加进辣椒和蛋花。Jumbo Seafood 1987 年在东海岸海鲜中心开业。吃法：炸馒头蘸满酱汁。"
+  "辣椒蟹是新加坡最有代表性的菜之一，相传 1950 年代由 Cher Yam Tian 女士在路边摊发明，最早只是蟹加番茄酱炒，后来才加进辣椒和蛋花。Jumbo Seafood 1987 年在东海岸海鲜中心开业。吃法：炸馒头蘸满酱汁。",
+  "Chilli crab is one of Singapore's signature dishes. It is said to have been invented in the 1950s by Madam Cher Yam Tian at a roadside stall – at first just crab stir-fried in tomato sauce, with chilli and egg ribbons added later. JUMBO Seafood opened in 1987 at the East Coast Seafood Centre. Dip fried mantou buns in the sauce."
  ],
  [
   "Chin Mee Chin",
-  "这类咖啡饼店是海南人的传统：海南移民早年在英国人家里做厨师和管家，学会了西式烘焙，后来自己开咖啡店，所以才有咖椰吐司、奶油角和蛋糕。加东（Katong）以前临海，是土生华人和欧亚混血家庭聚居的地方。"
+  "这类咖啡饼店是海南人的传统：海南移民早年在英国人家里做厨师和管家，学会了西式烘焙，后来自己开咖啡店，所以才有咖椰吐司、奶油角和蛋糕。加东（Katong）以前临海，是土生华人和欧亚混血家庭聚居的地方。",
+  "Confectionery cafés like this are a Hainanese tradition: Hainanese immigrants worked as cooks and butlers in British households, learned Western baking, and later opened coffee shops – hence kaya toast, cream horns and cakes. Katong was once seaside land where Peranakan and Eurasian families lived."
  ],
  [
   "Koon Seng",
-  "如切（Joo Chiat）得名于地主 Chew Joo Chiat（1857–1926）。Koon Seng Road 这排彩色联排屋是 20 世纪初到战前的建筑，保留了典型的娘惹元素：灰泥花饰、彩色花砖、双开木门（pintu pagar）和前面的“五脚基”走廊。"
+  "如切（Joo Chiat）得名于地主 Chew Joo Chiat（1857–1926）。Koon Seng Road 这排彩色联排屋是 20 世纪初到战前的建筑，保留了典型的娘惹元素：灰泥花饰、彩色花砖、双开木门（pintu pagar）和前面的“五脚基”走廊。",
+  "Joo Chiat is named after landowner Chew Joo Chiat (1857–1926). The pastel terrace houses on Koon Seng Road date from the early 20th century to before the war and keep classic Peranakan features: plaster ornament, coloured tiles, double swing doors (pintu pagar) and the covered \"five-foot way\"."
  ],
  [
   "Peranakan Mansion",
-  "Peranakan 指早年到东南亚经商的华人与当地女子通婚后留下的后代：男性叫 Baba（峇峇），女性叫 Nyonya（娘惹），说混合了闽南语的马来语。这座博物馆在一栋 1928 年的店屋里，展出家具、布料、瓷器和首饰，能看到中国、马来和欧洲三种风格混在一起。"
+  "Peranakan 指早年到东南亚经商的华人与当地女子通婚后留下的后代：男性叫 Baba（峇峇），女性叫 Nyonya（娘惹），说混合了闽南语的马来语。这座博物馆在一栋 1928 年的店屋里，展出家具、布料、瓷器和首饰，能看到中国、马来和欧洲三种风格混在一起。",
+  "\"Peranakan\" refers to the descendants of early Chinese traders who married local women in Southeast Asia: men are called Baba, women Nyonya, and they spoke a Malay mixed with Hokkien. This museum is in a 1928 shophouse and shows furniture, textiles, porcelain and jewellery that blend Chinese, Malay and European styles."
  ],
  [
   "老机场路食阁",
-  "老机场路因旧的加冷机场（Kallang Airport）得名：1937 年启用，是新加坡第一个民用机场，1955 年被巴耶利巴机场取代。食阁（hawker centre）是 1970 年代政府把路边小贩迁进统一场所的产物，这里 1973 年开始营业。2020 年，新加坡的小贩文化被列入联合国教科文组织人类非物质文化遗产名录。"
+  "老机场路因旧的加冷机场（Kallang Airport）得名：1937 年启用，是新加坡第一个民用机场，1955 年被巴耶利巴机场取代。食阁（hawker centre）是 1970 年代政府把路边小贩迁进统一场所的产物，这里 1973 年开始营业。2020 年，新加坡的小贩文化被列入联合国教科文组织人类非物质文化遗产名录。",
+  "Old Airport Road is named after Kallang Airport, Singapore's first civil airport (opened 1937, replaced by Paya Lebar in 1955). Hawker centres were built in the 1970s to move street hawkers into proper premises; this one opened in 1973. In 2020 Singapore's hawker culture was inscribed on UNESCO's Intangible Cultural Heritage list."
  ],
  [
   "榴莲街",
-  "新加坡人叫榴莲“水果之王”，本地卖的榴莲多数从马来西亚进口。Geylang（芽笼）这个名字一般认为和这一带早年种香茅（serai）有关，旁边的 Geylang Serai 至今是马来社区的中心。老说法：榴莲“热气”，吃完要配“凉”的山竹；酒店和地铁都禁止带榴莲。"
- ],
- [
-  "去甘榜格南",
-  "甘榜格南（Kampong Glam）曾是马来王室区：1819 年莱佛士与胡先苏丹订约，1822 年的城市规划把这一片划给苏丹和族人居住。“Gelam”据说来自一种白千层树，树皮曾用来堵船缝。后来这里成了阿拉伯商人和穆斯林朝圣者聚居的地方。"
+  "新加坡人叫榴莲“水果之王”，本地卖的榴莲多数从马来西亚进口。Geylang（芽笼）这个名字一般认为和这一带早年种香茅（serai）有关，旁边的 Geylang Serai 至今是马来社区的中心。老说法：榴莲“热气”，吃完要配“凉”的山竹；酒店和地铁都禁止带榴莲。",
+  "Singaporeans call durian the \"king of fruits\"; most of it is imported from Malaysia. \"Geylang\" is generally thought to relate to the lemongrass (serai) once grown here, and neighbouring Geylang Serai is still the heart of the Malay community. Folk wisdom says durian is \"heaty\" and should be balanced with \"cooling\" mangosteen. Durian is banned in hotels and on the MRT."
  ],
  [
   "哈芝巷",
-  "哈芝巷（Haji Lane）是甘榜格南最窄的一条小巷，两边是 20 世纪初的联排店屋，早年是阿拉伯、马来商人的杂货铺和小旅馆；名字常被认为和去麦加朝圣的“哈芝”（haji）有关，说法不一。现在多是设计小店、古着和壁画。"
+  "甘榜格南（Kampong Glam）曾是马来王室区：1819 年莱佛士与胡先苏丹订约，1822 年的城市规划把这一片划给苏丹和族人居住；“Gelam”据说来自一种白千层树，树皮曾用来堵船缝。后来这里成了阿拉伯商人和穆斯林朝圣者聚居的地方。哈芝巷（Haji Lane）是区里最窄的一条小巷，两边是 20 世纪初的联排店屋，早年是阿拉伯、马来商人的杂货铺和小旅馆；名字常被认为和去麦加朝圣的“哈芝”（haji）有关，说法不一。现在多是设计小店、古着和壁画。",
+  "Kampong Glam was once the Malay royal quarter: Raffles signed a treaty with Sultan Hussein in 1819, and the 1822 town plan set this area aside for the Sultan and his people. \"Gelam\" is said to come from a tree whose bark was used to caulk boats. It later became home to Arab merchants and Muslim pilgrims. Haji Lane is its narrowest alley, lined with early-20th-century shophouses that were once Arab and Malay grocers and lodgings; the name is often linked to the \"haji\" who made the pilgrimage to Mecca, though accounts differ. Today it is full of design shops, vintage stores and murals."
  ],
  [
   "Bussorah",
-  "Bussorah Street 的名字来自伊拉克的巴士拉（Basra），与阿拉伯商人的渊源有关。苏丹回教堂（Masjid Sultan）现在的建筑 1932 年完工，由建筑师 Denis Santry 设计；金色圆顶的底部据说嵌着穷穆斯林捐出的玻璃瓶底。"
+  "Bussorah Street 的名字来自伊拉克的巴士拉（Basra），与阿拉伯商人的渊源有关。苏丹回教堂（Masjid Sultan）现在的建筑 1932 年完工，由建筑师 Denis Santry 设计；金色圆顶的底部据说嵌着穷穆斯林捐出的玻璃瓶底。",
+  "Bussorah Street is named after Basra in Iraq, reflecting the Arab merchants who lived here. The present Sultan Mosque (Masjid Sultan) was completed in 1932 to a design by architect Denis Santry; the base of its golden dome is said to be studded with glass bottle ends donated by poor Muslims."
  ],
  [
   "Selegie",
-  "Selegie Arts Centre 的大楼原本是一家印度咖啡店，楼上住人；1994 年被列为保护建筑，后来由国家艺术理事会改成艺术空间，1996 年 11 月启用，最早供新加坡摄影学会使用。外墙鲜艳的配色是它的标志。"
+  "Selegie Arts Centre 的大楼原本是一家印度咖啡店，楼上住人；1994 年被列为保护建筑，后来由国家艺术理事会改成艺术空间，1996 年 11 月启用，最早供新加坡摄影学会使用。外墙鲜艳的配色是它的标志。",
+  "The Selegie Arts Centre building was originally an Indian coffee shop with homes upstairs. It was gazetted for conservation in 1994, then taken over by the National Arts Council as an arts space and opened in November 1996, first for the Photographic Society of Singapore. Its bright paint scheme is its signature."
  ],
  [
   "翡翠山历史保护区",
-  "Emerald Hill 一带原是 19 世纪的肉豆蔻种植园，Cuppage Road 的名字据记载来自当年的种植园主 William Cuppage。20 世纪初，富有的土生华人在山上盖起一排排联排洋楼，1989 年被划为保护区。路口的 Peranakan Place 是这一带最显眼的一组。"
+  "Emerald Hill 一带原是 19 世纪的肉豆蔻种植园，Cuppage Road 的名字据记载来自当年的种植园主 William Cuppage。20 世纪初，富有的土生华人在山上盖起一排排联排洋楼，1989 年被划为保护区。路口的 Peranakan Place 是这一带最显眼的一组。",
+  "Emerald Hill was a 19th-century nutmeg plantation; Cuppage Road is recorded as named after planter William Cuppage. In the early 20th century wealthy Peranakans built rows of terrace houses on the hill, and the area was gazetted for conservation in 1989. Peranakan Place at the entrance is the most eye-catching group."
  ],
  [
   "National Kitchen",
-  "这家餐厅所在的国家美术馆由两栋建筑合并而成：1929 年建成的旧市政厅（City Hall）和 1939 年建成的旧最高法院，2015 年改成美术馆。1945 年 9 月，日军在市政厅的大厅向盟军正式投降。餐厅的 Violet Oon 是新加坡美食作家，以娘惹菜闻名。"
+  "这家餐厅所在的国家美术馆由两栋建筑合并而成：1929 年建成的旧市政厅（City Hall）和 1939 年建成的旧最高法院，2015 年改成美术馆。1945 年 9 月，日军在市政厅的大厅向盟军正式投降。餐厅的 Violet Oon 是新加坡美食作家，以娘惹菜闻名。",
+  "The National Gallery is made of two merged buildings: the old City Hall (completed 1929) and the old Supreme Court (1939), converted into a gallery in 2015. In September 1945 the Japanese formally surrendered to the Allies in City Hall's chamber. Violet Oon is a Singaporean food writer known for Peranakan cuisine."
  ],
  [
   "Old Hill Street",
-  "Old Hill Street Police Station 1934 年建成，曾是警察总部，在当时是新加坡最大的政府大楼之一。立面上九百多扇窗被涂成彩虹色，现在是政府部门的办公楼，只能在外面拍照。"
+  "Old Hill Street Police Station 1934 年建成，曾是警察总部，在当时是新加坡最大的政府大楼之一。立面上九百多扇窗被涂成彩虹色，现在是政府部门的办公楼，只能在外面拍照。",
+  "Old Hill Street Police Station was completed in 1934 and served as police headquarters; at the time it was one of Singapore's largest government buildings. Its 900-odd windows were painted in rainbow colours. It now houses government offices, so it is photographed from outside only."
  ],
  [
   "福康宁公园",
-  "福康宁山（Fort Canning）古称“禁山”（Bukit Larangan），传说 14 世纪的马来王曾居住于此。1822 年莱佛士在山顶盖了住所，还开辟了新加坡第一个实验植物园；1859 年建炮台，以印度总督坎宁子爵命名。1942 年二战时，山下“Battle Box”地下指挥部是英军决定投降的地方。"
+  "福康宁山（Fort Canning）古称“禁山”（Bukit Larangan），传说 14 世纪的马来王曾居住于此。1822 年莱佛士在山顶盖了住所，还开辟了新加坡第一个实验植物园；1859 年建炮台，以印度总督坎宁子爵命名。1942 年二战时，山下“Battle Box”地下指挥部是英军决定投降的地方。",
+  "Fort Canning, once called \"Forbidden Hill\" (Bukit Larangan), is said to have been home to a 14th-century Malay king. In 1822 Raffles built a residence on top and started Singapore's first experimental botanic garden; the fort (1859) is named after Viscount Canning, Governor-General of India. In 1942 the \"Battle Box\" bunker beneath the hill was where the British decided to surrender."
  ],
  [
   "土生华人博物馆",
-  "博物馆所在的大楼 20 世纪初是道南学校（Tao Nan School），新加坡最早的华文学校之一，由福建人创办。博物馆 2023 年改造后重新开放，收藏峇峇娘惹的婚礼、服饰、珠绣和金饰，很多物件把中国的图案、马来的做法和欧洲的瓷器混在一起。"
+  "博物馆所在的大楼 20 世纪初是道南学校（Tao Nan School），新加坡最早的华文学校之一，由福建人创办。博物馆 2023 年改造后重新开放，收藏峇峇娘惹的婚礼、服饰、珠绣和金饰，很多物件把中国的图案、马来的做法和欧洲的瓷器混在一起。",
+  "The building was the Tao Nan School in the early 20th century, among Singapore's earliest Chinese-language schools, founded by the Hokkien community. The museum reopened in 2023 after a revamp, with Peranakan weddings, clothing, beadwork and gold jewellery – many pieces mix Chinese motifs, Malay craft and European porcelain."
  ],
  [
   "HolyCrab",
-  "HolyCrab 所在的 Capitol Singapore，老 Capitol 戏院 1930 年开幕，是装饰艺术风格的老戏院，2015 年修复后改成商场和酒店。吃螃蟹戴一次性手套直接手抓，是本地人的吃法。"
+  "HolyCrab 所在的 Capitol Singapore，老 Capitol 戏院 1930 年开幕，是装饰艺术风格的老戏院，2015 年修复后改成商场和酒店。吃螃蟹戴一次性手套直接手抓，是本地人的吃法。",
+  "Capitol Singapore's old Capitol Theatre opened in 1930, an Art Deco cinema restored in 2015 as a mall and hotel. Eating crab with disposable gloves and bare hands is the local way."
  ],
  [
   "国家博物馆",
-  "新加坡最老的博物馆，前身是 1849 年的莱佛士图书馆与博物馆；现在的新古典主义建筑和圆顶 1887 年落成，1965 年改称国家博物馆。展厅从渔村讲到港口城市，包括日据时期的展览。"
+  "新加坡最老的博物馆，前身是 1849 年的莱佛士图书馆与博物馆；现在的新古典主义建筑和圆顶 1887 年落成，1965 年改称国家博物馆。展厅从渔村讲到港口城市，包括日据时期的展览。",
+  "Singapore's oldest museum, descended from the Raffles Library and Museum of 1849. The present neoclassical building and dome were completed in 1887, and it was renamed the National Museum in 1965. The galleries trace Singapore from fishing village to port city, including the Japanese Occupation."
  ],
  [
   "Kopi House",
-  "“Kopi”是马来语“咖啡”，tiam 是福建话“店”，kopitiam 就是咖啡店。点单暗语：Kopi = 加炼乳和糖；Kopi O = 黑咖啡加糖；Kopi C = 加淡奶和糖；Kopi Kosong = 有奶无糖；Kopi O Kosong = 黑咖啡不加糖；Siew Dai = 少糖；Gao = 浓；Po = 淡。"
+  "“Kopi”是马来语“咖啡”，tiam 是福建话“店”，kopitiam 就是咖啡店。点单暗语：Kopi = 加炼乳和糖；Kopi O = 黑咖啡加糖；Kopi C = 加淡奶和糖；Kopi Kosong = 有奶无糖；Kopi O Kosong = 黑咖啡不加糖；Siew Dai = 少糖；Gao = 浓；Po = 淡。",
+  "\"Kopi\" is Malay for coffee and \"tiam\" is Hokkien for shop, so kopitiam = coffee shop. Order code: Kopi = with condensed milk and sugar; Kopi O = black with sugar; Kopi C = with evaporated milk and sugar; Kopi Kosong = with milk, no sugar; Kopi O Kosong = black, no sugar; Siew Dai = less sugar; Gao = strong; Po = weak."
  ],
  [
   "Night Safari",
-  "夜间动物园 1994 年开放，是世界上第一个夜间动物园，里面以夜行动物为主，用低亮度的灯光模拟月光。园内禁止闪光灯，会打扰动物。"
+  "夜间动物园 1994 年开放，是世界上第一个夜间动物园，里面以夜行动物为主，用低亮度的灯光模拟月光。园内禁止闪光灯，会打扰动物。",
+  "Night Safari opened in 1994 as the world's first nocturnal zoo, focused on night-active animals under low lighting that imitates moonlight. Flash photography is forbidden because it disturbs the animals."
  ],
  [
   "Tong Ah",
-  "东亚餐室（Tong Ah Eating House）1939 年开在 Keong Saik Road，以炭烤吐司和半熟蛋出名。Keong Saik Road 在 20 世纪前半叶是红灯区，后来整条街的店屋被翻新，变成精品酒店和餐厅。"
+  "东亚餐室（Tong Ah Eating House）1939 年开在 Keong Saik Road，以炭烤吐司和半熟蛋出名。Keong Saik Road 在 20 世纪前半叶是红灯区，后来整条街的店屋被翻新，变成精品酒店和餐厅。",
+  "Tong Ah Eating House opened in 1939 on Keong Saik Road and is known for charcoal-grilled toast with soft-boiled eggs. Keong Saik Road was a red-light district in the first half of the 20th century; its shophouses were later restored as boutique hotels and restaurants."
  ],
  [
   "Tong Mern Sern",
-  "Tong Mern Sern 所在的 Craig Road 属于丹绒巴葛（Tanjong Pagar）保护区。店屋（shophouse）是新加坡最典型的老建筑：楼下做生意、楼上住人，前面有顶的“五脚基”（five-foot way）是莱佛士 1822 年城市规划规定的遮阳避雨走廊。"
+  "Tong Mern Sern 所在的 Craig Road 属于丹绒巴葛（Tanjong Pagar）保护区。店屋（shophouse）是新加坡最典型的老建筑：楼下做生意、楼上住人，前面有顶的“五脚基”（five-foot way）是莱佛士 1822 年城市规划规定的遮阳避雨走廊。",
+  "Craig Road lies in the Tanjong Pagar Conservation Area. The shophouse is Singapore's classic old building: shop downstairs, home upstairs, with a covered \"five-foot way\" in front that Raffles' 1822 town plan required as shelter from sun and rain."
  ],
  [
   "BabyFang",
-  "Tras Link 一带属于丹绒巴葛。“Tanjong Pagar”在马来语里大意是“木桩岬”，据说和早年沿岸插着捕鱼的木桩有关。"
+  "Tras Link 一带属于丹绒巴葛。“Tanjong Pagar”在马来语里大意是“木桩岬”，据说和早年沿岸插着捕鱼的木桩有关。",
+  "Tras Link is in Tanjong Pagar. \"Tanjong Pagar\" is Malay for roughly \"cape of stakes\", said to refer to the fishing stakes once planted along the shore."
  ],
  [
   "佛牙寺",
-  "佛牙寺 2007 年开放，仿唐代风格，供奉一枚被寺方称为佛牙舍利的圣物，据寺方说是 1980 年前后在缅甸一座倒塌的佛塔中发现的。进寺要遮住肩膀和膝盖。"
+  "佛牙寺 2007 年开放，仿唐代风格，供奉一枚被寺方称为佛牙舍利的圣物，据寺方说是 1980 年前后在缅甸一座倒塌的佛塔中发现的。进寺要遮住肩膀和膝盖。",
+  "The Buddha Tooth Relic Temple opened in 2007 in Tang-dynasty style and enshrines a relic the temple describes as a tooth of the Buddha, which it says was found around 1980 in a collapsed stupa in Myanmar. Cover shoulders and knees to enter."
  ],
  [
   "Tai Chong Kok",
-  "Sago Street（西米街）得名于以前这一带的西米（sago）加工厂。Sago Lane 的老名字叫“死人街”：20 世纪上半叶，街上有给临终老人住的“死人屋”，如今早已拆掉。"
+  "Sago Street（西米街）得名于以前这一带的西米（sago）加工厂。Sago Lane 的老名字叫“死人街”：20 世纪上半叶，街上有给临终老人住的“死人屋”，如今早已拆掉。",
+  "Sago Street is named after the sago-flour mills that once stood here. Sago Lane's old nickname was \"Street of the Dead\": in the first half of the 20th century it had \"death houses\" where the dying elderly stayed; they were long ago demolished."
  ],
  [
   "Chinatown Market Wall",
-  "这组壁画的作者 Yip Yew Chong（叶耀聪）是新加坡艺术家，用怀旧的画风把老牛车水的日常——菜市场、理发摊、木屐匠——画在店屋外墙上，让人站进画面里拍照。牛车水的名字来自马来语 Kreta Ayer，意思是“水车”——早年这一带没有自来水，用牛车运水来卖。1822 年莱佛士的城市规划把新加坡河南岸划给华人居住，牛车水逐渐成为华人社区的中心。"
+  "这组壁画的作者 Yip Yew Chong（叶耀聪）是新加坡艺术家，用怀旧的画风把老牛车水的日常——菜市场、理发摊、木屐匠——画在店屋外墙上，让人站进画面里拍照。牛车水的名字来自马来语 Kreta Ayer，意思是“水车”——早年这一带没有自来水，用牛车运水来卖。1822 年莱佛士的城市规划把新加坡河南岸划给华人居住，牛车水逐渐成为华人社区的中心。",
+  "The mural's artist, Yip Yew Chong, is a Singaporean who paints nostalgic scenes of old Chinatown – wet markets, barbers, clog makers – on shophouse walls so visitors can step into the picture. Chinatown's Chinese name \"Niu Che Shui\" comes from the Malay Kreta Ayer, \"water cart\": early residents had no tap water, so water was hauled in by ox cart. Raffles' 1822 plan set the south bank of the river aside for the Chinese."
  ],
  [
   "鱼尾狮",
-  "鱼尾狮是 1964 年为新加坡旅游局设计的标志，设计者是 Alec Fraser-Brunner。狮头来自“Singapura（狮城）”的传说——14 世纪的王子 Sang Nila Utama 在岛上见到一头狮子；鱼身代表这里原本是叫 Temasek（淡马锡）的渔村。公园里的石像 1972 年由李光耀揭幕，2002 年迁到现在的位置。"
+  "鱼尾狮是 1964 年为新加坡旅游局设计的标志，设计者是 Alec Fraser-Brunner。狮头来自“Singapura（狮城）”的传说——14 世纪的王子 Sang Nila Utama 在岛上见到一头狮子；鱼身代表这里原本是叫 Temasek（淡马锡）的渔村。公园里的石像 1972 年由李光耀揭幕，2002 年迁到现在的位置。",
+  "The Merlion was created in 1964 as a logo for the Singapore Tourism Board by Alec Fraser-Brunner. The lion head comes from the legend of \"Singapura\" (Lion City), when the 14th-century prince Sang Nila Utama saw a lion on the island; the fish body recalls the fishing village of Temasek. The statue was unveiled by Lee Kuan Yew in 1972 and moved to its present spot in 2002."
  ],
  [
   "滨海湾花园",
-  "滨海湾花园 2012 年开放，建在填海土地上，是新加坡“花园中的城市”政策的代表作。擎天大树（Supertree）高 25–50 米，表面爬满植物，顶上装着太阳能板，有的还负责给旁边的温室排气降温。OCBC 空中走廊离地约 22 米。"
+  "滨海湾花园 2012 年开放，建在填海土地上，是新加坡“花园中的城市”政策的代表作。擎天大树（Supertree）高 25–50 米，表面爬满植物，顶上装着太阳能板，有的还负责给旁边的温室排气降温。OCBC 空中走廊离地约 22 米。",
+  "Gardens by the Bay opened in 2012 on reclaimed land and is the flagship of Singapore's \"City in a Garden\" vision. The Supertrees stand 25–50 m tall, covered in plants, topped with solar panels, and some vent the greenhouses' cooling system. The OCBC Skyway is about 22 m above ground."
  ],
  [
   "Garden Rhapsody",
-  "Garden Rhapsody 是在 Supertree Grove 每晚固定场次的灯光音乐秀，灯光随着音乐变化，每场十几分钟。可以躺在草地或空地上仰头看。"
+  "Garden Rhapsody 是在 Supertree Grove 每晚固定场次的灯光音乐秀，灯光随着音乐变化，每场十几分钟。可以躺在草地或空地上仰头看。",
+  "Garden Rhapsody is a nightly light-and-music show at the Supertree Grove, lasting a dozen minutes or so. Lie on the grass or open ground and look up."
  ],
  [
   "Bafu",
-  "榴莲鸡锅是近年在新加坡和马来西亚流行起来的吃法：把榴莲果肉煮进鸡汤，汤带着榴莲的甜和奶香。冷知识：滨海艺术中心（Esplanade）圆圆带刺的屋顶，本地人叫它“大榴莲”。"
- ],
- [
-  "去樟宜机场",
-  "樟宜机场多次被评为世界最佳机场之一。T1 是最早的航站楼，1981 年启用；Jewel 就盖在它前面，两者有连廊相通。"
+  "榴莲鸡锅是近年在新加坡和马来西亚流行起来的吃法：把榴莲果肉煮进鸡汤，汤带着榴莲的甜和奶香。冷知识：滨海艺术中心（Esplanade）圆圆带刺的屋顶，本地人叫它“大榴莲”。",
+  "Durian chicken pot is a recent Singapore–Malaysia craze: durian flesh simmered into chicken soup for sweetness and creaminess. Trivia: the round, spiky roof of the Esplanade theatres is nicknamed \"the durian\" by locals."
  ],
  [
   "雨漩涡",
-  "星耀樟宜（Jewel）2019 年 4 月开放，由 Safdie Architects 设计，盖在 T1 前面原来的露天停车场上。40 米高的 HSBC 雨漩涡（Rain Vortex）常被称为世界最高的室内瀑布，旁边的森林谷种满了树木和灌木。"
+  "星耀樟宜（Jewel）2019 年 4 月开放，由 Safdie Architects 设计，盖在 T1 前面原来的露天停车场上。40 米高的 HSBC 雨漩涡（Rain Vortex）常被称为世界最高的室内瀑布，旁边的森林谷种满了树木和灌木。",
+  "Jewel Changi Airport opened in April 2019, designed by Safdie Architects, on the former open-air car park in front of T1. The 40 m HSBC Rain Vortex is often called the world's tallest indoor waterfall, and the Forest Valley beside it is planted with trees and shrubs."
  ],
  [
   "抵达曼谷素万那普",
-  "素万那普机场 2006 年 9 月启用，取代廊曼机场成为曼谷的主要国际机场。“Suvarnabhumi”是泰语“黄金之地”，由已故的普密蓬国王赐名。"
+  "素万那普机场 2006 年 9 月启用，取代廊曼机场成为曼谷的主要国际机场。“Suvarnabhumi”是泰语“黄金之地”，由已故的普密蓬国王赐名。",
+  "Suvarnabhumi Airport opened in September 2006 and replaced Don Mueang as Bangkok's main international airport. \"Suvarnabhumi\" means \"Golden Land\" in Thai and was named by the late King Bhumibol."
  ],
  [
   "安凡尼",
-  "酒店在湄南河（Chao Phraya）边，这条河常被译为“王者之河”，是曼谷的命脉：18 世纪末曼谷建都时，城市就沿着河发展，河上的渡船和长尾船至今还在运人。"
+  "酒店在湄南河（Chao Phraya）边，这条河常被译为“王者之河”，是曼谷的命脉：18 世纪末曼谷建都时，城市就沿着河发展，河上的渡船和长尾船至今还在运人。",
+  "The hotel sits on the Chao Phraya, often translated \"River of Kings\", Bangkok's lifeline. When the city was founded in the late 18th century it grew along the river, and ferries and long-tail boats still carry people today."
  ],
  [
   "ICONSIAM",
-  "ICONSIAM 2018 年底在湄南河边开业，是曼谷的大型滨水商场。里面的 SOOKSIAM 是室内水上市场，仿造泰国各地的传统市场和水上生活，可以集中吃到各地小吃。"
+  "ICONSIAM 2018 年底在湄南河边开业，是曼谷的大型滨水商场。里面的 SOOKSIAM 是室内水上市场，仿造泰国各地的传统市场和水上生活，可以集中吃到各地小吃。",
+  "ICONSIAM opened on the Chao Phraya in late 2018, a large riverside mall. Its SOOKSIAM indoor floating market recreates traditional markets and water life from across Thailand, with regional snacks in one place."
  ],
  [
   "丹嫩沙多",
-  "丹嫩沙多运河是拉玛四世（Mongkut）在 1866 年下令开凿的，用来连通 Tha Chin 河与 Mae Klong 河。以前的水上市场是当地人买卖的日常，现在以游客为主，早上 9 点前人少一些。"
+  "丹嫩沙多运河是拉玛四世（Mongkut）在 1866 年下令开凿的，用来连通 Tha Chin 河与 Mae Klong 河。以前的水上市场是当地人买卖的日常，现在以游客为主，早上 9 点前人少一些。",
+  "The Damnoen Saduak canal was ordered dug by King Rama IV (Mongkut) in 1866 to link the Tha Chin and Mae Klong rivers. The floating market was once everyday trade for locals and is now mostly for visitors; it is quieter before 9 a.m."
  ],
  [
   "美功铁道",
-  "美功铁路市场（Talat Rom Hoop，“收伞市场”）的小贩把摊子搭在铁轨上，火车来时才收起遮阳棚让路，车过之后再支起。这条美功铁路是 20 世纪初的老铁路。"
+  "美功铁路市场（Talat Rom Hoop，“收伞市场”）的小贩把摊子搭在铁轨上，火车来时才收起遮阳棚让路，车过之后再支起。这条美功铁路是 20 世纪初的老铁路。",
+  "At the Maeklong Railway Market (Talat Rom Hoop, \"umbrella-folding market\") vendors set up on the tracks and fold away their awnings only when a train comes, then reopen as it passes. The line is an early-20th-century railway."
  ],
  [
   "班印轩",
-  "安帕瓦（Amphawa）是泰国国王拉玛二世的出生地，运河边保留着不少木屋。住在这里的好处是傍晚游客散去后，运河一带很安静，早晨能看到水边的日常生活。"
+  "安帕瓦（Amphawa）是泰国国王拉玛二世的出生地，运河边保留着不少木屋。住在这里的好处是傍晚游客散去后，运河一带很安静，早晨能看到水边的日常生活。",
+  "Amphawa is the birthplace of King Rama II, and canal-side wooden houses still stand. Staying here means the canal turns quiet after day visitors leave, and you can see everyday waterside life in the morning."
  ],
  [
   "安帕瓦水上市场",
-  "安帕瓦水上市场只在周五到周日的下午和晚上热闹，小贩在船上烧烤海鲜、卖糕点。安帕瓦本身是个有两百多年历史的运河小镇，拉玛二世（1767–1824）出生在这里。"
+  "安帕瓦水上市场只在周五到周日的下午和晚上热闹，小贩在船上烧烤海鲜、卖糕点。安帕瓦本身是个有两百多年历史的运河小镇，拉玛二世（1767–1824）出生在这里。",
+  "Amphawa Floating Market is busy only on Friday to Sunday afternoons and evenings, with vendors grilling seafood and selling sweets from boats. Amphawa itself is a canal town over two centuries old and the birthplace of Rama II (1767–1824)."
  ],
  [
   "萤火虫",
-  "安帕瓦运河边长着一种叫 lamphu 的植物（海桑），夜里成群的萤火虫停在树上一起闪光。萤火虫怕光和噪音，船上请关闪光灯、手电和手机屏幕；月亮太亮的夜晚看得少。"
+  "安帕瓦运河边长着一种叫 lamphu 的植物（海桑），夜里成群的萤火虫停在树上一起闪光。萤火虫怕光和噪音，船上请关闪光灯、手电和手机屏幕；月亮太亮的夜晚看得少。",
+  "Fireflies gather on lamphu trees (mangrove apple) along Amphawa's canals and flash together at night. They are sensitive to light and noise, so turn off flash, torches and phone screens on the boat; bright moonlit nights show fewer."
  ],
  [
   "河边散步",
-  "湄南河在泰国人心里是母亲河，古时的城市和皇宫都沿河而建。清晨河边是看当地生活的好时间：渡船、早市和给僧人布施的人。"
- ],
- [
-  "玛哈泰寺",
-  "大城（Ayutthaya）由 U Thong（Ramathibodi 一世）约 1350 年建都，1767 年被缅甸军队攻陷。Wat Mahathat 是当时的重要王家寺院，树根缠住的佛头是这里最有名的景象。"
- ],
- [
-  "柴瓦塔那兰寺",
-  "Wat Chaiwatthanaram 是 1630 年国王 Prasat Thong 为纪念母亲所建，中央的高塔（prang）模仿柬埔寨吴哥的风格，四周有小塔环绕。1767 年大城陷落时遭到破坏，后来修复。傍晚夕阳照在红褐色的砖石上最好看。"
- ],
- [
-  "大城古迹清晨游",
-  "大城全盛时期是东南亚最繁华的城市之一，有许多国家的商人往来，1991 年和周围遗迹一起被列入联合国教科文组织世界遗产。遗址里的红砖佛塔和佛像在 1767 年被缅甸军队洗劫焚毁，很多佛像至今缺头少手。"
+  "湄南河在泰国人心里是母亲河，古时的城市和皇宫都沿河而建。清晨河边是看当地生活的好时间：渡船、早市和给僧人布施的人。",
+  "The Chao Phraya is Thailand's mother river; old cities and palaces were built along it. Early morning on the riverbank is a good time to see local life: ferries, morning markets and people giving alms to monks."
  ],
  [
   "入住诺富特",
-  "暹罗（Siam）是泰国 1939 年之前的国名，1939 年改名 Thailand，1945–1949 年又短暂改回 Siam。“暹罗广场”一带因此得名，是曼谷最热闹的商圈。"
+  "暹罗（Siam）是泰国 1939 年之前的国名，1939 年改名 Thailand，1945–1949 年又短暂改回 Siam。“暹罗广场”一带因此得名，是曼谷最热闹的商圈。",
+  "Siam was Thailand's name until 1939, when it became Thailand; it briefly reverted to Siam in 1945–1949. Siam Square is named from this and is Bangkok's busiest shopping district."
  ],
  [
   "恰图恰",
-  "恰图恰周末市场的前身 1940 年代在别处开设，1982 年搬到现址，现在有一万五千个左右的摊位，分成二十七个区。名字来自旁边的恰图恰公园。"
+  "恰图恰周末市场的前身 1940 年代在别处开设，1982 年搬到现址，现在有一万五千个左右的摊位，分成二十七个区。名字来自旁边的恰图恰公园。",
+  "Chatuchak Weekend Market began elsewhere in the 1940s and moved to its present site in 1982. It now has around 15,000 stalls in 27 sections, and is named after the neighbouring Chatuchak Park."
  ],
  [
   "暹罗商圈",
-  "Siam Square 一带的商业街区兴起于 1960 年代，土地属于朱拉隆功大学，是曼谷最早规划的商圈之一，周围商场、电影院和年轻人的小店很集中。"
+  "Siam Square 一带的商业街区兴起于 1960 年代，土地属于朱拉隆功大学，是曼谷最早规划的商圈之一，周围商场、电影院和年轻人的小店很集中。",
+  "The Siam Square area developed in the 1960s on Chulalongkorn University land and is one of Bangkok's earliest planned commercial districts, with malls, cinemas and young designers' shops close together."
  ],
  [
   "大皇宫",
-  "大皇宫 1782 年由拉玛一世建造，当年他把首都从湄南河西岸的吞武里迁到东岸的 Rattanakosin。玉佛寺（Wat Phra Kaew）供着用整块翠玉雕成的玉佛，国王每年换三次衣服，对应热季、雨季、凉季。进去要遮住肩膀和膝盖。"
+  "大皇宫 1782 年由拉玛一世建造，当年他把首都从湄南河西岸的吞武里迁到东岸的 Rattanakosin。玉佛寺（Wat Phra Kaew）供着用整块翠玉雕成的玉佛，国王每年换三次衣服，对应热季、雨季、凉季。进去要遮住肩膀和膝盖。",
+  "The Grand Palace was built in 1782 by Rama I when he moved the capital from Thonburi on the west bank to Rattanakosin on the east. Wat Phra Kaew houses the Emerald Buddha, carved from a single piece of jade; the king changes its robes three times a year for the hot, rainy and cool seasons. Shoulders and knees must be covered."
  ],
  [
   "卧佛寺",
-  "Wat Pho 比曼谷建都还早，是曼谷最古老的佛寺之一，卧佛长约 46 米，佛脚底镶着 108 个吉祥图案，用珍珠母贝嵌成。这里也是泰式按摩学校的发源地，寺里有刻着穴位和草药的石碑。"
+  "Wat Pho 比曼谷建都还早，是曼谷最古老的佛寺之一，卧佛长约 46 米，佛脚底镶着 108 个吉祥图案，用珍珠母贝嵌成。这里也是泰式按摩学校的发源地，寺里有刻着穴位和草药的石碑。",
+  "Wat Pho predates Bangkok itself and is among its oldest temples. The Reclining Buddha is about 46 m long, with 108 auspicious symbols inlaid in mother-of-pearl on the soles. It is also the birthplace of the Thai massage school, with stone tablets showing pressure points and herbs."
  ],
  [
   "郑王庙",
-  "郑王庙（Wat Arun）意为“黎明寺”，名字取自印度的黎明神 Aruna。中央的大塔（prang）高约 70–80 米，用瓷片和贝壳贴成花纹，据说那些瓷片是早年中国商船压舱的碎瓷器。登塔的台阶很陡。"
+  "郑王庙（Wat Arun）意为“黎明寺”，名字取自印度的黎明神 Aruna。中央的大塔（prang）高约 70–80 米，用瓷片和贝壳贴成花纹，据说那些瓷片是早年中国商船压舱的碎瓷器。登塔的台阶很陡。",
+  "Wat Arun means \"Temple of Dawn\", after the Indian dawn god Aruna. The central prang, roughly 70–80 m high, is decorated with porcelain and shell – said to be broken porcelain from Chinese ships' ballast. The steps are steep."
  ],
  [
   "耀华力",
-  "耀华力路（Yaowarat）是曼谷唐人街的主街，华人在 1782 年曼谷建都时被迁到这一带，这条路本身是拉玛五世时期、19 世纪末修的。这里的华人以潮州人为主，夜里整条街摆满小吃摊。"
+  "耀华力路（Yaowarat）是曼谷唐人街的主街，华人在 1782 年曼谷建都时被迁到这一带，这条路本身是拉玛五世时期、19 世纪末修的。这里的华人以潮州人为主，夜里整条街摆满小吃摊。",
+  "Yaowarat is the main street of Bangkok's Chinatown. Chinese merchants were moved here when Bangkok was founded in 1782, and the road itself dates from Rama V's reign in the late 19th century. The community is largely Teochew, and at night the whole street fills with food stalls."
  ],
  [
   "Big C",
-  "Ratchadamri（拉差达姆里）大意是“王室行进之路”，这条路从暹罗商圈通向王室所在的 Dusit 一带。"
+  "Ratchadamri（拉差达姆里）大意是“王室行进之路”，这条路从暹罗商圈通向王室所在的 Dusit 一带。",
+  "Ratchadamri means roughly \"royal progress\"; the road runs from the Siam area toward the Dusit district where the royal family lives."
+ ],
+ [
+  "Jewel 到达",
+  "樟宜机场多次被评为世界最佳机场之一。T1 是最早的航站楼，1981 年启用；Jewel 就盖在它前面，两者有连廊相通。",
+  "Changi Airport is repeatedly ranked among the world's best. Terminal 1, the oldest, opened in 1981; Jewel was built in front of it and is linked by a walkway."
+ ],
+ [
+  "田鸡粥",
+  "田鸡粥里的“田鸡”其实是青蛙：把青蛙肉和砂锅粥一起煮，可以做成姜葱、宫保、白胡椒等口味，是新加坡人的经典宵夜。通宵营业的田鸡粥店集中在芽笼（Geylang）一带。",
+  "The \"field chicken\" in this porridge is frog. Frog meat is cooked with claypot porridge in ginger-and-spring-onion, kung pao, white pepper and other styles – a classic Singaporean supper. Late-night frog porridge shops cluster in Geylang."
+ ],
+ [
+  "Asiatique",
+  "Asiatique 这片河边场地原是丹麦东亚公司（East Asiatic Company）的码头和仓库，改造成夜市和购物区后，2012 年开业。仓库式的白色长廊、河边餐厅和摩天轮，是曼谷最容易逛的夜市之一。",
+  "The Asiatique riverfront site was once the wharf and warehouses of Denmark's East Asiatic Company; after conversion into a night market and shopping area it opened in 2012. White warehouse-style arcades, riverside restaurants and a Ferris wheel make it one of Bangkok's easiest night markets to stroll."
+ ],
+ [
+  "天福宫",
+  "天福宫（Thian Hock Keng）最早是 1821–22 年的一间小庙，供奉妈祖（航海人的保护神）；1839–1842 年由陈笃生出资重建，1973 年列为国家古迹。早年海岸线就在庙门口，刚下船的福建移民会先来这里拜谢平安到岸。",
+  "Thian Hock Keng began as a small joss house in 1821–22 dedicated to Mazu, protector of seafarers; it was rebuilt in 1839–1842 with funds from Tan Tock Seng and gazetted a national monument in 1973. The shoreline once lay right at its door, and newly arrived Hokkien immigrants came here to give thanks for a safe voyage."
+ ],
+ [
+  "Maxwell",
+  "麦士威熟食中心在牛车水边上。海南鸡饭源自海南的文昌鸡，被新加坡人视为最有代表性的国民菜之一；天天海南鸡饭（Tian Tian）是这里排队最长的一家，必比登推介。",
+  "Maxwell Food Centre sits on the edge of Chinatown. Hainanese chicken rice descends from Hainan's Wenchang chicken and is widely regarded as one of Singapore's signature dishes; Tian Tian is the longest queue here and a Michelin Bib Gourmand."
+ ],
+ [
+  "树抱佛庙",
+  "Wat Bang Kung 在夜功府（Samut Songkhram）的 Bang Khon Thi 一带，大殿（ubosot）被一棵大榕树的根完全包裹，树根、墙和佛像长在一起，所以叫“树抱佛庙”，是安帕瓦周边最出名的小景点之一。建寺年代各来源说法不一，这里不写。",
+  "Wat Bang Kung is in Bang Khon Thi, Samut Songkhram Province. Its ubosot (ordination hall) is completely wrapped in the roots of a huge banyan tree, so walls, roots and Buddha images have grown together – hence the nickname \"the temple embraced by a tree\". It is one of the best-known small sights around Amphawa. Sources disagree on its founding date, so none is given here."
+ ],
+ [
+  "布施",
+  "托钵（tak bat）是泰国南传佛教的日常：僧侣清晨出门化缘，信众把米饭、食物或日用品放进钵里，作功德。安帕瓦、美功一带水网多，有的僧侣会划小船沿运河接受供养。女性不要直接触碰僧人，递东西时放进钵里或放在布上。",
+  "Tak bat – the morning alms round – is part of daily life in Thai Theravada Buddhism: monks walk (or, along canals like Amphawa's, paddle) out at dawn and people place rice, food or daily necessities in their bowls to make merit. Women should not touch monks directly; put offerings in the bowl or on a cloth."
+ ],
+ [
+  "租泰服",
+  "近年来穿泰服（Chut Thai）去古迹和寺庙拍照很流行，泰国本地人自己也爱这样玩。寺庙毕竟是宗教场所，衣服要得体，别爬遗迹、别摆不敬的姿势。",
+  "Wearing Chut Thai (traditional Thai dress) for photos at ruins and temples has become very popular in recent years, including among Thais themselves. Temples are still sacred places: dress modestly, don't climb on the ruins and avoid disrespectful poses."
+ ],
+ [
+  "Here Hai",
+  "Here Hai 在曼谷 Ekkamai 路，据 2024 年的探店文章，主打蟹肉炒饭和蟹肉蛋卷，是米其林必比登小店。",
+  "Here Hai is on Ekkamai Road in Bangkok; according to a 2024 review it is known for crab fried rice and crab omelette, and is a Michelin Bib Gourmand listing."
+ ],
+ [
+  "汤普森",
+  "吉姆·汤普森（Jim Thompson）是美国人，二战后帮泰丝重新打开国际市场。1967 年他在马来西亚金马伦高原散步时失踪，至今没有定论。故居由几座传统柚木房屋拆迁、重新组合而成。",
+  "Jim Thompson was an American who helped revive the Thai silk industry and open it to international markets after WWII. In 1967 he vanished while walking in Malaysia's Cameron Highlands and his fate remains unresolved. The house is assembled from several traditional teak houses that were dismantled and rebuilt here."
+ ],
+ [
+  "朱拉隆功夜市",
+  "朱拉隆功大学 1917 年创办，是泰国第一所大学，以拉玛五世朱拉隆功（Chulalongkorn）命名。校门口这条 Bhantat Thong 路一带平价小吃集中。",
+  "Chulalongkorn University was founded in 1917 as Thailand's first university and named after King Rama V (Chulalongkorn). Bhantat Thong Road by the campus is packed with cheap street food."
+ ],
+ [
+  "水门市场",
+  "Pratunam 泰语意为“水门”，据说得名于这一带运河上的水闸。现在是曼谷最大的成衣批发区之一。",
+  "Pratunam means \"water gate\" in Thai, said to refer to a lock on the nearby canal. Today it is one of Bangkok's biggest garment wholesale districts."
+ ],
+ [
+  "水门寺",
+  "水门寺（Wat Paknam Bhasicharoen）在吞武里一侧，以已故住持 Luang Pu Sod（Phra Mongkol Thepmuni）和他传授的法身禅（Dhammakaya）闻名。现在的 80 米白塔（2012 年建）顶层有一座绿色玻璃小佛塔，天花板画着蓝紫色星河；院里的 69 米青铜坐佛 2021 年完工（数据来自一个旅游网站，没有逐条核实）。",
+  "Wat Paknam Bhasicharoen, on the Thonburi side, is known for its late abbot Luang Pu Sod (Phra Mongkol Thepmuni) and the Dhammakaya meditation he taught. The 80 m white stupa (2012) holds a small green glass pagoda on its top floor under a ceiling painted with blue-violet galaxies; the 69 m bronze seated Buddha in the compound was completed in 2021 (figures from a travel site, not individually verified)."
+ ],
+ [
+  "夏玛雷斯登斯",
+  "大城（Ayutthaya）传统说法建于 1350 年前后，由乌通王（Ramathibodi 一世）在湄南河、华富里河、巴萨河交汇处的一座岛上建城，四面环水，所以后人叫它“东方威尼斯”。此后约 417 年里，大城是暹罗的首都，历经 30 多位国王，是东南亚最繁华的港口之一，来自中国、日本、波斯、葡萄牙、荷兰、法国的商人都在城外设有聚居区。1767 年缅甸军队攻破大城，烧毁王宫、寺庙和大部分档案，国王殿下的朝廷南迁，后来才建起吞武里、曼谷。现在的“古迹”大多是那次浩劫后的断壁残垣；这片遗址 1991 年列入联合国教科文组织世界遗产。",
+  "Ayutthaya is traditionally dated to about 1350, when King U Thong (Ramathibodi I) founded it on an island where three rivers meet — hence the nickname 'Venice of the East'. For roughly 417 years it was Siam's capital and one of Southeast Asia's busiest ports, with foreign quarters for Chinese, Japanese, Persian, Portuguese, Dutch and French traders. Burmese forces sacked it in 1767, burning palaces, temples and most records; the court later moved to Thonburi and then Bangkok. The ruins you see are what survived; the site became a UNESCO World Heritage Site in 1991."
+ ],
+ [
+  "柴瓦塔那兰寺",
+  "Wat Chaiwatthanaram 是国王 Prasat Thong 在 1630 年前后建的王家寺院，建在湄南河西岸，据说是为纪念他母亲的住处、积功德，也有学者认为是为庆祝战胜柬埔寨的 Longvek（说法不一）。建造可能花了约 20 年。高棉风格：中央主塔约 35 米，象征须弥山，四周四座小塔，八座佛塔形小殿用回廊相连。1767 年缅甸军队攻城时，这里被占作据点，后来被废弃约 220 年，佛像被砍头、砖被偷。1987 年泰国艺术厅开始修复，1992 年对外开放；2011 年大水把寺淹没，之后又花了约 2 亿泰铢整修。",
+  "Wat Chaiwatthanaram was built around 1630 by King Prasat Thong on the west bank of the Chao Phraya, said to honour his mother's former residence and to gain merit (some scholars also link it to a victory over Longvek in Cambodia; accounts differ). Construction may have taken about 20 years. It is Khmer in style: a central prang of about 35 m symbolising Mount Meru, four smaller prangs, and eight chedi-shaped chapels joined by galleries. After the 1767 sack it was abandoned for about 220 years. Restoration began in 1987 and it opened to the public in 1992; the 2011 floods submerged it and a further ~200 million baht repair followed."
+ ],
+ [
+  "玛哈泰寺",
+  "Wat Mahathat（“大舍利寺”）是大城最重要的王家寺院之一，据载在 Borommaracha 一世（1370–88 年在位）和 Ramesuan 王（1388–95 年在位）时期建成，中央主塔里曾供奉佛舍利，是大城早期的宗教中心。1767 年被缅甸军队毁掉。那个被榕树根包住的佛头是这里最出名的画面：佛头怎么到树根里的，没有定论，常见说法是佛像被砍头后，头落在树旁，树根慢慢长上来包住。园里很多佛像没有头，也是那次浩劫留下的。",
+  "Wat Mahathat ('Temple of the Great Relic') was one of Ayutthaya's most important royal temples, built under Borommaracha I (r. 1370–88) and Ramesuan (r. 1388–95); its central prang once held Buddha relics. Burmese forces ruined it in 1767. The Buddha head in banyan roots is its famous image; how it got there is not settled — the usual story is that a beheaded statue's head came to rest by a tree and the roots grew around it. The many headless statues are also from the sack."
+ ],
+ [
+  "拉嘉布拉那寺",
+  "Wat Ratchaburana 建于 1424 年，国王 Borommaracha 二世下令，地点是他的两位哥哥决斗身亡后火化的地方：国王去世后两个哥哥（Ai 和 Yi）骑象决斗争夺王位，双双战死，弟弟继位后在此建塔纪念。主塔下有地宫，里面有 15 世纪的壁画，德国协助修复过；据我所知 1957 年曾有盗墓者挖开地宫，偷走金器，后来追回的部分藏在 Chao Sam Phraya 国家博物馆（这一点我没核实）。",
+  "Wat Ratchaburana was built in 1424 by King Borommaracha II on the site where his two elder brothers were cremated: after their father died they fought a duel on elephant-back for the throne and both were killed. The main prang has an underground crypt with 15th-century murals, stabilised with German-funded restoration. As far as I know, looters dug into the crypt in 1957 and took gold objects, some later recovered and now in the Chao Sam Phraya National Museum (not verified)."
+ ],
+ [
+  "帕兰寺",
+  "Wat Phra Ram 建在大城第一位国王 Ramathibodi 一世火化的地方。多数学者认为是他的儿子 Ramesuan 在 1369 年下令兴建，不过编年史说法不一（最早的 Luang Prasoet 编年史写 1369 年，后来的版本写 1434 年）。Borommakot 王在 1741 年修缮过。高棉式的主塔和一排排小佛塔建在叫 Bueng Phra Ram 的低洼湿地边，所以有水中倒影。1685 年法国耶稣会士 Guy Tachard 曾记下这里有五座镀金佛塔和约 44 座金字塔形建筑。",
+  "Wat Phra Ram stands on the cremation site of Ayutthaya's first king, Ramathibodi I. Most scholars say his son Ramesuan ordered it built in 1369, though chronicles disagree (the oldest, Luang Prasoet, says 1369; later ones say 1434). King Borommakot restored it in 1741. The Khmer-style prang and rows of small chedis sit beside a low marshy area called Bueng Phra Ram, hence the reflections. The Jesuit Guy Tachard described five gilded domes and about 44 pyramid-shaped structures here in 1685."
+ ],
+ [
+  "帕西桑佩寺",
+  "Wat Phra Si Sanphet 是大城王宫里的御用寺院，没有常驻僧侣，只办王室仪式。传统上，这片地原是乌通王的宫殿，后来才改为寺；1492 年国王 Ramathibodi 二世在这里建塔，三座并排的钟形佛塔供奉着几位国王的骨灰。寺里原有一尊高约 16 米、包着金的大佛，1767 年被缅甸人熔掉取金。据说曼谷玉佛寺（Wat Phra Kaew）的设计受它启发。旁边的蒙科空博碧寺（Wihan Phra Mongkhon Bophit）有一尊大铜佛，我印象里佛像是 15–16 世纪的，大殿是后来重建的（没核实）。",
+  "Wat Phra Si Sanphet was the royal temple inside the Ayutthaya palace compound, used for royal ceremonies rather than housing monks. The site was once the palace of King U Thong; in 1492 King Ramathibodi II built here, and the three bell-shaped chedis hold the ashes of kings. It once housed a ~16 m gold-covered Buddha which the Burmese melted down in 1767. It reportedly inspired the design of Bangkok's Wat Phra Kaew. Next door, Wihan Phra Mongkhon Bophit holds a large bronze Buddha; as I recall the image dates to the 15th–16th centuries and the hall was rebuilt later (not verified)."
+ ],
+ [
+  "洛卡亚苏塔寺",
+  "Wat Lokayasutharam 以露天大卧佛闻名，佛像约 40 多米长、8 米多高，头朝北、面朝西。建寺年代没有确切记载，从风格看是大城中期（16 世纪以后）。卧佛原来有大殿覆盖，殿塌后只剩佛身，后来用灰泥修补。佛的右手枕头、左手搭在身侧，是“涅槃”姿势，代表释迦牟尼最后的时刻。",
+  "Wat Lokayasutharam is known for its open-air reclining Buddha, roughly 40-odd metres long and over 8 m high. Its date is unrecorded; the style points to the middle Ayutthaya period (after the 16th century). The Buddha was once housed in a hall; after the roof was lost only the body remained and it was later repaired in stucco. The pose represents the Buddha's final moments (parinirvana)."
+ ],
+ [
+  "Yai Chai Mongkhon",
+  "Wat Yai Chai Mongkhon 原是大城早期的禅修寺院：传说 1357 年乌通王为从斯里兰卡学成归来的僧团建的，叫 Wat Pa Kaeo（林中寺）。1592 年纳黎萱大帝（Naresuan）在象背上与缅甸王储决斗获胜，为纪念这次战役，在寺里建了高约 72 米的大佛塔，所以改名“胜利大寺”。塔周围一圈坐佛，原来被缅甸人砍头，后来用僧袍披上。🎬 这里是 86 版《西游记》第 24 集「天竺收玉兔」的取景地（剧中的布金寺），据多篇中文文章，《泰囧》也在这里拍过。（建寺和决斗的年份各来源说法不一，我没逐条核实。）",
+  "Wat Yai Chai Mongkhon began as a meditation monastery: tradition says King U Thong founded it in 1357 for monks returning from study in Sri Lanka (Wat Pa Kaeo, 'forest temple'). After King Naresuan's elephant-back duel victory over the Burmese crown prince (about 1592) the large chedi, roughly 72 m, was built to commemorate it, hence the name 'Great Temple of Auspicious Victory'. Rows of seated Buddhas ring the chedi, wrapped in saffron robes. (Dates differ between sources and are not individually verified.)"
  ]
 ];
-const loreFor = p => { for (const [k,t] of LORE) if ((p.n||'').includes(k)) return t; return ''; };
+const loreFor = p => { if (p.nov || p.custom) return null; for (const [k,zh,en] of LORE) if ((p.n||'').includes(k)) return {zh,en}; return null; };
 
 const FOOD = {
   sg: [
@@ -811,7 +1052,20 @@ const FOOD = {
     {cat:"coffee", n:"Roots Coffee", en:"Roots Coffee Bangkok", chain:true, d:"曼谷本地精品咖啡"},
     {cat:"coffee", n:"Factory Coffee", en:"Factory Coffee Bangkok", lat:13.7565, lon:100.5335, d:"冠军咖啡师的店，创意特调"},
     {cat:"drink", n:"ChaTraMue 手标泰奶", en:"ChaTraMue", chain:true, d:"正宗泰式奶茶，橙色那杯"},
-    {cat:"drink", n:"椰子冰淇淋", en:"coconut ice cream Chatuchak", lat:13.7999, lon:100.5500, d:"恰图恰市场里，椰壳装"}
+    {cat:"drink", n:"椰子冰淇淋", en:"coconut ice cream Chatuchak", lat:13.7999, lon:100.5500, d:"恰图恰市场里，椰壳装"},
+    {cat:"food", n:"Here Hai 蟹肉炒饭", en:"Here Hai Ekkamai Bangkok", lat:13.7303, lon:100.5864, d:"原店在 Ekkamai 路（Donki Mall Thonglor 对面，二楼）：蟹肉炒饭 + 蟹肉蛋卷；10:00–15:00、16:00–17:30，周一休息；堂食只收现金；11/29 打算 Grab 外卖送酒店（没核实）；Siam Paragon 美食广场有分店（4 道菜）"},
+    {cat:"food", n:"朱拉隆功夜市 Elvis Suki", en:"Elvis Suki Chulalongkorn", d:"朱拉夜市里的火锅（泰式 suki），队伍多"},
+    {cat:"food", n:"Jeh O Chula", en:"Jeh O Chula Bangkok", d:"朱拉夜市一带的中泰菜，平价"},
+    {cat:"food", n:"Supanniga Eating Room（Tha Tien）", en:"Supanniga Eating Room Tha Tien", d:"泰东部菜，Tha Tien 河边有分店（记忆，需核实）"},
+    {cat:"food", n:"Pier 21 美食广场", en:"Pier 21 Food Court Terminal 21", lat:13.7376, lon:100.5604, d:"Terminal 21 五层，平价快，储值卡付款"},
+    {cat:"food", n:"Nam Prik Puthon（美功）", en:"Nam Prik Puthon Maeklong", d:"美功市场外的辣椒酱小摊（旧游记，需核实）"},
+    {cat:"food", n:"Baan Ta Ko Rai（大城）", en:"Baan Ta Ko Rai Ayutthaya", d:"必比登；Khlong Suanplu 112/941 Moo 3，每天 9:00–20:00，只收现金，+66 89 764 5119（米其林）"},
+    {cat:"food", n:"Ruan Thai Kung Pao（大城）", en:"Ruan Thai Kung Pao Ayutthaya", d:"烤河虾和鱼，必比登；在 Bang Sai 县，离大城古城区较远，不顺路；每天 10:00–17:30（米其林）"},
+    {cat:"food", n:"Pa Lek Boat Noodles（大城）", en:"Pa Lek Boat Noodles Ayutthaya", d:"约五十年船面老店，必比登"},
+    {cat:"food", n:"Pranom 鸡丝面（大城）", en:"Pranom Shredded Chicken Noodles Ayutthaya", d:"鸡丝面，必比登"},
+    {cat:"food", n:"Suriyan Chandra（大城）", en:"Suriyan Chandra Ayutthaya", d:"130 年老碾米厂改的河边餐厅，米其林推荐，要订位"},
+    {cat:"dessert", n:"Roti Sai Mai（大城拉丝糖饼）", en:"Roti Sai Mai Abeedeen Pranom Sangaroon Ayutthaya", d:"大城特产，棉花糖丝卷饼，必比登"},
+    {cat:"food", n:"Chao Le（安帕瓦）", en:"Chao Le Restaurant Amphawa", d:"靠近萤火虫村的河边餐厅（一篇博客提到，需核实）"}
   ]
 };
 
@@ -834,7 +1088,15 @@ const SHOP = {
     {n:"青草药膏 / 鼻通", w:"7-Eleven、药妆店", d:"防蚊止痒、提神"},
     {n:"Karmakamet 香氛", w:"Siam Paragon、Central", d:"复古药铺风香薰"},
     {n:"Jim Thompson 丝巾", w:"Jim Thompson 店、机场", d:"泰丝，适合送重要的人"},
-    {n:"MAMA 泡面", w:"7-Eleven、Big C", d:"冬阴功口味必带"}
+    {n:"MAMA 泡面", w:"7-Eleven、Big C", d:"冬阴功口味必带"},
+    {n:"Srichand 遮瑕粉 / Mistine 彩妆", w:"Boots、Big C、7-Eleven", d:"泰国平价彩妆，Srichand 粉饼最出名"},
+    {n:"蛇牌痱子粉", w:"Big C、药妆店", d:"凉感爽身粉，热带必备"},
+    {n:"Mae Pranom 辣椒酱", w:"Big C、超市", d:"泰式 nam prik pao，拌饭拌面"},
+    {n:"大哥花生豆 Koh-Kae", w:"7-Eleven、Big C", d:"泰国国民零食"},
+    {n:"Harnn / Thann 香氛", w:"Siam Paragon、Central", d:"泰国本土 spa 品牌，香皂香薰"},
+    {n:"泰式草药球", w:"市场、药妆店", d:"热敷用，价格友好"},
+    {n:"乳胶枕", w:"Big C、专卖店", d:"泰国产乳胶，注意行李重量"},
+    {n:"大象裤 / 棉麻衣服", w:"水门市场、恰图恰、MBK", d:"批发区便宜，可以多件议价"}
   ]
 };
 
@@ -885,14 +1147,28 @@ const TIPS = {
         "按摩一般给 50–100 泰铢小费，餐厅可留零头"]],
       ["plug","电源",["多数插座是两孔扁圆通用口，国内两脚扁插通常能直接用，电压 220V"]],
       ["bed","5 晚 4 个住处怎么搬",[
-        "路线：<b>河畔安凡尼（1 晚）→ 安帕瓦（1 晚）→ 大城（1 晚）→ 暹罗广场诺富特（2 晚）</b>",
+        "路线：<b>河畔安凡尼（1 晚）→ 安帕瓦（1 晚）→ 大城（1 晚）→ 暹罗广场诺富特（2 晚）</b>；11/29 在大城午饭后回曼谷，顺路去 Here Hai 吃蟹肉饭",
         "11/27–11/29 这三天<b>包一辆带司机的车</b>最省事，大行李箱一直放车上",
         "安帕瓦和大城各只住 1 晚，随身<b>小包装两晚用的东西</b>：换洗衣物、洗漱、充电器、驱蚊液",
-        "包车出发前和司机确认：时间、路线（水上市场 → 美功 → 安帕瓦 → 大城 → 暹罗）、含不含过路费和油费"]],
+        "包车出发前和司机确认：时间、路线（美功 → 树抱佛庙 → 安帕瓦 → 柴瓦塔那兰寺 → 大城酒店 → 大城古迹 → 暹罗），11/27 九点出发、含不含过路费和油费"]],
+      ["pin","大城古迹：怎么分配、怎么走、买票",[
+        "<b>11/28 上午（包车顺路）</b>：柴瓦塔那兰寺，在城岛西侧河对岸，从南边进城正好经过",
+        "<b>11/28 下午（自己步行逛，酒店出发）</b>：玛哈泰寺 → 拉嘉布拉那寺（两座相距约 0.3 km）；酒店走 1 分钟到历史公园入口（Expedia），到玛哈泰的准确距离我没核实，出门前在地图上量；逛完沿河边走回酒店看日落",
+        "<b>11/29 上午（包车，稍远的）</b>：Wat Yai Chai Mongkhon（城外东南，先去）→ 洛卡亚苏塔寺 → 帕西桑佩寺 / 蒙科空博碧寺（两处相距 0.5 km）→ 帕兰寺（离酒店最近，放最后）；时间多再加 Wat Phanan Choeng",
+        "<b>柴瓦塔那兰寺离酒店多远</b>：直线约 2 km（坐标估算），但在河对岸要绕桥，有来源写离市区约 6–7 km；走路不现实，开车约 10–15 分钟（估），所以放在包车路上顺路看。<br><b>🎬 86 版《西游记》</b>：我只核实到一处——Wat Yai Chai Mongkhon，第 24 集「天竺收玉兔」的布金寺（三篇中文文章都这么写）；别的大城古迹有没有出镜，我没查到可靠说法，不乱标",
+        "<b>泰服</b>：酒店周边我没查到有名有姓的租衣店；查到的店集中在柴瓦塔那兰寺门口，约 200–500 泰铢，化妆做发各约 50（泰文网帖，价格 2023–2024 年的，仅供参考）。穿泰服进古迹的做法很常见，不是官方规定，进门前看有没有标牌",
+        "<b>门票</b>（外国人，2025 年 12 月资料，以现场为准）：玛哈泰、拉嘉布拉那、帕西桑佩、帕兰寺、柴瓦塔那兰、Maheyong、Kudi Dao 这 7 座各 80 泰铢，联票 300 泰铢；这次共进 5 座，联票更划算（联票隔天是否有效没核实，买的时候问）；蒙科空博碧寺免费；Wat Yai Chai Mongkhon、Wat Phanan Choeng 另外收费（金额没查到）；洛卡亚苏塔寺没列收费，可能免费",
+        "<b>开放时间</b>：历史公园约 8:00–18:00（旧资料，洛卡亚苏塔寺写 8:30–17:00）"]],
+      ["bag","酒店楼下的 mall（暹罗广场）",[
+        "<b>Siam Paragon</b>：地下 Gourmet Market 超市买泰国零食、泰茶、调味酱；国际品牌多；有美食广场",
+        "<b>Siam Center</b>：泰国设计师品牌和年轻潮牌；<b>Siam Discovery</b>：家居、设计小店",
+        "<b>MBK 中心</b>：平价纪念品、杂货、衣服，要砍价，多以现金为主；BTS National Stadium 站旁边",
+        "<b>CentralWorld</b>（旁边 Big C Ratchadamri）：大型商场；<b>Pratunam 水门市场</b>：成衣批发",
+        "以上是我凭印象整理的，营业时间约 10:00–22:00，我没核实；买泰国本地好物见“买买买”页"]],
       ["card","去安帕瓦、大城前先备钱",[
         "这两个地方的小摊、船、寺庙门票<b>多数只收现金</b>，先在曼谷换好或取好泰铢，带够小面额",
         "外国银行卡在泰国 ATM 取钱每笔有手续费，<b>一次多取一点</b>比多次少取划算",
-        "安帕瓦水上市场多在<b>周五到周日</b>营业，你们 11/27、11/28 刚好；平日很多店不开"]],
+        "安帕瓦水上市场多在<b>周五到周日</b>下午到晚上营业，你们 11/27（周五）傍晚去；平日很多店不开"]],
       ["alert","注意事项",[
         "<b>尊重王室</b>，不要议论或开玩笑",
         "不要摸别人的头；进寺庙脱鞋，遮肩穿过膝下装",
@@ -1077,8 +1353,10 @@ function renderStay(day, prep){
   const h = night || out, idx = HOTELS.indexOf(h);
   const p = {en:h.en + " " + h.addr, n:h.name, lat:h.lat, lon:h.lon};
   box.innerHTML = `<h3>${icon("bed")}${night ? "今晚住" : "今天退房"} <span class="tag">${esc(h.dates)}</span></h3>
-    <div><b>${esc(h.name)}</b> <small>${esc(h.place)}</small></div>
+    <div><b>${esc(h.name)}</b> <small>${esc(h.place)}</small></div><div class="ne">${esc(h.en)}</div>
     <div class="hint">${esc(h.room)} ｜ ${esc(h.addr)}</div>
+    ${h.zh ? `<div class="hint">中文：${esc(h.zh)}</div>` : ""}
+    ${/[\u0E00-\u0E7F]/.test(h.local || "") ? `<div class="hint thx">ไทย：${esc(h.local)}</div>` : ""}
     ${out && night && out !== night ? `<div class="hint">早上先从「${esc(out.name)}」退房</div>` : ""}
     <div class="hint">${esc(h.note)}</div>
     <div class="btns">${navBtns(p)}<button class="btn solid" data-drv="${idx}">给司机看地址</button></div>`;
@@ -1100,26 +1378,286 @@ function renderHome(){
 
   if (prep) renderPrep();
   else {
+    const list = dayItemsFull(day), vis = getVisit(), notes = store.get("notes", {});
     let n = 0;
-    $("#itin").innerHTML = `<h3>${icon("pin")}今日行程 <span class="tag">绿 = 已定　橙 = 建议</span></h3>
-      <ul class="tl">${day.items.map(p => {
+    $("#itin").innerHTML = `<h3>${icon("pin")}今日行程 <span class="tag" id="prog"></span></h3>
+      <div class="hint" style="margin:0 0 8px">绿 = 已定　橙 = 建议　点「打卡」记下去过的地方，没去的地方会留在「足迹」里</div>
+      <ul class="tl">${list.map(p => {
         const has = p.lat != null; if (has) n++;
-        return `<li><div class="no ${p.s==="fixed"?"fixed":""} ${has?"":"none"} ${p.fl!=null?"flt":""}">${p.fl!=null?icon("plane"):has?n:"·"}</div>
+        const canV = !p.fl && !p.nov, v = vis[p.id], lore = loreFor(p);
+        const leg = p.tt || legText(list[list.indexOf(p) - 1], p);
+        return `<li class="${v ? "visited" : ""}" data-id="${esc(p.id)}">${leg ? `<div class="leg">↓ 从上一站${esc(leg)}　<small>（估算，仅供参考）</small></div>` : ""}<div class="no ${p.s==="fixed"?"fixed":""} ${has?"":"none"} ${p.fl!=null?"flt":""}" data-n="${has?n:"·"}">${v ? "✓" : p.fl!=null?icon("plane"):has?n:"·"}</div>
           <div><span class="time">${esc(p.t)}</span><span class="name">${esc(p.n)}</span>
-          <span class="badge ${p.s}">${p.s==="fixed"?"已定":"建议"}</span></div>
-          ${p.fl != null ? ticketHTML(FLIGHTS[p.fl]) : `<div class="d">${esc(p.d||"")}</div>`}
+          <span class="badge ${p.custom?"custom":p.s}">${p.custom?"自加":p.s==="fixed"?"已定":"建议"}</span></div>
+          ${p.ne ? `<div class="ne">${esc(p.ne)}</div>` : ""}
+          ${p.th ? `<div class="ne th">${esc(p.th)}</div>` : ""}
+          ${p.fl != null ? ticketHTML(FLIGHTS[p.fl]) : (p.d ? `<div class="d">${esc(p.d)}</div>` : "")}
           ${p.go ? `<div class="go">${icon("walk")}<span>${esc(p.go)}</span></div>` : ""}
           ${p.tip ? `<div class="tip">${icon("bulb")}<span>${esc(p.tip)}</span></div>` : ""}
-          ${loreFor(p) ? `<details class="lore"><summary>✦ 历史 · 小知识</summary><p>${esc(loreFor(p))}</p></details>` : ""}
-          ${p.en ? `<div class="btns">${navBtns(p)}${xhsBtn(p.n, day.city)}</div>` : ""}</li>`;
-      }).join("")}</ul>`;
+          ${lore ? `<details class="lore"><summary>✦ 历史 · 小知识 / History</summary><p>${esc(lore.zh)}</p>${lore.en ? `<p class="en">${esc(lore.en)}</p>` : ""}</details>` : ""}
+          ${ADDR[p.id] ? addrHTML(p) : ""}
+          ${p.en ? `<div class="btns">${navBtns(p)}${xhsBtn(p.n, day.city)}</div>` : ""}
+          <div class="bk">${bkHTML(p.id)}</div>
+          ${canV || p.custom ? `<div class="act">${canV ? `<button class="chk ${v?"on":""}" data-id="${esc(p.id)}">${v ? "✓ 已打卡 · " + esc(v) : "☐ 打卡"}</button>` : ""}
+            ${p.custom ? `<button class="btn delx" data-id="${esc(p.id)}">删除这个地点</button>` : ""}</div>` : ""}
+          ${noteBox(p.id)}</li>`;
+      }).join("")}</ul>
+      <div class="addp"><button class="btn solid" id="addpBtn">＋ 加一个地点 / Add a stop</button>
+        <div id="addpForm" style="display:none">
+          <input id="apN" placeholder="地点名称" maxlength="40"><input id="apE" placeholder="English name（可不填）" maxlength="60">
+          <div class="row"><input id="apT" type="time"><select id="apA"><option value="auto">位置：按时间自动放</option><option value="end">位置：放在最后</option>${day.items.map(p => `<option value="${esc(p.id)}">插在「${esc(p.t)} ${esc(p.n.slice(0,14))}」后面</option>`).join("")}</select></div>
+          <div class="row"><button class="btn" id="apLoc" type="button">📍 记下我现在的位置</button><span id="apLocT" class="hint"></span></div>
+          <label class="row"><input type="checkbox" id="apV" checked> 已经到了，直接打卡</label>
+          <div class="row"><button class="btn solid" id="apSave">加进今天</button><button class="btn" id="apCancel">取消</button></div>
+        </div></div>`;
+    bindItin(day);
+    updateProgress();
     renderTodo(); renderMap(); renderNews();
   }
   renderWeather();
 
-  const nb = $("#notesBtn");
-  if (SHARED_NOTES_URL){ nb.href = SHARED_NOTES_URL; nb.innerHTML = `${icon("note")} 打开共享笔记<small>腾讯文档 · 大家一起写</small>`; }
-  else { nb.removeAttribute("href"); nb.innerHTML = `${icon("note")} 共享笔记（还没设置）<small>建好腾讯文档后，把链接发给 Claude 加进来</small>`; }
+  renderFoot();
+}
+
+
+/* ---------- 打卡 · 笔记 · 自加地点 · 足迹 ---------- */
+const getVisit = () => store.get("visit", {});
+const getExtras = date => store.get("extra:" + date, []);
+function stampNow(){ const d = new Date(), z = n => String(n).padStart(2, "0"); return (d.getMonth()+1) + "/" + d.getDate() + " " + z(d.getHours()) + ":" + z(d.getMinutes()); }
+function dayItemsFull(day){
+  const ex = getExtras(day.date), out = [];
+  const mk = x => Object.assign({s:"fixed", custom:true, t:""}, x, {en: x.en || x.ne || x.n});
+  day.items.forEach(p => { out.push(p); ex.filter(x => x.after === p.id).forEach(x => out.push(mk(x))); });
+  ex.filter(x => !x.after || !day.items.some(p => p.id === x.after)).forEach(x => out.push(mk(x)));
+  return out;
+}
+const visitable = p => !p.fl && !p.nov;
+function updateProgress(){
+  const day = curDay(), vis = getVisit(), list = dayItemsFull(day).filter(visitable);
+  const el = $("#prog"), all = dayItemsFull(day);
+  if (el) el.textContent = "已打卡 " + list.filter(p => vis[p.id]).length + " / " + list.length + " · 已预约 " + all.filter(p => bookedOn(p.id)).length + " / " + all.length;
+}
+/* ---------- 共享：预约状态 + 笔记（GitHub Pages 没有后台：靠「分享/导入」在微信群里交换）---------- */
+const SYNC_URL = "";
+const sh = { me: store.get("me", "") || "我", st: null, status: "idle", lastOk: null, busy: false, again: false, t: null };
+sh.st = (() => { const x = store.get("shared", null) || {}; x.notes = x.notes || {}; x.booked = x.booked || {}; return x; })();
+const saveShared = () => store.set("shared", sh.st);
+function mergeShared(a, b){
+  const out = {notes:{}, booked:{}};
+  ["notes", "booked"].forEach(k => { const m = out[k]; [a[k] || {}, b[k] || {}].forEach(src => { for (const id in src){ const x = src[id]; if (!m[id] || (x.ts || 0) > (m[id].ts || 0)) m[id] = x; } }); });
+  return out;
+}
+(function migrateNotes(){
+  if (store.get("notesMigrated", 0)) return;
+  const old = store.get("notes", {});
+  Object.keys(old).forEach(id => { const t = String(old[id] || "").trim(); if (!t) return; const eid = "m" + id; if (!sh.st.notes[eid]) sh.st.notes[eid] = {id:eid, item:id, by:sh.me || "我", ts:Date.now(), text:t.slice(0, 800)}; });
+  store.set("notesMigrated", 1); saveShared();
+})();
+const fmtTs = ts => { const d = new Date(ts); return (d.getMonth()+1) + "/" + d.getDate() + " " + String(d.getHours()).padStart(2,"0") + ":" + String(d.getMinutes()).padStart(2,"0"); };
+const notesFor = id => Object.values(sh.st.notes).filter(n => n.item === id && !n.del).sort((a, b) => a.ts - b.ts);
+const noteLine = id => notesFor(id).map(n => (n.by || "匿名") + "：" + n.text).join("；");
+const bookedOn = id => !!(sh.st.booked[id] && sh.st.booked[id].v);
+function bkHTML(id){
+  const b = sh.st.booked[id], on = b && b.v;
+  return `<button class="bkb ${on ? "on" : ""}" data-bk="${esc(id)}">${on ? "✓ 已预约" + (b.by ? " · " + esc(b.by) : "") : "☐ 未预约"}</button>`;
+}
+function nlistHTML(id){
+  return notesFor(id).map(n => { const mine = sh.me && n.by === sh.me;
+    return `<div class="nrow ${mine ? "mine" : ""}"><div class="nm"><b>${esc(n.by || "匿名")}</b><small>${fmtTs(n.ts)}</small>${mine ? `<button class="nedit" data-eid="${esc(n.id)}">编辑</button><button class="ndel" data-eid="${esc(n.id)}">删除</button>` : ""}</div><div class="nt2">${esc(n.text)}</div></div>`; }).join("");
+}
+function noteBox(id){
+  const c = notesFor(id).length;
+  return `<details class="nt" data-nid="${esc(id)}" ${c ? "open" : ""}><summary>✎ 笔记 / Notes <span class="nc">${c ? "· " + c + " 条" : ""}</span></summary>
+    <div class="nlist">${nlistHTML(id)}</div>
+    <textarea class="pn" rows="2" maxlength="800" placeholder="写给自己和同行的人，大家都能看到…"></textarea>
+    <div class="nbtns"><button class="btn solid nadd">发布</button><button class="btn ncancel" style="display:none">取消编辑</button></div></details>`;
+}
+function addrHTML(p){
+  const a = ADDR[p.id]; if (!a) return "";
+  return `<div class="addr3"><div class="ah">📍 地址 / Address / ที่อยู่</div><div>${esc(a[0])}</div><div class="en">${esc(a[1])}</div><div class="thx">${esc(a[2])}</div>
+    <div class="btns"><button class="btn solid" data-drvi="${esc(p.id)}">给司机看 · ให้คนขับดู</button><button class="btn" data-cpth="${esc(p.id)}">复制泰文地址</button></div></div>`;
+}
+function findItem(id){ for (const d of DAYS){ const x = (d.items || []).find(q => q.id === id); if (x) return x; } return null; }
+function showItemDriver(id){
+  const a = ADDR[id], p = findItem(id); if (!a || !p) return;
+  $("#overlayBox").innerHTML = `<div class="lbl">请带我去这里 · Please take me here · พาฉันไปที่นี่</div>
+    <div class="big">${esc(p.th || p.ne || p.n)}</div><div class="addr">${esc(a[2])}</div>
+    <div class="hint" style="margin-top:10px">${esc(a[1])}</div>
+    <div class="hint" style="margin-top:6px">${esc(p.n)} · ${esc(a[0])}｜司机看不懂就点 Google 地图导航</div>`;
+  $("#overlay").classList.add("show");
+}
+function copyText(txt, done){
+  const fb = () => { const ta = document.createElement("textarea"); ta.value = txt; document.body.appendChild(ta); ta.select(); let ok = false; try { ok = document.execCommand("copy"); } catch(e){} ta.remove(); done(ok); };
+  if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(() => done(true), fb); else fb();
+}
+function setSyncStatus(){
+  const el = $("#syncSt"); if (!el) return;
+  el.textContent = sh.msg || "笔记/预约先存在本机；写完点「分享」发微信群，别人点「导入」";
+}
+function refreshShared(){
+  const box = $("#itin"); if (!box) return;
+  box.querySelectorAll("li[data-id]").forEach(li => {
+    const id = li.dataset.id, bk = li.querySelector(".bk"), bh = bkHTML(id); if (bk && bk.innerHTML !== bh) bk.innerHTML = bh;
+    const d = li.querySelector("details.nt");
+    if (d){ const nl = d.querySelector(".nlist"), nh = nlistHTML(id); if (nl.innerHTML !== nh){ nl.innerHTML = nh; if (notesFor(id).length) d.open = true; } const c = notesFor(id).length; d.querySelector(".nc").textContent = c ? "· " + c + " 条" : ""; }
+  });
+  updateProgress(); renderFoot();
+}
+function syncNow(){}
+function syncSoon(){}
+const b64e = o => btoa(unescape(encodeURIComponent(JSON.stringify(o)))).replace(/\+/g,"-").replace(/\//g,"_").replace(/=+$/,"");
+const b64d = t => { t = t.replace(/-/g,"+").replace(/_/g,"/"); while (t.length % 4) t += "="; return JSON.parse(decodeURIComponent(escape(atob(t)))); };
+function myUpdates(){
+  const o = {notes:{}, booked:{}}, me = sh.me;
+  for (const k in sh.st.notes){ const n = sh.st.notes[k]; if (n.by === me) o.notes[k] = n; }
+  for (const k in sh.st.booked){ const b = sh.st.booked[k]; if (b.by === me) o.booked[k] = b; }
+  return o;
+}
+function cleanShared(x){
+  const out = {notes:{}, booked:{}}, ok = v => typeof v === "string" && /^[A-Za-z0-9_-]{1,60}$/.test(v);
+  if (!x || typeof x !== "object") return out;
+  let c = 0;
+  for (const k in (x.notes || {})){ const n = x.notes[k]; if (c++ > 500) break; if (!n || !ok(k) || !ok(n.item) || typeof n.ts !== "number") continue;
+    out.notes[k] = {id:k, item:n.item, by:String(n.by || "").slice(0, 20), ts:n.ts, text:String(n.text || "").slice(0, 800)}; if (n.del) out.notes[k].del = true; }
+  for (const k in (x.booked || {})){ const b = x.booked[k]; if (c++ > 900) break; if (!b || !ok(k) || typeof b.ts !== "number") continue;
+    out.booked[k] = {v:!!b.v, by:String(b.by || "").slice(0, 20), ts:b.ts}; }
+  return out;
+}
+function shareMine(){
+  if (needName()) return;
+  const u = myUpdates(), nn = Object.keys(u.notes).length, nb = Object.keys(u.booked).length;
+  const panel = $("#sharePanel"), out = $("#shareOut"), msg = $("#shareMsg"); panel.style.display = "block";
+  if (!nn && !nb){ out.value = ""; msg.textContent = "你还没有写过笔记，也没点过「已预约」，先去写一条再来分享。"; return; }
+  const txt = "【南洋旅行】" + sh.me + " 的更新：" + nn + " 条笔记，" + nb + " 个预约状态\n（复制整段发到群里，别人打开网页点「导入」粘贴）\nNYTRIP1:" + b64e(u);
+  out.value = txt; out.focus(); out.select();
+  copyText(txt, ok => { msg.textContent = ok ? "已复制！去微信群粘贴发送。" : "没能自动复制：请长按上面的文字，全选后复制，发到微信群。"; });
+}
+function importShared(){
+  const t = $("#impTxt").value, msg = $("#shareMsg"), ms = t.match(/NYTRIP1:[A-Za-z0-9_-]+/g);
+  if (!ms){ msg.textContent = "没找到更新内容：请把微信里整段消息（含 NYTRIP1: 开头那串）完整粘贴进来。"; return; }
+  let nn = 0, nb = 0, bad = 0;
+  ms.forEach(m => { try {
+    const inc = cleanShared(b64d(m.slice(8))), before = JSON.stringify(sh.st);
+    const merged = mergeShared(sh.st, inc); if (JSON.stringify(merged) !== before){ nn += Object.keys(inc.notes).length; nb += Object.keys(inc.booked).length; sh.st = merged; }
+  } catch(e){ bad++; } });
+  saveShared(); refreshShared(); $("#impTxt").value = "";
+  msg.textContent = bad ? "有 " + bad + " 段内容不完整，没能导入（可能被微信截断了）。" : "导入完成：新增/更新 " + nn + " 条笔记、" + nb + " 个预约状态。";
+}
+function needName(){ return false; }
+function bindSyncBar(){
+  const i = $("#meName"); if (!i) return;
+  i.onchange = () => { sh.me = i.value.trim(); store.set("me", sh.me); refreshShared(); setSyncStatus(); };
+  $("#shareBtn").onclick = shareMine;
+  $("#impBtn").onclick = () => { const p = $("#sharePanel"); p.style.display = "block"; $("#impTxt").focus(); };
+  $("#impGo").onclick = importShared;
+  setSyncStatus();
+}
+function dropSharedFor(id){
+  const now = Date.now();
+  Object.values(sh.st.notes).filter(n => n.item === id && !n.del).forEach(n => { sh.st.notes[n.id] = Object.assign({}, n, {del:true, text:"", ts:now}); });
+  if (sh.st.booked[id]) sh.st.booked[id] = Object.assign({}, sh.st.booked[id], {v:false, ts:now});
+  saveShared(); syncSoon();
+}
+function sharedClick(e){
+  const t = e.target;
+  const bk = t.closest(".bkb");
+  if (bk){
+    if (needName()) return true;
+    const id = bk.dataset.bk; sh.st.booked[id] = {v:!bookedOn(id), by:sh.me, ts:Date.now()};
+    saveShared(); refreshShared(); syncSoon(); return true;
+  }
+  const d = t.closest("[data-drvi]"); if (d){ showItemDriver(d.dataset.drvi); return true; }
+  const c = t.closest("[data-cpth]");
+  if (c){ const a = ADDR[c.dataset.cpth]; copyText(a ? a[2] : "", ok => { c.textContent = ok ? "已复制 ✓" : "复制失败，请长按选中"; }); return true; }
+  const box = t.closest("details.nt"); if (!box) return false;
+  const ta = box.querySelector("textarea.pn"), id = box.dataset.nid;
+  if (t.closest(".nadd")){
+    const txt = ta.value.trim(); if (!txt) return true;
+    if (needName()) return true;
+    const eid = ta.dataset.edit;
+    if (eid && sh.st.notes[eid]) sh.st.notes[eid] = Object.assign({}, sh.st.notes[eid], {text:txt.slice(0, 800), ts:Date.now()});
+    else { const nid = "n" + Date.now().toString(36) + Math.random().toString(36).slice(2, 6); sh.st.notes[nid] = {id:nid, item:id, by:sh.me, ts:Date.now(), text:txt.slice(0, 800)}; }
+    ta.value = ""; delete ta.dataset.edit; box.querySelector(".ncancel").style.display = "none"; box.querySelector(".nadd").textContent = "发布";
+    saveShared(); refreshShared(); syncSoon(); return true;
+  }
+  if (t.closest(".ncancel")){ ta.value = ""; delete ta.dataset.edit; t.closest(".ncancel").style.display = "none"; box.querySelector(".nadd").textContent = "发布"; return true; }
+  const ed = t.closest(".nedit");
+  if (ed){ const n = sh.st.notes[ed.dataset.eid]; if (n){ ta.value = n.text; ta.dataset.edit = n.id; ta.focus(); box.querySelector(".ncancel").style.display = ""; box.querySelector(".nadd").textContent = "保存修改"; } return true; }
+  const dl = t.closest(".ndel");
+  if (dl){ const n = sh.st.notes[dl.dataset.eid]; if (n && confirm("删除这条笔记？")){ sh.st.notes[n.id] = Object.assign({}, n, {del:true, text:"", ts:Date.now()}); saveShared(); refreshShared(); syncSoon(); } return true; }
+  return false;
+}
+function bindItin(day){
+  const box = $("#itin");
+  bindSyncBar();
+  box.onclick = e => {
+    if (sharedClick(e)) return;
+    const b = e.target.closest(".chk");
+    if (b){
+      const v = getVisit(), id = b.dataset.id;
+      if (v[id]) delete v[id]; else v[id] = stampNow();
+      store.set("visit", v);
+      const li = b.closest("li"), on = !!v[id];
+      b.classList.toggle("on", on); b.textContent = on ? "✓ 已打卡 · " + v[id] : "☐ 打卡";
+      li.classList.toggle("visited", on);
+      const no = li.querySelector(".no"); if (no && !no.classList.contains("flt")) no.textContent = on ? "✓" : no.dataset.n;
+      updateProgress(); renderFoot(); return;
+    }
+    const x = e.target.closest(".delx");
+    if (x){
+      if (!confirm("删除这个自己加的地点？")) return;
+      const ex = getExtras(day.date).filter(q => q.id !== x.dataset.id); store.set("extra:" + day.date, ex);
+      const v = getVisit(); delete v[x.dataset.id]; store.set("visit", v);
+      dropSharedFor(x.dataset.id);
+      renderHome();
+    }
+  };
+  let pos = null;
+  $("#addpBtn").onclick = () => { const f = $("#addpForm"); f.style.display = f.style.display === "none" ? "" : "none"; };
+  $("#apCancel").onclick = () => { $("#addpForm").style.display = "none"; };
+  $("#apLoc").onclick = () => {
+    if (!navigator.geolocation){ $("#apLocT").textContent = "这台设备不支持定位"; return; }
+    $("#apLocT").textContent = "定位中…";
+    navigator.geolocation.getCurrentPosition(g => { pos = [g.coords.latitude, g.coords.longitude]; $("#apLocT").textContent = "已记下位置 ✓"; },
+      () => { $("#apLocT").textContent = "没拿到定位，不影响保存"; }, {timeout:10000});
+  };
+  $("#apSave").onclick = () => {
+    const n = $("#apN").value.trim(); if (!n){ $("#apN").focus(); return; }
+    const t = $("#apT").value || "", sel = $("#apA").value;
+    let after = null;
+    if (sel === "auto"){ if (t){ day.items.forEach(p => { if (p.t <= t) after = p.id; }); } }
+    else if (sel !== "end") after = sel;
+    const id = "u" + Date.now().toString(36);
+    const it = {id, n, ne:$("#apE").value.trim(), t, after};
+    if (pos){ it.lat = pos[0]; it.lon = pos[1]; }
+    const ex = getExtras(day.date); ex.push(it); store.set("extra:" + day.date, ex);
+    if ($("#apV").checked){ const v = getVisit(); v[id] = stampNow(); store.set("visit", v); }
+    renderHome();
+  };
+}
+function renderFoot(){
+  const box = $("#foot"); if (!box) return;
+  const vis = getVisit();
+  let done = 0, total = 0;
+  const days = DAYS.filter(d => d.type !== "prep").map(d => {
+    const o = dayObj(d.date), list = dayItemsFull(d).filter(visitable);
+    const dn = list.filter(p => vis[p.id]);
+    done += dn.length; total += list.length;
+    return {d, label:(o.getUTCMonth()+1) + "/" + o.getUTCDate() + " " + WEEK[o.getUTCDay()], list, dn};
+  });
+  const row = p => { const v = vis[p.id], nt = noteLine(p.id);
+    return `<li class="${v ? "ok" : "no"}"><span class="mk">${v ? "✓" : "○"}</span><span><b>${esc(p.n)}</b>${p.ne ? `<small> ${esc(p.ne)}</small>` : ""}${v ? `<small> · ${esc(v)}</small>` : ""}${bookedOn(p.id) ? `<small> · 已预约</small>` : ""}${nt ? `<div class="fn">✎ ${esc(nt)}</div>` : ""}</span></li>`; };
+  box.innerHTML = `<h3>${icon("pin")}足迹 / Footprints <span class="tag">已去 ${done} · 没去 ${total - done}</span></h3>
+    <div class="hint">打卡、笔记和「已预约」都只存在这台手机里。想把足迹整理出来，点下面的复制。</div>
+    ${days.map(x => `<details class="fd"><summary>${x.label} · ${esc(x.d.title.split(" · ")[0])}<span class="cnt">${x.dn.length}/${x.list.length}</span></summary>
+      <ul class="fl">${x.list.map(row).join("")}</ul></details>`).join("")}
+    <div class="btns"><button class="btn solid" id="footCopy">复制足迹和笔记</button><span class="hint" id="footMsg"></span></div>`;
+  $("#footCopy").onclick = () => {
+    const txt = days.map(x => x.label + " " + x.d.title + "\n" + x.list.map(p => (vis[p.id] ? "✓ " : "○ ") + p.n + (p.ne ? " / " + p.ne : "") + (vis[p.id] ? "（" + vis[p.id] + "）" : "") + (bookedOn(p.id) ? " [已预约]" : "") + (noteLine(p.id) ? "\n    笔记：" + noteLine(p.id) : "")).join("\n")).join("\n\n");
+    const ok = () => { $("#footMsg").textContent = "已复制 ✓"; };
+    const fb = () => { const ta = document.createElement("textarea"); ta.value = txt; document.body.appendChild(ta); ta.select(); try { document.execCommand("copy"); ok(); } catch(e){ $("#footMsg").textContent = "复制失败，请手动长按"; } ta.remove(); };
+    if (navigator.clipboard && navigator.clipboard.writeText) navigator.clipboard.writeText(txt).then(ok, fb); else fb();
+  };
 }
 
 /* ---------- 出发前清单 ---------- */
@@ -1156,15 +1694,16 @@ function renderPrep(){
 /* ---------- 待办 ---------- */
 function renderTodo(){
   const day = curDay();
-  let list = store.get("todo:" + day.date, null);
+  let list = store.get("todo2:" + day.date, null);
   if (!list) list = (day.todos||[]).map(x => ({t:x, done:false}));
   $("#todo").innerHTML = `<h3>${icon("check")}今日待办 <span class="tag">只存在这台手机</span></h3>
-    ${list.length ? "" : `<div class="empty">今天还没有待办</div>`}
+    <div class="hint" style="margin:0 0 6px">这里列的是「明天」行程需要提前做好的事，今天就把它们办完</div>
+    ${list.length ? "" : `<div class="empty">没有要提前做的事</div>`}
     <ul class="todo">${list.map((x,i) => `<li class="${x.done?"done":""}">
       <input type="checkbox" data-i="${i}" ${x.done?"checked":""}><span class="txt">${esc(x.t)}</span>
       <button class="del" data-i="${i}" aria-label="删除">×</button></li>`).join("")}</ul>
     <div class="addrow"><input id="todoIn" placeholder="加一条待办…" maxlength="80"><button id="todoAdd">添加</button></div>`;
-  const save = l => { store.set("todo:" + day.date, l); renderTodo(); };
+  const save = l => { store.set("todo2:" + day.date, l); renderTodo(); };
   $("#todo").querySelectorAll("input[type=checkbox]").forEach(c => c.onchange = () => { list[+c.dataset.i].done = c.checked; save(list); });
   $("#todo").querySelectorAll(".del").forEach(b => b.onclick = () => { list.splice(+b.dataset.i,1); save(list); });
   const add = () => { const v = $("#todoIn").value.trim(); if (v){ list.push({t:v, done:false}); save(list); } };
@@ -1188,7 +1727,7 @@ function loadLeaflet(){
 }
 function svgMap(el, day, city){
   const pts = []; let n = 0;
-  day.items.forEach(p => { if (p.lat == null) return; n++; if (Math.abs(p.lat - city.lat) > 3) return; pts.push({n, p}); });
+  dayItemsFull(day).forEach(p => { if (p.lat == null) return; n++; if (Math.abs(p.lat - city.lat) > 3) return; pts.push({n, p}); });
   if (!pts.length){ el.innerHTML = `<div class="mapfail">今天没有可画的地点</div>`; return; }
   const W = 340, H = 250, pad = 36, k = Math.cos(city.lat * Math.PI / 180);
   const xs = pts.map(o => o.p.lon * k), ys = pts.map(o => -o.p.lat);
@@ -1243,7 +1782,7 @@ function renderMap(){
   layer.clearLayers();
   // 只画和当天城市在同一地区的点（跨城市的机场不连线）
   const pts = []; let n = 0;
-  day.items.forEach(p => {
+  dayItemsFull(day).forEach(p => {
     if (p.lat == null) return;
     n++;
     if (Math.abs(p.lat - city.lat) > 3) return;
@@ -1369,7 +1908,7 @@ function renderFood(){
     <div class="filters">${CATS.map(c => `<button class="fchip ${state.foodCat===c[0]?"on":""}" data-c="${c[0]}">${c[1]}</button>`).join("")}
       <button class="fchip" id="locBtn">📍 ${state.myPos ? "已用我的位置" : "用我的位置"}</button></div>
     <div class="card rough">${list.map(f => `<div class="place">
-      <div class="top2"><span class="cat ${f.cat}">${CATNAME[f.cat]}</span><span class="nm">${esc(f.n)}</span>
+      <div class="top2"><span class="cat ${f.cat}">${CATNAME[f.cat]}</span><span class="nm">${esc(f.n)}${f.en ? `<span class="ne" style="display:block;font-weight:400">${esc(f.en)}</span>` : ""}</span>
       ${f.dist != null ? `<span class="dist">${f.dist < 1 ? Math.round(f.dist*1000)+" m" : f.dist.toFixed(1)+" km"}</span>` : (f.chain ? `<span class="dist" style="font-size:13px;font-family:var(--body)">连锁 · 找最近</span>` : "")}</div>
       <div class="ds">${esc(f.d)}</div>
       <div class="btns">${navBtns(f)}${xhsBtn(f.n, key)}</div></div>`).join("") || `<div class="empty">这一类还没有推荐</div>`}</div>`;
@@ -1453,11 +1992,12 @@ function tripTipsCard(){
 
 /* ---------- 钱包：票夹 + 记账 ---------- */
 function showDriver(i){
-  const h = HOTELS[i];
-  $("#overlayBox").innerHTML = `<div class="lbl">请带我去这里 · Please take me here</div>
-    <div class="big">${esc(h.en || h.name)}</div><div class="addr">${esc(h.local || h.addr)}</div>
-    ${h.local && h.addr ? `<div class="hint" style="margin-top:10px">${esc(h.addr)}</div>` : ""}
-    <div class="hint" style="margin-top:10px">${esc(h.name)}｜司机看不懂就点 Google 地图导航</div>`;
+  const h = HOTELS[i], th = /[\u0E00-\u0E7F]/.test(h.local || "");
+  const parts = th ? h.local.split(" · ") : [];
+  $("#overlayBox").innerHTML = `<div class="lbl">请带我去这里 · Please take me here${th ? " · พาฉันไปที่นี่" : ""}</div>
+    <div class="big">${esc(th ? parts[0] : (h.en || h.name))}</div><div class="addr">${esc(th ? parts.slice(1).join(" · ") : (h.local || h.addr))}</div>
+    <div class="hint" style="margin-top:10px">${esc(h.en)} · ${esc(h.addr)}</div>
+    <div class="hint" style="margin-top:6px">${esc(h.name)}${h.zh ? " · " + esc(h.zh) : ""}｜司机看不懂就点 Google 地图导航</div>`;
   $("#overlay").classList.add("show");
 }
 function settle(bal){
