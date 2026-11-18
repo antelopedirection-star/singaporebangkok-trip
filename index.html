@@ -322,6 +322,14 @@ function nx(){if(done||i>=u.length)return;var l=document.createElement("link");l
 
 .pa-top h1{font-family:"LXGW WenKai Screen","LXGW WenKai",var(--hand),serif;font-weight:700}
 .pa-top .clock{border-radius:12px}
+
+.wish .wadd{display:grid;gap:7px;margin:4px 0 10px}
+.wish .wadd input,.wish .wadd select,.wish .wedit input{font:inherit;font-size:14px;padding:8px 10px;border:1.5px solid rgba(44,58,51,.35);border-radius:10px;background:#fff;color:var(--ink);width:100%;box-sizing:border-box}
+.wish .wrow{display:flex;gap:8px}.wish .wrow select{flex:1}.wish .wrow .btn{flex:none}
+.wish #wSug a{color:var(--jade);text-decoration:underline}
+.wish .wtag{font-size:11px;padding:1px 7px;border-radius:999px;background:var(--mint);color:var(--deep);font-weight:400;margin-left:4px}
+.wish .wedit{display:flex;gap:6px;margin:6px 0}.wish .wedit[hidden]{display:none}
+.wish li.done .txt b{text-decoration:line-through;opacity:.6}
 </style>
 </head>
 <body>
@@ -1922,10 +1930,87 @@ function renderFood(){
 }
 
 /* ---------- 买买买 ---------- */
+
+/* ---------- 心愿清单（想买的东西，只存本机） ---------- */
+const WISH_HINTS = [
+  [["泰茶","手标","chatramue","奶茶粉"], "bkk", "Big C / 莲花超市 / Siam Paragon 地下 Gourmet Market"],
+  [["芒果干","零食","小老板","海苔","椰子片","椰子脆","薯片","果干","榴莲干","糖"], "bkk", "Big C / 莲花超市 / 7-Eleven"],
+  [["香水","香薰","香氛","精油","蜡烛","扩香","香皂"], "bkk", "Siam Paragon GF（Panpuri、Harnn、Pawis、Reunrom）/ MBK G 层 Thai Perfume Runway"],
+  [["丝巾","泰丝","丝绸","围巾"], "bkk", "金·汤普森故居商店 / Siam Paragon 的 Jim Thompson"],
+  [["青草膏","卧佛","药膏","鼻通","鼻吸","八仙筒","虎标","老虎膏","风油"], "bkk", "7-Eleven / Big C / 莲花超市 / Boots、Watsons 药妆店"],
+  [["mistine","srichand","彩妆","防晒","面膜","粉饼","口红","护肤"], "bkk", "Big C / 莲花超市 / Watsons"],
+  [["象裤","t恤","冰箱贴","钥匙扣","纪念品","明信片","小象","摆件","拖鞋"], "bkk", "MBK 5–6 层小摊 / 朱拉隆功夜市"],
+  [["香料","冬阴功","咖喱","酱","调料","鱼露"], "bkk", "Big C / 莲花超市 / Gourmet Market"],
+  [["咖椰","kaya","肉骨茶","叻沙","laksa","咖啡粉","kopi"], "sg", "FairPrice 超市 / 樟宜机场"],
+  [["twg","茶叶"], "sg", "ION Orchard / 樟宜机场"],
+  [["凤梨挞","糕","bengawan"], "sg", "Bengawan Solo（樟宜机场、各大商场）"],
+  [["鱼皮","咸蛋","irvin"], "sg", "Irvin's（樟宜机场、ION Orchard）"],
+];
+const WISH_PLACES = ["Big C","莲花超市 Lotus's","7-Eleven","Siam Paragon","Siam Paragon Gourmet Market","Siam Center","MBK","朱拉隆功夜市","金·汤普森故居商店","Watsons 屈臣氏","Boots","樟宜机场","ION Orchard","FairPrice 超市","牛车水","Haji Lane"];
+function wishSuggest(text){
+  const t = (text || "").toLowerCase().trim(); if (!t) return [];
+  const out = [];
+  WISH_HINTS.forEach(h => { if (h[0].some(k => t.includes(k) || k.includes(t) && t.length >= 2)) out.push({w:h[2], c:h[1]}); });
+  ["sg","bkk"].forEach(c => SHOP[c].forEach(x => { const n = x.n.toLowerCase(); if (n.includes(t) || t.length >= 2 && n.split(/[ \/·]/).some(k => k && t.includes(k))) out.push({w:x.w, c}); }));
+  const seen = {}; return out.filter(o => seen[o.w] ? false : (seen[o.w] = 1)).slice(0, 3);
+}
+const wishCityName = c => c === "sg" ? "新加坡" : "泰国";
+function wishMapBtns(w, c){
+  const q = w.split(/[\/、（(]/)[0].trim() + " " + (c === "sg" ? "Singapore" : "Bangkok");
+  return `<a class="btn g" href="https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(q)}" target="_blank" rel="noopener">Google 地图</a><a class="btn a" href="https://uri.amap.com/search?keyword=${encodeURIComponent(q)}&callnative=1" target="_blank" rel="noopener">高德</a>`;
+}
+function wishHTML(){
+  const L = store.get("wish", []), cur = tabCity();
+  const n = L.length, done = L.filter(x => x.done).length;
+  const list = L.slice().sort((a,b) => (a.done - b.done) || ((b.c === cur) - (a.c === cur)) || (a.ts - b.ts));
+  const row = x => {
+    const sug = !x.w ? wishSuggest(x.t) : [];
+    const where = x.w ? `<div class="where">📍 ${esc(x.w)}</div>` : sug.length ? `<div class="where">📍 可能在：${esc(sug[0].w)} <span class="hint">（参考，没逐一核实）</span></div>` : `<div class="hint">还没填在哪买</div>`;
+    const ww = x.w || (sug[0] && sug[0].w) || "";
+    return `<li class="${x.done ? "done" : ""}" data-wid="${x.id}"><input type="checkbox" data-wck="${x.id}" ${x.done ? "checked" : ""}>
+      <div style="flex:1"><div class="txt"><b>${esc(x.t)}</b> <span class="wtag">${wishCityName(x.c)}</span></div>${x.note ? `<div class="hint">${esc(x.note)}</div>` : ""}${where}
+      <div class="wedit" data-wedit="${x.id}" hidden><input class="wW2" list="wList" value="${esc(x.w || "")}" placeholder="在哪买"><button class="btn solid" data-wsave="${x.id}">保存</button></div>
+      <div class="btns">${ww ? wishMapBtns(ww, x.c) : ""}<button class="btn" data-wed="${x.id}">改地方</button><button class="btn" data-wdel="${x.id}">删除</button></div></div></li>`;
+  };
+  return `<div class="card rough wish"><h3>${icon("bag")}我的心愿清单 <span class="tag">${n ? done + " / " + n + " 已买" : "随时添加"}</span></h3>
+    <div class="wadd">
+      <input id="wT" placeholder="想买什么？比如：手标泰茶、泰丝丝巾">
+      <input id="wW" list="wList" placeholder="在哪买（可不填，会自动推荐）">
+      <datalist id="wList">${WISH_PLACES.map(p => `<option value="${esc(p)}">`).join("")}</datalist>
+      <input id="wN" placeholder="备注（可不填）：价格、帮谁买、几份">
+      <div class="wrow"><select id="wC"><option value="bkk" ${cur === "bkk" ? "selected" : ""}>在泰国买</option><option value="sg" ${cur === "sg" ? "selected" : ""}>在新加坡买</option></select>
+      <button class="btn solid" id="wAdd">加入清单</button></div>
+      <div class="hint" id="wSug"></div>
+    </div>
+    ${n ? `<ul class="todo wlist">${list.map(row).join("")}</ul>` : `<div class="empty">还没有想买的东西，在上面写一个试试</div>`}
+    <div class="hint">清单只存在这台手机里；「可能在」是按关键词自动推荐的，仅供参考</div></div>`;
+}
+function bindWish(){
+  const root = $("#tab-shop"), save = L => { store.set("wish", L); renderShop(); };
+  const T = $("#wT"), W = $("#wW"), C = $("#wC"), N = $("#wN"), S = $("#wSug");
+  C.onchange = () => { C.dataset.touched = 1; };
+  const showSug = () => { const g = wishSuggest(T.value); if (g.length && !C.dataset.touched) C.value = g[0].c; S.innerHTML = g.length && !W.value ? "可能在：" + g.map(o => `<a href="#" data-wpick="${esc(o.w)}" data-wc="${o.c}">${esc(o.w)}</a>`).join(" ｜ ") : ""; };
+  T.oninput = showSug; W.oninput = showSug;
+  S.onclick = e => { const a = e.target.closest("[data-wpick]"); if (!a) return; e.preventDefault(); W.value = a.dataset.wpick; C.value = a.dataset.wc; S.innerHTML = ""; };
+  $("#wAdd").onclick = () => {
+    const t = T.value.trim(); if (!t){ T.focus(); return; }
+    const L = store.get("wish", []);
+    L.push({id: "w" + Date.now().toString(36), t: t.slice(0, 60), w: W.value.trim().slice(0, 80), c: C.value, note: N.value.trim().slice(0, 80), done: false, ts: Date.now()});
+    save(L);
+  };
+  T.onkeydown = e => { if (e.key === "Enter") $("#wAdd").click(); };
+  root.querySelectorAll("[data-wck]").forEach(c => c.onchange = () => { const L = store.get("wish", []); const x = L.find(y => y.id === c.dataset.wck); if (x){ x.done = c.checked; save(L); } });
+  root.querySelectorAll("[data-wed]").forEach(b => b.onclick = () => { const d = root.querySelector(`[data-wedit="${b.dataset.wed}"]`); d.hidden = !d.hidden; if (!d.hidden) d.querySelector("input").focus(); });
+  root.querySelectorAll("[data-wsave]").forEach(b => b.onclick = () => { const L = store.get("wish", []); const x = L.find(y => y.id === b.dataset.wsave); if (x){ x.w = b.previousElementSibling.value.trim().slice(0, 80); save(L); } });
+  root.querySelectorAll("[data-wdel]").forEach(b => b.onclick = () => {
+    if (b.dataset.armed){ save(store.get("wish", []).filter(y => y.id !== b.dataset.wdel)); return; }
+    b.dataset.armed = 1; b.textContent = "再点一次删除"; setTimeout(() => { if (b.isConnected){ delete b.dataset.armed; b.textContent = "删除"; } }, 3000);
+  });
+}
 function renderShop(){
   const key = tabCity(), city = CITIES[key];
   const got = store.get("shop:" + key, {});
-  $("#tab-shop").innerHTML = `<div class="cityline">${icon("bag")}${city.name} · 人气必买</div>
+  $("#tab-shop").innerHTML = wishHTML() + `<div class="cityline">${icon("bag")}${city.name} · 人气必买</div>
     <div class="hint">买到了就打勾（只存在这台手机）</div>
     <div class="card rough"><ul class="todo">${SHOP[key].map((s,i) => `<li class="${got[i]?"done":""}">
       <input type="checkbox" data-i="${i}" ${got[i]?"checked":""}>
@@ -1933,6 +2018,7 @@ function renderShop(){
       <div class="hint">${esc(s.d)}</div><div class="where">📍 ${esc(s.w)}</div>
       <div class="btns">${xhsBtn(s.n, key)}</div></div></li>`).join("")}</ul></div>`;
   $("#tab-shop").querySelectorAll("input[type=checkbox]").forEach(c => c.onchange = () => { got[c.dataset.i] = c.checked; store.set("shop:" + key, got); renderShop(); });
+  bindWish();
 }
 
 /* ---------- 汇率 ---------- */
